@@ -46,7 +46,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
           </div>
 
           <div className="hidden md:flex items-center">
-            <button className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-[30px] border border-[#FF8A00] bg-white text-[#FF8A00] text-base font-semibold hover:bg-[#FF8A00] hover:text-white transition-colors">
+            <button className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-[30px] border border-[#FF8A00] bg-[#001641] text-[#FF8A00] text-base font-semibold hover:bg-[#FF8A00] hover:text-[#001641] transition-colors">
               Request a sample →
             </button>
           </div>
