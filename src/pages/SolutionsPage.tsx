@@ -135,7 +135,7 @@ export default function SolutionsPage() {
                 </div>
 
                 <button
-                  className={`w-full py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 ${
+                  className={`w-full py-3 rounded-full font-semibold transition-all flex items-center justify-center gap-2 ${
                     tier.highlighted
                       ? 'bg-[#FF8A00] text-white hover:bg-[#e67d00]'
                       : 'bg-[#001641] text-white hover:bg-[#002a5c]'

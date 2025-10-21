@@ -13,7 +13,7 @@ export default function HomePage() {
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Defensible, global coverage with audit-ready proof. Powering compliance, investigations, and research.
             </p>
-            <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+            <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
               Request a sample
               <ArrowRight size={20} />
             </button>
@@ -159,7 +159,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+            <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
               Request a sample
               <ArrowRight size={20} />
             </button>
@@ -226,7 +226,7 @@ export default function HomePage() {
         </div>
 
         <div className="text-center">
-          <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+          <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
             More Insights
             <ArrowRight size={20} />
           </button>

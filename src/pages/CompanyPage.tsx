@@ -264,7 +264,7 @@ export default function CompanyPage() {
             </div>
           </div>
 
-          <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+          <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
             View All Openings
             <ArrowRight size={20} />
           </button>
@@ -394,7 +394,7 @@ export default function CompanyPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#FF8A00] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>

@@ -60,7 +60,7 @@ export default function IndustriesPage() {
                   </span>
                 </li>
               </ul>
-              <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+              <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
                 Request a sample
                 <ArrowRight size={20} />
               </button>
@@ -121,7 +121,7 @@ export default function IndustriesPage() {
                   </span>
                 </li>
               </ul>
-              <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+              <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
                 Contact our team
                 <ArrowRight size={20} />
               </button>
@@ -183,7 +183,7 @@ export default function IndustriesPage() {
             Request a sample of our wallet label dataset and see the Chainlabs difference
             for yourself. No commitment required.
           </p>
-          <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+          <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
             Request a sample
             <ArrowRight size={20} />
           </button>

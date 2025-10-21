@@ -187,7 +187,7 @@ export default function InsightsPage() {
               placeholder="Enter your email"
               className="flex-1 px-6 py-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8A00]"
             />
-            <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg whitespace-nowrap">
+            <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg whitespace-nowrap">
               Subscribe
             </button>
           </div>
