@@ -1,27 +1,25 @@
 import { ArrowRight, Database, Zap, Users } from 'lucide-react';
-import { DataVisualizationChart, HexagonalDiagram, WorldMapNetwork } from '../components/LineArt';
-import SplineHeroAnimation from '../components/SplineHeroAnimation';
+import { HeroLineArt, DataVisualizationChart, HexagonalDiagram, WorldMapNetwork } from '../components/LineArt';
 
 export default function HomePage() {
   return (
     <div className="bg-white">
-      <section className="relative px-6 lg:px-8 py-20 lg:py-32 min-h-[600px] lg:min-h-[700px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none opacity-60">
-          <SplineHeroAnimation />
-        </div>
-
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl lg:text-7xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
-            Web3 Wallet Labels You Can Trust
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Defensible, global coverage with audit-ready proof. Powering compliance, investigations, and research.
-          </p>
-          <div className="flex justify-center">
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div>
+            <h1 className="text-5xl lg:text-7xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
+              Web3 Wallet Labels You Can Trust
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              Defensible, global coverage with audit-ready proof. Powering compliance, investigations, and research.
+            </p>
             <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
               Request a sample
               <ArrowRight size={20} />
             </button>
+          </div>
+          <div className="hidden lg:block">
+            <HeroLineArt />
           </div>
         </div>
       </section>
