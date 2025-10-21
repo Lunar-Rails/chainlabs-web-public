@@ -7,7 +7,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
-            <h1 className="text-5xl lg:text-7xl font-bold text-[#001641] leading-tight mb-6">
+            <h1 className="text-5xl lg:text-7xl font-semibold text-[#001641] leading-tight mb-6">
               Web3 Wallet Labels You Can Trust
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
