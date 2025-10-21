@@ -275,7 +275,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20 lg:py-32">
+      <section className="bg-gray-50 py-20 lg:py-32 pb-0">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-5xl lg:text-6xl font-bold text-[#001641] mb-16" style={{ lineHeight: '110%' }}>
             FAQs
