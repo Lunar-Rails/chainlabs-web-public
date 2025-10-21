@@ -43,7 +43,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
                 {item.label}
               </button>
             ))}
-            <button className="bg-[#001641] text-white px-6 h-[42px] rounded-lg text-sm font-semibold hover:bg-[#002255] transition-colors">
+            <button className="bg-[#001641] text-white px-6 h-[48px] rounded-full text-sm font-semibold hover:bg-[#002255] transition-colors">
               Request a Sample
             </button>
           </div>
@@ -76,7 +76,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
                 {item.label}
               </button>
             ))}
-            <button className="w-full bg-[#001641] text-white px-6 h-[42px] rounded-lg text-sm font-semibold">
+            <button className="w-full bg-[#001641] text-white px-6 h-[48px] rounded-full text-sm font-semibold">
               Request a Sample
             </button>
           </div>
