@@ -19,7 +19,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
   ];
 
   return (
-    <nav className="bg-white/80 backdrop-blur-[20px] sticky top-0 z-50 pt-4">
+    <nav className="bg-white/80 backdrop-blur-[20px] sticky top-0 z-50 py-3">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <button
@@ -29,7 +29,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
             <img src="/CL logo 2.svg" alt="Chainlabs" className="h-16" />
           </button>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -43,6 +43,9 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
                 {item.label}
               </button>
             ))}
+          </div>
+
+          <div className="hidden md:flex items-center">
             <button className="bg-[#001641] text-white px-6 h-[48px] rounded-full text-sm font-semibold hover:bg-[#002255] transition-colors">
               Request a Sample
             </button>
