@@ -61,7 +61,7 @@ export default function SolutionsPage() {
           <div className="text-sm font-semibold text-[#FF8A00] mb-4 uppercase tracking-wider">
             Dataset Access
           </div>
-          <h1 className="text-5xl lg:text-6xl font-bold text-[#001641] leading-tight mb-6">
+          <h1 className="text-5xl lg:text-6xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
             Access the Most Up-to-date and Defensible Wallet Label Dataset in Crypto.
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
