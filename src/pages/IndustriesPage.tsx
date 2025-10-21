@@ -5,7 +5,7 @@ export default function IndustriesPage() {
   return (
     <div className="bg-white">
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
-        <h1 className="text-5xl lg:text-6xl font-bold text-[#001641] text-center mb-6">
+        <h1 className="text-5xl lg:text-6xl font-semibold text-[#001641] text-center mb-6" style={{ lineHeight: '110%' }}>
           Industries We Serve
         </h1>
         <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-20 leading-relaxed">
@@ -16,7 +16,7 @@ export default function IndustriesPage() {
         <div className="space-y-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-[#001641] mb-4">
+              <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
                 Compliance Software Providers
               </h2>
               <div className="text-lg font-semibold text-[#FF8A00] mb-6">
@@ -77,7 +77,7 @@ export default function IndustriesPage() {
             </div>
 
             <div className="order-1 lg:order-2">
-              <h2 className="text-4xl lg:text-5xl font-bold text-[#001641] mb-4">
+              <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
                 Law Enforcement
               </h2>
               <div className="text-lg font-semibold text-[#FF8A00] mb-6">
@@ -133,7 +133,7 @@ export default function IndustriesPage() {
       <section className="bg-gray-50 py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#001641] mb-6">
+            <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
               Validated by Industry Leaders
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
@@ -150,21 +150,21 @@ export default function IndustriesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
               <div className="bg-white p-8 rounded-xl shadow-sm">
-                <div className="text-4xl font-bold text-[#001641] mb-3">250+</div>
+                <div className="text-4xl font-semibold text-[#001641] mb-3" style={{ lineHeight: '110%' }}>250+</div>
                 <p className="text-gray-600">
                   New entities added monthly
                 </p>
               </div>
 
               <div className="bg-white p-8 rounded-xl shadow-sm">
-                <div className="text-4xl font-bold text-[#001641] mb-3">25+</div>
+                <div className="text-4xl font-semibold text-[#001641] mb-3" style={{ lineHeight: '110%' }}>25+</div>
                 <p className="text-gray-600">
                   Blockchain networks covered
                 </p>
               </div>
 
               <div className="bg-white p-8 rounded-xl shadow-sm">
-                <div className="text-4xl font-bold text-[#001641] mb-3">24/7</div>
+                <div className="text-4xl font-semibold text-[#001641] mb-3" style={{ lineHeight: '110%' }}>24/7</div>
                 <p className="text-gray-600">
                   Global intelligence network
                 </p>
@@ -176,7 +176,7 @@ export default function IndustriesPage() {
 
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
         <div className="bg-[#001641] rounded-3xl p-12 lg:p-16 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl lg:text-5xl font-semibold text-white mb-6" style={{ lineHeight: '110%' }}>
             Ready to Get Started?
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed">

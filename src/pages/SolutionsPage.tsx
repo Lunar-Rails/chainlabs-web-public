@@ -75,7 +75,7 @@ export default function SolutionsPage() {
       <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-[#001641] mb-4">
+            <h2 className="text-4xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
               Choose Your Plan
             </h2>
           </div>
@@ -95,7 +95,7 @@ export default function SolutionsPage() {
                     MOST POPULAR
                   </div>
                 )}
-                <h3 className="text-3xl font-bold text-[#001641] mb-6">{tier.name}</h3>
+                <h3 className="text-3xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>{tier.name}</h3>
 
                 <div className="space-y-6 mb-8">
                   <div>
@@ -159,7 +159,7 @@ export default function SolutionsPage() {
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-[#001641] mb-6">
+            <h2 className="text-4xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
               Trusted by Compliance Leaders
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-6">
@@ -180,7 +180,7 @@ export default function SolutionsPage() {
                   <Check className="text-[#001641]" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#001641] mb-2">
+                  <h3 className="text-xl font-semibold text-[#001641] mb-2" style={{ lineHeight: '110%' }}>
                     Audit-Ready Documentation
                   </h3>
                   <p className="text-gray-600">
@@ -194,7 +194,7 @@ export default function SolutionsPage() {
                   <Check className="text-[#001641]" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#001641] mb-2">
+                  <h3 className="text-xl font-semibold text-[#001641] mb-2" style={{ lineHeight: '110%' }}>
                     Global Coverage
                   </h3>
                   <p className="text-gray-600">
@@ -208,7 +208,7 @@ export default function SolutionsPage() {
                   <Check className="text-[#001641]" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#001641] mb-2">
+                  <h3 className="text-xl font-semibold text-[#001641] mb-2" style={{ lineHeight: '110%' }}>
                     Continuous Updates
                   </h3>
                   <p className="text-gray-600">

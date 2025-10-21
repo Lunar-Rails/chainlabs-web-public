@@ -30,7 +30,7 @@ export default function HomePage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <h2 className="text-4xl font-bold text-white text-center mb-20">
+          <h2 className="text-4xl font-semibold text-white text-center mb-20" style={{ lineHeight: '110%' }}>
             Used by Industry Leaders
           </h2>
         </div>
@@ -62,28 +62,28 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white/10 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:bg-white/15 transition-all">
-              <div className="text-5xl font-bold text-white mb-3">90%</div>
+              <div className="text-5xl font-semibold text-white mb-3" style={{ lineHeight: '110%' }}>90%</div>
               <p className="text-gray-300 leading-relaxed">
                 of the leading blockchain AML/KYC Trading Intel and CEX firms use Chainlabs labels
               </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:bg-white/15 transition-all">
-              <div className="text-5xl font-bold text-white mb-3">4/4</div>
+              <div className="text-5xl font-semibold text-white mb-3" style={{ lineHeight: '110%' }}>4/4</div>
               <p className="text-gray-300 leading-relaxed">
                 of the top 4 blockchain analytics firms use Chainlabs
               </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:bg-white/15 transition-all">
-              <div className="text-5xl font-bold text-white mb-3">Global</div>
+              <div className="text-5xl font-semibold text-white mb-3" style={{ lineHeight: '110%' }}>Global</div>
               <p className="text-gray-300 leading-relaxed">
                 Our intelligence operative network spans the globe, 24/7
               </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:bg-white/15 transition-all">
-              <div className="text-5xl font-bold text-white mb-3">25+</div>
+              <div className="text-5xl font-semibold text-white mb-3" style={{ lineHeight: '110%' }}>25+</div>
               <p className="text-gray-300 leading-relaxed">
                 Our labels cover the top chains and we are adding more
               </p>
@@ -93,7 +93,7 @@ export default function HomePage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
-        <h2 className="text-4xl lg:text-5xl font-bold text-[#001641] text-center mb-6">
+        <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] text-center mb-6" style={{ lineHeight: '110%' }}>
           Our Data
         </h2>
         <p className="text-xl text-gray-600 text-center max-w-4xl mx-auto mb-16 leading-relaxed">
@@ -113,7 +113,7 @@ export default function HomePage() {
 
       <section className="bg-gray-50 py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-4xl lg:text-5xl font-bold text-[#001641] text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] text-center mb-16" style={{ lineHeight: '110%' }}>
             Our Approach
           </h2>
 
@@ -122,7 +122,7 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-[#001641] bg-opacity-10 rounded-lg flex items-center justify-center mb-6">
                 <Database className="text-[#001641]" size={32} />
               </div>
-              <h3 className="text-2xl font-bold text-[#001641] mb-4">
+              <h3 className="text-2xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
                 Quality in. Quality out.
               </h3>
               <p className="text-gray-600 leading-relaxed">
@@ -135,7 +135,7 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-[#001641] bg-opacity-10 rounded-lg flex items-center justify-center mb-6">
                 <Zap className="text-[#001641]" size={32} />
               </div>
-              <h3 className="text-2xl font-bold text-[#001641] mb-4">
+              <h3 className="text-2xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
                 Efficient, bespoke data ingestion
               </h3>
               <p className="text-gray-600 leading-relaxed">
@@ -148,7 +148,7 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-[#001641] bg-opacity-10 rounded-lg flex items-center justify-center mb-6">
                 <Users className="text-[#001641]" size={32} />
               </div>
-              <h3 className="text-2xl font-bold text-[#001641] mb-4">
+              <h3 className="text-2xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
                 A client centric approach
               </h3>
               <p className="text-gray-600 leading-relaxed">
@@ -168,7 +168,7 @@ export default function HomePage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
-        <h2 className="text-4xl lg:text-5xl font-bold text-[#001641] text-center mb-4">
+        <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] text-center mb-4" style={{ lineHeight: '110%' }}>
           Insights
         </h2>
         <p className="text-xl text-gray-600 text-center mb-16">
@@ -180,7 +180,7 @@ export default function HomePage() {
             <div className="h-48 bg-gradient-to-br from-[#001641] to-[#003982]"></div>
             <div className="p-6">
               <div className="text-sm text-[#FF8A00] font-semibold mb-2">RESEARCH</div>
-              <h3 className="text-xl font-bold text-[#001641] mb-3 group-hover:text-[#FF8A00] transition-colors">
+              <h3 className="text-xl font-semibold text-[#001641] mb-3 group-hover:text-[#FF8A00] transition-colors" style={{ lineHeight: '110%' }}>
                 The State of Blockchain Intelligence in 2025
               </h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
@@ -196,7 +196,7 @@ export default function HomePage() {
             <div className="h-48 bg-gradient-to-br from-[#001641] to-[#003982]"></div>
             <div className="p-6">
               <div className="text-sm text-[#FF8A00] font-semibold mb-2">THOUGHT LEADERSHIP</div>
-              <h3 className="text-xl font-bold text-[#001641] mb-3 group-hover:text-[#FF8A00] transition-colors">
+              <h3 className="text-xl font-semibold text-[#001641] mb-3 group-hover:text-[#FF8A00] transition-colors" style={{ lineHeight: '110%' }}>
                 Building Trust in Decentralized Systems
               </h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
@@ -212,7 +212,7 @@ export default function HomePage() {
             <div className="h-48 bg-gradient-to-br from-[#001641] to-[#003982]"></div>
             <div className="p-6">
               <div className="text-sm text-[#FF8A00] font-semibold mb-2">NEWS</div>
-              <h3 className="text-xl font-bold text-[#001641] mb-3 group-hover:text-[#FF8A00] transition-colors">
+              <h3 className="text-xl font-semibold text-[#001641] mb-3 group-hover:text-[#FF8A00] transition-colors" style={{ lineHeight: '110%' }}>
                 Chainlabs Expands Coverage to 25+ Blockchains
               </h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
