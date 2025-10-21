@@ -1,7 +1,49 @@
-import { ArrowRight, Database, Zap, Users } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowRight, Database, Zap, Users, Plus, Minus } from 'lucide-react';
 import { HeroLineArt, DataVisualizationChart, HexagonalDiagram, WorldMapNetwork } from '../components/LineArt';
 
 export default function HomePage() {
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      question: "What are wallet labels and why are they important?",
+      answer: "Wallet labels are identifications assigned to cryptocurrency addresses that help identify the entity or organization controlling those addresses. They are crucial for compliance, risk management, and investigations in the blockchain space. Chainlabs provides defensible, audit-ready wallet labels that enable organizations to understand who they're transacting with and identify potential risks."
+    },
+    {
+      question: "How many blockchains does Chainlabs support?",
+      answer: "Chainlabs currently supports 25+ blockchain networks and continues to expand coverage. Our comprehensive dataset includes labels for major networks like Bitcoin, Ethereum, and other leading chains, ensuring you have the intelligence you need across the entire crypto ecosystem."
+    },
+    {
+      question: "What makes Chainlabs' methodology defensible?",
+      answer: "Our methodology combines human intelligence, advanced algorithms, and blockchain forensics. Every label we create includes documented provenance and evidence trails, making them audit-ready and suitable for regulatory compliance. We maintain rigorous validation processes to ensure the highest standards of accuracy and defensibility."
+    },
+    {
+      question: "How often is the wallet label dataset updated?",
+      answer: "We add 250+ new organizations to our dataset every month. Update frequency varies by tier: Core and Advanced tiers receive monthly delta updates, while Enterprise customers can receive continuous real-time updates during active briefs. Our global intelligence network operates 24/7 to identify emerging entities and risks."
+    },
+    {
+      question: "Who uses Chainlabs' wallet intelligence?",
+      answer: "90% of leading blockchain AML/KYC firms and all top 4 blockchain analytics companies use Chainlabs. Our clients include compliance software providers, cryptocurrency exchanges, law enforcement agencies, and research institutions worldwide. We power critical compliance and investigation workflows for organizations that demand the highest quality intelligence."
+    },
+    {
+      question: "What types of entities does Chainlabs label?",
+      answer: "Our coverage includes centralized exchanges (CeFi), darknet marketplaces, mixer services, VPN/hosting providers, OTC desks, scam operations, exploit addresses, DeFi protocols, public entity wallets, and illicit NFT collections. The specific categories available depend on your subscription tier, with Enterprise customers able to request custom categories."
+    },
+    {
+      question: "How can I integrate Chainlabs data into my platform?",
+      answer: "We provide flexible integration options including REST APIs, custom data pipelines, and direct database access. All tiers include comprehensive documentation and API libraries. Enterprise customers receive dedicated support and custom integration assistance to ensure seamless incorporation into your existing infrastructure."
+    },
+    {
+      question: "What is the difference between the Core, Advanced, and Enterprise tiers?",
+      answer: "The Core tier includes essential categories like CeFi, darknet, mixers, and VPN/hosting with monthly updates. Advanced adds OTC, scams, exploits, DeFi, public entities, and illicit NFTs. Enterprise provides all Advanced features plus custom category creation, real-time updates, dedicated research teams, and extensive customization (>86 hours/month). Each tier is designed for specific use cases and organizational needs."
+    }
+  ];
+
+  const toggleFaq = (index: number) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
+
   return (
     <div className="bg-white">
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
@@ -230,6 +272,47 @@ export default function HomePage() {
             More Insights
             <ArrowRight size={20} />
           </button>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 py-20 lg:py-32">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <h2 className="text-5xl lg:text-6xl font-bold text-[#001641] mb-16" style={{ lineHeight: '110%' }}>
+            FAQs
+          </h2>
+
+          <div className="space-y-0">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="border-b border-gray-300"
+              >
+                <button
+                  onClick={() => toggleFaq(index)}
+                  className="w-full flex items-center justify-between py-8 text-left hover:opacity-70 transition-opacity"
+                >
+                  <span className="text-2xl lg:text-3xl font-medium text-[#001641] pr-8" style={{ lineHeight: '120%' }}>
+                    {faq.question}
+                  </span>
+                  <div className="flex-shrink-0">
+                    {openFaqIndex === index ? (
+                      <Minus size={32} className="text-[#001641]" strokeWidth={2} />
+                    ) : (
+                      <Plus size={32} className="text-[#001641]" strokeWidth={2} />
+                    )}
+                  </div>
+                </button>
+
+                {openFaqIndex === index && (
+                  <div className="pb-8 pr-12">
+                    <p className="text-lg text-gray-600 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
