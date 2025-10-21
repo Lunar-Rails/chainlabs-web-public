@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import HomePage from './pages/HomePage';
+import CompanyPage from './pages/CompanyPage';
 import SolutionsPage from './pages/SolutionsPage';
 import IndustriesPage from './pages/IndustriesPage';
 import Navigation from './components/Navigation';
@@ -14,6 +15,8 @@ function App() {
     switch (currentPage) {
       case 'home':
         return <HomePage />;
+      case 'company':
+        return <CompanyPage />;
       case 'solutions':
         return <SolutionsPage />;
       case 'industries':
