@@ -153,16 +153,16 @@ export default function CompanyPage() {
             Our affiliated companies and partners
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 border border-white/20">
             {affiliatedCompanies.map((company) => (
               <div
                 key={company.id}
-                className="flex items-center justify-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all h-32"
+                className="flex items-center justify-center p-12 border-r border-b border-white/20 h-48 hover:bg-white/5 transition-all"
               >
                 <img
                   src={company.logo_url}
                   alt={company.name}
-                  className="max-h-12 max-w-full object-contain"
+                  className="max-h-16 max-w-full object-contain grayscale opacity-80 hover:opacity-100 transition-opacity"
                 />
               </div>
             ))}
@@ -188,7 +188,7 @@ export default function CompanyPage() {
                 <img
                   src={member.photo_url}
                   alt={member.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
@@ -196,7 +196,6 @@ export default function CompanyPage() {
                   {member.name}
                 </h3>
                 <p className="text-[#FF8A00] font-medium mb-3">{member.role}</p>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">{member.bio}</p>
                 {member.linkedin_url && (
                   <a
                     href={member.linkedin_url}
