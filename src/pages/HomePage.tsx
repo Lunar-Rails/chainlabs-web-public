@@ -161,9 +161,9 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900">
+              <div className="h-48 bg-white">
                 <img
-                  src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/Abstract - 4.png"
                   alt="Quality in. Quality out."
                   className="w-full h-full object-cover"
                 />
@@ -179,9 +179,9 @@ export default function HomePage() {
             </div>
 
             <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900">
+              <div className="h-48 bg-white">
                 <img
-                  src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/Abstract - 1.png"
                   alt="Efficient, bespoke data ingestion"
                   className="w-full h-full object-cover"
                 />
@@ -197,9 +197,9 @@ export default function HomePage() {
             </div>
 
             <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900">
+              <div className="h-48 bg-white">
                 <img
-                  src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/Abstract - 5.png"
                   alt="A client centric approach"
                   className="w-full h-full object-cover"
                 />
