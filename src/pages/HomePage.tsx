@@ -1,12 +1,13 @@
 import { ArrowRight, Database, Zap, Users } from 'lucide-react';
-import { HeroLineArt, DataVisualizationChart, HexagonalDiagram, WorldMapNetwork } from '../components/LineArt';
+import { DataVisualizationChart, HexagonalDiagram, WorldMapNetwork } from '../components/LineArt';
+import SplineHeroAnimation from '../components/SplineHeroAnimation';
 
 export default function HomePage() {
   return (
     <div className="bg-white">
       <section className="relative px-6 lg:px-8 py-20 lg:py-32 min-h-[600px] lg:min-h-[700px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <HeroLineArt />
+        <div className="absolute inset-0 pointer-events-none opacity-60">
+          <SplineHeroAnimation />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
