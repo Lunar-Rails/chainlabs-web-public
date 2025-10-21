@@ -135,13 +135,14 @@ export default function SolutionsPage() {
                 </div>
 
                 <button
-                  className={`w-full py-4 rounded-[30px] font-semibold transition-colors inline-flex items-center justify-center gap-2 ${
+                  className={`w-full py-3 rounded-full font-semibold transition-all flex items-center justify-center gap-2 ${
                     tier.highlighted
-                      ? 'border border-[#FF8A00] bg-white text-[#FF8A00] hover:bg-[#FF8A00] hover:text-white'
-                      : 'border border-[#FF8A00] bg-white text-[#FF8A00] hover:bg-[#FF8A00] hover:text-white'
+                      ? 'bg-[#FF8A00] text-white hover:bg-[#e67d00]'
+                      : 'bg-[#001641] text-white hover:bg-[#002a5c]'
                   }`}
                 >
-                  Request a sample →
+                  Request a sample
+                  <ArrowRight size={18} />
                 </button>
               </div>
             ))}

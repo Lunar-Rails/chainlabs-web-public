@@ -55,8 +55,9 @@ export default function HomePage() {
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Defensible, global coverage with audit-ready proof. Powering compliance, investigations, and research.
             </p>
-            <button className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-[30px] border border-[#FF8A00] bg-white text-[#FF8A00] text-base font-semibold hover:bg-[#FF8A00] hover:text-white transition-colors">
-              Request a sample →
+            <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+              Request a sample
+              <ArrowRight size={20} />
             </button>
           </div>
           <div className="hidden lg:block">
@@ -200,8 +201,9 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <button className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-[30px] border border-[#FF8A00] bg-white text-[#FF8A00] text-base font-semibold hover:bg-[#FF8A00] hover:text-white transition-colors">
-              Request a sample →
+            <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+              Request a sample
+              <ArrowRight size={20} />
             </button>
           </div>
         </div>

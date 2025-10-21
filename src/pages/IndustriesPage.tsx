@@ -60,8 +60,9 @@ export default function IndustriesPage() {
                   </span>
                 </li>
               </ul>
-              <button className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-[30px] border border-[#FF8A00] bg-white text-[#FF8A00] text-base font-semibold hover:bg-[#FF8A00] hover:text-white transition-colors">
-                Request a sample →
+              <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+                Request a sample
+                <ArrowRight size={20} />
               </button>
             </div>
 

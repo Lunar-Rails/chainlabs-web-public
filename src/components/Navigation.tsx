@@ -46,8 +46,8 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
           </div>
 
           <div className="hidden md:flex items-center">
-            <button className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-[30px] border border-[#FF8A00] bg-[#001641] text-[#FF8A00] text-base font-semibold hover:bg-[#FF8A00] hover:text-[#001641] transition-colors">
-              Request a sample →
+            <button className="bg-[#001641] text-white px-6 h-[48px] rounded-full text-sm font-semibold hover:bg-[#002255] transition-colors">
+              Request a Sample
             </button>
           </div>
 
@@ -79,8 +79,8 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
                 {item.label}
               </button>
             ))}
-            <button className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-[30px] border border-[#FF8A00] bg-white text-[#FF8A00] text-base font-semibold">
-              Request a sample →
+            <button className="w-full bg-[#001641] text-white px-6 h-[48px] rounded-full text-sm font-semibold">
+              Request a Sample
             </button>
           </div>
         </div>
