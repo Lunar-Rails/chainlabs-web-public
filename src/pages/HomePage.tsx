@@ -24,7 +24,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#001641] py-20 lg:py-32 relative overflow-hidden">
+      <section className="bg-[#001641] py-32 lg:py-40 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.12] pointer-events-none">
           <WorldMapNetwork />
         </div>
@@ -33,36 +33,29 @@ export default function HomePage() {
           <h2 className="text-4xl font-semibold text-white text-center mb-20" style={{ lineHeight: '110%' }}>
             Used by Industry Leaders
           </h2>
+        </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0 border border-white/20 mb-24">
-            <div className="flex items-center justify-center p-12 border-r border-b border-white/20 hover:bg-white/5 transition-colors">
-              <img src="/coinbase white logo@3x.png" alt="Coinbase" className="h-8 object-contain" />
+        <div className="mb-24 overflow-hidden relative w-full">
+            <div className="flex animate-marquee-faster whitespace-nowrap gap-[100px]">
+              <img src="/coinbase white logo@3x.png" alt="Coinbase" className="h-10 object-contain shrink-0" />
+              <img src="/elementus-white.png" alt="Elementus" className="h-10 object-contain shrink-0" />
+              <img src="/lookintobitcoin white logo.png" alt="LookIntoBitcoin" className="h-10 object-contain shrink-0" />
+              <img src="/santiment white logo@3x.png" alt="Santiment" className="h-10 object-contain shrink-0" />
+              <img src="/trm white logo@3x.png" alt="TRM" className="h-10 object-contain shrink-0" />
+              <img src="/scorechain logo@3x.png" alt="Scorechain" className="h-10 object-contain shrink-0" />
+              <img src="/upsalla white logo@3x.png" alt="Upsalla" className="h-10 object-contain shrink-0" />
+              <img src="/merkle white logo@3x.png" alt="Merkle" className="h-10 object-contain shrink-0" />
+              <img src="/iknaio white logo@3x.png" alt="Iknaio" className="h-10 object-contain shrink-0" />
+              <img src="/coinbase white logo@3x.png" alt="Coinbase" className="h-10 object-contain shrink-0" />
+              <img src="/elementus-white.png" alt="Elementus" className="h-10 object-contain shrink-0" />
+              <img src="/lookintobitcoin white logo.png" alt="LookIntoBitcoin" className="h-10 object-contain shrink-0" />
+              <img src="/santiment white logo@3x.png" alt="Santiment" className="h-10 object-contain shrink-0" />
+              <img src="/trm white logo@3x.png" alt="TRM" className="h-10 object-contain shrink-0" />
+              <img src="/scorechain logo@3x.png" alt="Scorechain" className="h-10 object-contain shrink-0" />
+              <img src="/upsalla white logo@3x.png" alt="Upsalla" className="h-10 object-contain shrink-0" />
+              <img src="/merkle white logo@3x.png" alt="Merkle" className="h-10 object-contain shrink-0" />
+              <img src="/iknaio white logo@3x.png" alt="Iknaio" className="h-10 object-contain shrink-0" />
             </div>
-            <div className="flex items-center justify-center p-12 border-r border-b border-white/20 hover:bg-white/5 transition-colors">
-              <img src="/elementus-white.png" alt="Elementus" className="h-8 object-contain" />
-            </div>
-            <div className="flex items-center justify-center p-12 border-r border-b border-white/20 hover:bg-white/5 transition-colors">
-              <img src="/lookintobitcoin white logo.png" alt="LookIntoBitcoin" className="h-8 object-contain" />
-            </div>
-            <div className="flex items-center justify-center p-12 border-r border-b border-white/20 hover:bg-white/5 transition-colors">
-              <img src="/santiment white logo@3x.png" alt="Santiment" className="h-8 object-contain" />
-            </div>
-            <div className="flex items-center justify-center p-12 border-b border-white/20 hover:bg-white/5 transition-colors">
-              <img src="/trm white logo@3x.png" alt="TRM" className="h-8 object-contain" />
-            </div>
-            <div className="flex items-center justify-center p-12 border-r border-white/20 hover:bg-white/5 transition-colors md:border-b lg:border-b-0">
-              <img src="/scorechain logo@3x.png" alt="Scorechain" className="h-8 object-contain" />
-            </div>
-            <div className="flex items-center justify-center p-12 border-r border-white/20 hover:bg-white/5 transition-colors md:border-b lg:border-b-0">
-              <img src="/upsalla white logo@3x.png" alt="Upsalla" className="h-8 object-contain" />
-            </div>
-            <div className="flex items-center justify-center p-12 border-r border-white/20 hover:bg-white/5 transition-colors md:border-b lg:border-b-0">
-              <img src="/merkle white logo@3x.png" alt="Merkle" className="h-8 object-contain" />
-            </div>
-            <div className="flex items-center justify-center p-12 hover:bg-white/5 transition-colors md:border-r lg:border-r-0">
-              <img src="/iknaio white logo@3x.png" alt="Iknaio" className="h-8 object-contain" />
-            </div>
-          </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
