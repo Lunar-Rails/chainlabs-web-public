@@ -1,0 +1,237 @@
+import { ArrowRight, Database, Zap, Users } from 'lucide-react';
+import { HeroLineArt, DataVisualizationChart, HexagonalDiagram, WorldMapNetwork } from '../components/LineArt';
+
+export default function HomePage() {
+  return (
+    <div className="bg-white">
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div>
+            <h1 className="text-5xl lg:text-7xl font-bold text-[#001641] leading-tight mb-6">
+              Web3 Wallet Labels You Can Trust
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              Defensible, global coverage with audit-ready proof. Powering compliance, investigations, and research.
+            </p>
+            <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+              Request a sample
+              <ArrowRight size={20} />
+            </button>
+          </div>
+          <div className="hidden lg:block">
+            <HeroLineArt />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#001641] py-32 lg:py-40 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.12] pointer-events-none">
+          <WorldMapNetwork />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <h2 className="text-4xl font-bold text-white text-center mb-20">
+            Used by Industry Leaders
+          </h2>
+        </div>
+
+        <div className="mb-24 overflow-hidden relative w-full">
+            <div className="flex animate-marquee-faster whitespace-nowrap gap-[100px]">
+              <img src="/coinbase white logo@3x.png" alt="Coinbase" className="h-10 object-contain shrink-0" />
+              <img src="/elementus-white.png" alt="Elementus" className="h-10 object-contain shrink-0" />
+              <img src="/lookintobitcoin white logo.png" alt="LookIntoBitcoin" className="h-10 object-contain shrink-0" />
+              <img src="/santiment white logo@3x.png" alt="Santiment" className="h-10 object-contain shrink-0" />
+              <img src="/trm white logo@3x.png" alt="TRM" className="h-10 object-contain shrink-0" />
+              <img src="/scorechain logo@3x.png" alt="Scorechain" className="h-10 object-contain shrink-0" />
+              <img src="/upsalla white logo@3x.png" alt="Upsalla" className="h-10 object-contain shrink-0" />
+              <img src="/merkle white logo@3x.png" alt="Merkle" className="h-10 object-contain shrink-0" />
+              <img src="/iknaio white logo@3x.png" alt="Iknaio" className="h-10 object-contain shrink-0" />
+              <img src="/coinbase white logo@3x.png" alt="Coinbase" className="h-10 object-contain shrink-0" />
+              <img src="/elementus-white.png" alt="Elementus" className="h-10 object-contain shrink-0" />
+              <img src="/lookintobitcoin white logo.png" alt="LookIntoBitcoin" className="h-10 object-contain shrink-0" />
+              <img src="/santiment white logo@3x.png" alt="Santiment" className="h-10 object-contain shrink-0" />
+              <img src="/trm white logo@3x.png" alt="TRM" className="h-10 object-contain shrink-0" />
+              <img src="/scorechain logo@3x.png" alt="Scorechain" className="h-10 object-contain shrink-0" />
+              <img src="/upsalla white logo@3x.png" alt="Upsalla" className="h-10 object-contain shrink-0" />
+              <img src="/merkle white logo@3x.png" alt="Merkle" className="h-10 object-contain shrink-0" />
+              <img src="/iknaio white logo@3x.png" alt="Iknaio" className="h-10 object-contain shrink-0" />
+            </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:bg-white/15 transition-all">
+              <div className="text-5xl font-bold text-white mb-3">90%</div>
+              <p className="text-gray-300 leading-relaxed">
+                of the leading blockchain AML/KYC Trading Intel and CEX firms use Chainlabs labels
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:bg-white/15 transition-all">
+              <div className="text-5xl font-bold text-white mb-3">4/4</div>
+              <p className="text-gray-300 leading-relaxed">
+                of the top 4 blockchain analytics firms use Chainlabs
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:bg-white/15 transition-all">
+              <div className="text-5xl font-bold text-white mb-3">Global</div>
+              <p className="text-gray-300 leading-relaxed">
+                Our intelligence operative network spans the globe, 24/7
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:bg-white/15 transition-all">
+              <div className="text-5xl font-bold text-white mb-3">25+</div>
+              <p className="text-gray-300 leading-relaxed">
+                Our labels cover the top chains and we are adding more
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
+        <h2 className="text-4xl lg:text-5xl font-bold text-[#001641] text-center mb-6">
+          Our Data
+        </h2>
+        <p className="text-xl text-gray-600 text-center max-w-4xl mx-auto mb-16 leading-relaxed">
+          Every month we add 250+ new organizations that regularly transact on public blockchains,
+          and we develop algorithms to infer the address clusters that belong to these organizations.
+        </p>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="bg-gray-50 p-12 rounded-2xl">
+            <DataVisualizationChart />
+          </div>
+          <div className="bg-gray-50 p-12 rounded-2xl">
+            <HexagonalDiagram />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl lg:text-5xl font-bold text-[#001641] text-center mb-16">
+            Our Approach
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-[#001641] bg-opacity-10 rounded-lg flex items-center justify-center mb-6">
+                <Database className="text-[#001641]" size={32} />
+              </div>
+              <h3 className="text-2xl font-bold text-[#001641] mb-4">
+                Quality in. Quality out.
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                We maintain the highest standards of data quality through rigorous validation
+                and verification processes, ensuring every label meets our exacting criteria.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-[#001641] bg-opacity-10 rounded-lg flex items-center justify-center mb-6">
+                <Zap className="text-[#001641]" size={32} />
+              </div>
+              <h3 className="text-2xl font-bold text-[#001641] mb-4">
+                Efficient, bespoke data ingestion
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Our custom-built infrastructure enables rapid processing and integration of
+                new data sources, keeping you ahead of emerging trends and entities.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-[#001641] bg-opacity-10 rounded-lg flex items-center justify-center mb-6">
+                <Users className="text-[#001641]" size={32} />
+              </div>
+              <h3 className="text-2xl font-bold text-[#001641] mb-4">
+                A client centric approach
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Your needs drive our innovation. We work closely with clients to understand
+                requirements and deliver tailored solutions that exceed expectations.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+              Request a sample
+              <ArrowRight size={20} />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
+        <h2 className="text-4xl lg:text-5xl font-bold text-[#001641] text-center mb-4">
+          Insights
+        </h2>
+        <p className="text-xl text-gray-600 text-center mb-16">
+          Read all the latest news, thought leadership and research from Chainlabs
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <article className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
+            <div className="h-48 bg-gradient-to-br from-[#001641] to-[#003982]"></div>
+            <div className="p-6">
+              <div className="text-sm text-[#FF8A00] font-semibold mb-2">RESEARCH</div>
+              <h3 className="text-xl font-bold text-[#001641] mb-3 group-hover:text-[#FF8A00] transition-colors">
+                The State of Blockchain Intelligence in 2025
+              </h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                An in-depth analysis of emerging trends in wallet labeling and blockchain analytics.
+              </p>
+              <span className="text-[#001641] font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+                Read more <ArrowRight size={16} />
+              </span>
+            </div>
+          </article>
+
+          <article className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
+            <div className="h-48 bg-gradient-to-br from-[#001641] to-[#003982]"></div>
+            <div className="p-6">
+              <div className="text-sm text-[#FF8A00] font-semibold mb-2">THOUGHT LEADERSHIP</div>
+              <h3 className="text-xl font-bold text-[#001641] mb-3 group-hover:text-[#FF8A00] transition-colors">
+                Building Trust in Decentralized Systems
+              </h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                How accurate wallet labels are transforming compliance and risk management.
+              </p>
+              <span className="text-[#001641] font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+                Read more <ArrowRight size={16} />
+              </span>
+            </div>
+          </article>
+
+          <article className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
+            <div className="h-48 bg-gradient-to-br from-[#001641] to-[#003982]"></div>
+            <div className="p-6">
+              <div className="text-sm text-[#FF8A00] font-semibold mb-2">NEWS</div>
+              <h3 className="text-xl font-bold text-[#001641] mb-3 group-hover:text-[#FF8A00] transition-colors">
+                Chainlabs Expands Coverage to 25+ Blockchains
+              </h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                We're expanding our comprehensive labeling to support more blockchain networks.
+              </p>
+              <span className="text-[#001641] font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+                Read more <ArrowRight size={16} />
+              </span>
+            </div>
+          </article>
+        </div>
+
+        <div className="text-center">
+          <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+            More Insights
+            <ArrowRight size={20} />
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+}
