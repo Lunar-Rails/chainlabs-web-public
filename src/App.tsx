@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage';
 import CompanyPage from './pages/CompanyPage';
 import SolutionsPage from './pages/SolutionsPage';
 import IndustriesPage from './pages/IndustriesPage';
+import InsightsPage from './pages/InsightsPage';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
@@ -21,6 +22,8 @@ function App() {
         return <SolutionsPage />;
       case 'industries':
         return <IndustriesPage />;
+      case 'insights':
+        return <InsightsPage />;
       default:
         return <HomePage />;
     }
