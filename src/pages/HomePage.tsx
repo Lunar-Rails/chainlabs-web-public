@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, Database, Zap, Users, Plus, Minus } from 'lucide-react';
+import { ArrowRight, Plus, Minus } from 'lucide-react';
 import { HeroLineArt, DataVisualizationChart, HexagonalDiagram, WorldMapNetwork } from '../components/LineArt';
 
 export default function HomePage() {
@@ -159,44 +159,59 @@ export default function HomePage() {
             Our Approach
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-[#001641] bg-opacity-10 rounded-lg flex items-center justify-center mb-6">
-                <Database className="text-[#001641]" size={32} />
+          <div className="space-y-8 mb-12">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+              <div className="h-64 bg-gradient-to-br from-gray-800 to-gray-900">
+                <img
+                  src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Quality in. Quality out."
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-2xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
-                Quality in. Quality out.
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                We maintain the highest standards of data quality through rigorous validation
-                and verification processes, ensuring every label meets our exacting criteria.
-              </p>
+              <div className="p-8">
+                <h3 className="text-3xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
+                  Quality in. Quality out.
+                </h3>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  We maintain the highest standards of data quality through rigorous validation and verification processes, ensuring every label meets our exacting criteria.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-[#001641] bg-opacity-10 rounded-lg flex items-center justify-center mb-6">
-                <Zap className="text-[#001641]" size={32} />
+            <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+              <div className="h-64 bg-gradient-to-br from-gray-800 to-gray-900">
+                <img
+                  src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Efficient, bespoke data ingestion"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-2xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
-                Efficient, bespoke data ingestion
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Our custom-built infrastructure enables rapid processing and integration of
-                new data sources, keeping you ahead of emerging trends and entities.
-              </p>
+              <div className="p-8">
+                <h3 className="text-3xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
+                  Efficient, bespoke data ingestion
+                </h3>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Our custom-built infrastructure enables rapid processing and integration of new data sources, keeping you ahead of emerging trends and entities.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-[#001641] bg-opacity-10 rounded-lg flex items-center justify-center mb-6">
-                <Users className="text-[#001641]" size={32} />
+            <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+              <div className="h-64 bg-gradient-to-br from-gray-800 to-gray-900">
+                <img
+                  src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="A client centric approach"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-2xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
-                A client centric approach
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Your needs drive our innovation. We work closely with clients to understand
-                requirements and deliver tailored solutions that exceed expectations.
-              </p>
+              <div className="p-8">
+                <h3 className="text-3xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
+                  A client centric approach
+                </h3>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Your needs drive our innovation. We work closely with clients to understand requirements and deliver tailored solutions that exceed expectations.
+                </p>
+              </div>
             </div>
           </div>
 
