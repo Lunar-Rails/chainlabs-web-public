@@ -103,12 +103,6 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:bg-white/15 transition-all">
-              <div className="text-5xl font-semibold text-white mb-3" style={{ lineHeight: '110%' }}>90%</div>
-              <p className="text-gray-300 leading-relaxed">
-                of the leading blockchain AML/KYC Trading Intel and CEX firms use Chainlabs labels
-              </p>
-            </div>
 
             <div className="bg-white/10 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:bg-white/15 transition-all">
               <div className="text-5xl font-semibold text-white mb-3" style={{ lineHeight: '110%' }}>4/4</div>
