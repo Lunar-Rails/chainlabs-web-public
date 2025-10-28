@@ -156,7 +156,7 @@ export default function HomePage() {
                   Quality in. Quality out.
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  We maintain the highest standards of data quality through rigorous validation and verification processes, ensuring every label meets our exacting criteria.
+                 Each label comes with accurate and complete metadata verified by Chainlabs Quality Control.. Quality control runs to the core of our process and our promise to our customers. Your models are only as good as the data input.
                 </p>
               </div>
             </div>
