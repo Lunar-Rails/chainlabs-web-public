@@ -102,26 +102,26 @@ export default function HomePage() {
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-            <div className="bg-white/10 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:bg-white/15 transition-all">
+            <div className="bg-gradient-to-br from-[#001641]/40 to-[#002a70]/30 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:from-[#001641]/50 hover:to-[#002a70]/40 transition-all text-center">
               <div className="text-5xl font-semibold text-white mb-3" style={{ lineHeight: '110%' }}>4/4</div>
               <p className="text-gray-300 leading-relaxed">
                 of the top 4 blockchain analytics firms use Chainlabs
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:bg-white/15 transition-all">
+            <div className="bg-gradient-to-br from-[#001641]/40 to-[#002a70]/30 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:from-[#001641]/50 hover:to-[#002a70]/40 transition-all text-center">
               <div className="text-5xl font-semibold text-white mb-3" style={{ lineHeight: '110%' }}>Global</div>
               <p className="text-gray-300 leading-relaxed">
                 Our intelligence operative network spans the globe, 24/7
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:bg-white/15 transition-all">
-              <div className="text-5xl font-semibold text-white mb-3" style={{ lineHeight: '110%' }}>25+</div>
+            <div className="bg-gradient-to-br from-[#001641]/40 to-[#002a70]/30 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:from-[#001641]/50 hover:to-[#002a70]/40 transition-all text-center">
+              <div className="text-5xl font-semibold text-white mb-3" style={{ lineHeight: '110%' }}>70+</div>
               <p className="text-gray-300 leading-relaxed">
-                Our labels cover the top chains and we are adding more
+                We labels over 70 different categories and are adding more
               </p>
             </div>
           </div>
