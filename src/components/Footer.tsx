@@ -14,13 +14,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex items-center gap-1">
-                <div className="w-2 h-2 rounded-full bg-[#FF8A00]"></div>
-                <div className="w-2 h-2 rounded-full bg-[#FF8A00]"></div>
-                <div className="w-2 h-2 rounded-full bg-[#FF8A00]"></div>
-              </div>
-              <span className="text-white text-xl font-semibold">chainlabs</span>
+            <div className="mb-4">
+              <img src="/Cl Logo 2 Inverted.svg" alt="Chainlabs" className="h-8" />
             </div>
             <p className="text-sm text-gray-400 mb-6">
               Blockchain Intelligence & Wallet Labeling
