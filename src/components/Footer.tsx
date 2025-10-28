@@ -26,9 +26,9 @@ export default function Footer() {
               Blockchain Intelligence & Wallet Labeling
             </p>
             <div className="text-sm text-gray-400 mb-6">
-              123 Blockchain Avenue<br />
-              San Francisco, CA 94102<br />
-              United States
+              160 Robinson Road<br />
+              14-04 SBF Center,<br />
+              068914, Singapore
             </div>
 
             <div className="flex gap-4">
