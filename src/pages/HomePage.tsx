@@ -67,37 +67,26 @@ export default function HomePage() {
       </section>
 
       <section className="bg-[#001641] py-32 lg:py-40 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.12] pointer-events-none">
-          <WorldMapNetwork />
-        </div>
-
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <h2 className="text-4xl font-semibold text-white text-center mb-20" style={{ lineHeight: '110%' }}>
             Used by Industry Leaders
           </h2>
-        </div>
 
-        <div className="mb-24 overflow-hidden relative w-full">
-            <div className="flex animate-marquee-faster whitespace-nowrap gap-[100px]">
-              <img src="/coinbase white logo@3x.png" alt="Coinbase" className="h-10 object-contain shrink-0" />
-              <img src="/elementus-white.png" alt="Elementus" className="h-10 object-contain shrink-0" />
-              <img src="/lookintobitcoin white logo.png" alt="LookIntoBitcoin" className="h-10 object-contain shrink-0" />
-              <img src="/santiment white logo@3x.png" alt="Santiment" className="h-10 object-contain shrink-0" />
-              <img src="/trm white logo@3x.png" alt="TRM" className="h-10 object-contain shrink-0" />
-              <img src="/scorechain logo@3x.png" alt="Scorechain" className="h-10 object-contain shrink-0" />
-              <img src="/upsalla white logo@3x.png" alt="Upsalla" className="h-10 object-contain shrink-0" />
-              <img src="/merkle white logo@3x.png" alt="Merkle" className="h-10 object-contain shrink-0" />
-              <img src="/iknaio white logo@3x.png" alt="Iknaio" className="h-10 object-contain shrink-0" />
-              <img src="/coinbase white logo@3x.png" alt="Coinbase" className="h-10 object-contain shrink-0" />
-              <img src="/elementus-white.png" alt="Elementus" className="h-10 object-contain shrink-0" />
-              <img src="/lookintobitcoin white logo.png" alt="LookIntoBitcoin" className="h-10 object-contain shrink-0" />
-              <img src="/santiment white logo@3x.png" alt="Santiment" className="h-10 object-contain shrink-0" />
-              <img src="/trm white logo@3x.png" alt="TRM" className="h-10 object-contain shrink-0" />
-              <img src="/scorechain logo@3x.png" alt="Scorechain" className="h-10 object-contain shrink-0" />
-              <img src="/upsalla white logo@3x.png" alt="Upsalla" className="h-10 object-contain shrink-0" />
-              <img src="/merkle white logo@3x.png" alt="Merkle" className="h-10 object-contain shrink-0" />
-              <img src="/iknaio white logo@3x.png" alt="Iknaio" className="h-10 object-contain shrink-0" />
+          <div className="mb-24 flex flex-col gap-12">
+            <div className="flex justify-center items-center gap-16 flex-wrap">
+              <img src="/coinbase white logo@3x.png" alt="Coinbase" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/elementus-white.png" alt="Elementus" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/lookintobitcoin white logo.png" alt="LookIntoBitcoin" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/santiment white logo@3x.png" alt="Santiment" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/trm white logo@3x.png" alt="TRM" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
             </div>
+            <div className="flex justify-center items-center gap-16 flex-wrap">
+              <img src="/scorechain logo@3x.png" alt="Scorechain" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/upsalla white logo@3x.png" alt="Upsalla" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/merkle white logo@3x.png" alt="Merkle" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/iknaio white logo@3x.png" alt="Iknaio" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+            </div>
+          </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
