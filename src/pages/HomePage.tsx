@@ -68,7 +68,7 @@ export default function HomePage() {
 
       <section className="bg-[#001641] py-32 lg:py-40 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <h2 className="text-4xl font-semibold text-white text-center mb-20" style={{ lineHeight: '110%' }}>
+          <h2 className="text-2xl font-semibold text-white text-center mb-20" style={{ lineHeight: '110%' }}>
             Used by Industry Leaders
           </h2>
 
