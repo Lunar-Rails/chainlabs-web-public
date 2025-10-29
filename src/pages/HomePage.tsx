@@ -91,14 +91,7 @@ export default function HomePage() {
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-            <div className="bg-gradient-to-br from-[#001641]/40 to-[#002a70]/30 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:from-[#001641]/50 hover:to-[#002a70]/40 transition-all text-center">
-              <div className="text-5xl font-semibold text-white mb-3" style={{ lineHeight: '110%' }}>2018</div>
-              <p className="text-gray-300 leading-relaxed">
-                Founded
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
             <div className="bg-gradient-to-br from-[#001641]/40 to-[#002a70]/30 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:from-[#001641]/50 hover:to-[#002a70]/40 transition-all text-center">
               <div className="text-5xl font-semibold text-white mb-3" style={{ lineHeight: '110%' }}>4/4</div>

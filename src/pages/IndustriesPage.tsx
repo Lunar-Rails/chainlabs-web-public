@@ -157,7 +157,7 @@ export default function IndustriesPage() {
               </div>
 
               <div className="bg-white p-8 rounded-xl shadow-sm">
-                <div className="text-4xl font-semibold text-[#001641] mb-3" style={{ lineHeight: '110%' }}>30+</div>
+                <div className="text-4xl font-semibold text-[#001641] mb-3" style={{ lineHeight: '110%' }}>25+</div>
                 <p className="text-gray-600">
                   Blockchain networks covered
                 </p>
