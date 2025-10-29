@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowRight, Linkedin, MapPin, Phone } from 'lucide-react';
+import { ArrowRight, Linkedin } from 'lucide-react';
 import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(
@@ -24,24 +24,9 @@ interface AffiliatedCompany {
   display_order: number;
 }
 
-interface ContactFormData {
-  name: string;
-  email: string;
-  company: string;
-  message: string;
-}
-
 export default function CompanyPage() {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
   const [affiliatedCompanies, setAffiliatedCompanies] = useState<AffiliatedCompany[]>([]);
-  const [formData, setFormData] = useState<ContactFormData>({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   useEffect(() => {
     fetchTeamMembers();
@@ -68,30 +53,6 @@ export default function CompanyPage() {
     if (!error && data) {
       setAffiliatedCompanies(data);
     }
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    const { error } = await supabase
-      .from('contact_submissions')
-      .insert([formData]);
-
-    if (error) {
-      setSubmitStatus('error');
-    } else {
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', company: '', message: '' });
-    }
-
-    setIsSubmitting(false);
   };
 
   return (
@@ -234,133 +195,6 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      <section className="max-w-4xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
-        <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] text-center mb-6" style={{ lineHeight: '110%' }}>
-          Get in Touch
-        </h2>
-        <p className="text-xl text-gray-600 text-center mb-12 leading-relaxed">
-          Have questions about our services? Want to request a sample? We'd love to hear from you.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-          <div>
-            <h3 className="text-xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
-              Contact Information
-            </h3>
-
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#001641] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="text-[#001641]" size={20} />
-                </div>
-                <div>
-                  <p className="font-medium text-[#001641]">Phone</p>
-                  <a href="tel:+14155551234" className="text-gray-600 hover:text-[#FF8A00] transition-colors">
-                    +1 (415) 555-1234
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#001641] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="text-[#001641]" size={20} />
-                </div>
-                <div>
-                  <p className="font-medium text-[#001641]">Office</p>
-                  <p className="text-gray-600">
-                    123 Blockchain Avenue<br />
-                    San Francisco, CA 94102<br />
-                    United States
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
-              Send us a Message
-            </h3>
-
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-[#001641] mb-2">
-                  Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-[#001641] mb-2">
-                  Email *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="company" className="block text-sm font-medium text-[#001641] mb-2">
-                  Company
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-[#001641] mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent resize-none"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </button>
-
-              {submitStatus === 'success' && (
-                <p className="text-green-600 text-center">Message sent successfully! We'll get back to you soon.</p>
-              )}
-
-              {submitStatus === 'error' && (
-                <p className="text-red-600 text-center">Failed to send message. Please try again.</p>
-              )}
-            </form>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
