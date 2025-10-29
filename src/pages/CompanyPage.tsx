@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowRight, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { ArrowRight, Linkedin, MapPin, Phone } from 'lucide-react';
 import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(
@@ -249,18 +249,6 @@ export default function CompanyPage() {
             </h3>
 
             <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#001641] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail className="text-[#001641]" size={20} />
-                </div>
-                <div>
-                  <p className="font-medium text-[#001641]">Email</p>
-                  <a href="mailto:hello@chainlabs.com" className="text-gray-600 hover:text-[#FF8A00] transition-colors">
-                    hello@chainlabs.com
-                  </a>
-                </div>
-              </div>
-
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-[#001641] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Phone className="text-[#001641]" size={20} />
