@@ -1,7 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
-type Page = 'home' | 'insights' | 'solutions' | 'industries' | 'company';
+type Page = 'home' | 'insights' | 'solutions' | 'industries' | 'company' | 'requestSample';
 
 interface NavigationProps {
   currentPage: Page;
@@ -46,7 +46,10 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
           </div>
 
           <div className="hidden md:flex items-center">
-            <button className="bg-[#001641] text-white px-6 h-[48px] rounded-full text-sm font-semibold hover:bg-[#002255] transition-colors">
+            <button
+              onClick={() => onNavigate('requestSample')}
+              className="bg-[#001641] text-white px-6 h-[48px] rounded-full text-sm font-semibold hover:bg-[#002255] transition-colors"
+            >
               Request a Sample
             </button>
           </div>
@@ -79,7 +82,13 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
                 {item.label}
               </button>
             ))}
-            <button className="w-full bg-[#001641] text-white px-6 h-[48px] rounded-full text-sm font-semibold">
+            <button
+              onClick={() => {
+                onNavigate('requestSample');
+                setMobileMenuOpen(false);
+              }}
+              className="w-full bg-[#001641] text-white px-6 h-[48px] rounded-full text-sm font-semibold"
+            >
               Request a Sample
             </button>
           </div>

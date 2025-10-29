@@ -4,10 +4,11 @@ import CompanyPage from './pages/CompanyPage';
 import SolutionsPage from './pages/SolutionsPage';
 import IndustriesPage from './pages/IndustriesPage';
 import InsightsPage from './pages/InsightsPage';
+import RequestSamplePage from './pages/RequestSamplePage';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
-type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights';
+type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -24,6 +25,8 @@ function App() {
         return <IndustriesPage />;
       case 'insights':
         return <InsightsPage />;
+      case 'requestSample':
+        return <RequestSamplePage />;
       default:
         return <HomePage />;
     }
