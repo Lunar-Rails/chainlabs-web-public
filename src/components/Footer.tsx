@@ -2,10 +2,10 @@ import { Linkedin, Youtube, Send } from 'lucide-react';
 
 export default function Footer() {
   const footerLinks = [
-    { label: 'The Company', href: '#' },
     { label: 'Solutions', href: '#' },
     { label: 'Industries', href: '#' },
     { label: 'Insights', href: '#' },
+    { label: 'The Company', href: '#' },
     { label: 'Contact', href: '#' },
   ];
 
