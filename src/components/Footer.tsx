@@ -1,4 +1,4 @@
-import { Linkedin, Youtube, Send } from 'lucide-react';
+import { Linkedin, Youtube, Send, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
   const footerLinks = [
@@ -20,11 +20,56 @@ export default function Footer() {
             <p className="text-sm text-gray-400 mb-6">
               Blockchain Intelligence & Wallet Labeling
             </p>
-            <div className="text-sm text-gray-400 mb-6">
-              160 Robinson Road<br />
-              14-04 SBF Center,<br />
-              068914, Singapore
+
+            <div className="space-y-4 mb-6">
+              <div className="flex items-start gap-3">
+                <Phone size={16} className="text-gray-400 mt-0.5 flex-shrink-0" />
+                <a href="tel:+14155551234" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  +1 (415) 555-1234
+                </a>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <MapPin size={16} className="text-gray-400 mt-0.5 flex-shrink-0" />
+                <div className="text-sm text-gray-400">
+                  160 Robinson Road<br />
+                  14-04 SBF Center,<br />
+                  068914, Singapore
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">Navigation</h4>
+            <ul className="space-y-3">
+              {footerLinks.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">Legal</h4>
+            <ul className="space-y-3 mb-6">
+              <li>
+                <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  Terms and Conditions
+                </a>
+              </li>
+            </ul>
 
             <div className="flex gap-4">
               <a
@@ -55,38 +100,6 @@ export default function Footer() {
                 <Youtube size={18} className="text-white" />
               </a>
             </div>
-          </div>
-
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Navigation</h4>
-            <ul className="space-y-3">
-              {footerLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Legal</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
-                  Terms and Conditions
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
 
