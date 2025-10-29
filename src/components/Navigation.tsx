@@ -12,10 +12,10 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'company' as Page, label: 'Company' },
     { id: 'solutions' as Page, label: 'Solutions' },
     { id: 'industries' as Page, label: 'Industries' },
     { id: 'insights' as Page, label: 'Insights' },
+    { id: 'company' as Page, label: 'Company' },
   ];
 
   return (
