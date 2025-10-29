@@ -222,6 +222,15 @@ export default function CompanyPage() {
             We're always looking for talented individuals who share our passion for blockchain intelligence and security. Join us in building the future of decentralized trust.
           </p>
 
+          <a
+            href="https://chainlabs.notion.site/Chainlabs-Recruiting-7a36a5df1e5347d096542f868bd5e72e"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2"
+          >
+            View All Openings
+            <ArrowRight size={20} />
+          </a>
         </div>
       </section>
 
