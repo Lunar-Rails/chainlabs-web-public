@@ -5,7 +5,7 @@ export default function Footer() {
     { label: 'Solutions', href: '#' },
     { label: 'Industries', href: '#' },
     { label: 'Insights', href: '#' },
-    { label: 'The Company', href: '#' },
+    { label: 'Company', href: '#' },
     { label: 'Contact', href: '#' },
   ];
 
