@@ -461,7 +461,7 @@ export default function RequestSamplePage() {
 
               <div>
                 <label htmlFor="customMessage" className="block text-sm font-medium text-gray-700 mb-2">
-                  Help us customize your demo—tell us about your team and goals with Chainalysis. *
+                  Help us customize your demo—tell us about your team and goals with Chainlabs. *
                 </label>
                 <textarea
                   id="customMessage"
@@ -483,10 +483,10 @@ export default function RequestSamplePage() {
                   className="mt-1 w-4 h-4 text-[#FF8A00] border-gray-300 rounded focus:ring-[#FF8A00]"
                 />
                 <label htmlFor="consentGiven" className="text-sm text-gray-600 leading-relaxed">
-                  By checking this box, you indicate that you'd like us to send you information on Chainalysis
+                  By checking this box, you indicate that you'd like us to send you information on Chainlabs
                   products, services, events, and news. Your personal data will be handled in accordance with the{' '}
                   <a href="#" className="text-[#FF8A00] hover:underline">
-                    Chainalysis privacy policy
+                    Chainlabs privacy policy
                   </a>
                   .
                 </label>
