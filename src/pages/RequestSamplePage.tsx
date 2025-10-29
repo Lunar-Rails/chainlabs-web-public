@@ -220,8 +220,8 @@ export default function RequestSamplePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-          <div className="flex flex-col justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          <div className="flex flex-col justify-start lg:pt-10">
             <h1 className="text-4xl lg:text-5xl font-semibold text-[#001641] mb-8" style={{ lineHeight: '110%' }}>
               Ready to see what blockchain solution is right for you?
             </h1>
