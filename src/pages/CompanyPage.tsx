@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowRight, Linkedin } from 'lucide-react';
+import { ArrowRight, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(
@@ -242,8 +242,59 @@ export default function CompanyPage() {
           Have questions about our services? Want to request a sample? We'd love to hear from you.
         </p>
 
-        <div className="max-w-xl mx-auto">
-          <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+          <div>
+            <h3 className="text-xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
+              Contact Information
+            </h3>
+
+            <div className="space-y-4">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#001641] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="text-[#001641]" size={20} />
+                </div>
+                <div>
+                  <p className="font-medium text-[#001641]">Email</p>
+                  <a href="mailto:hello@chainlabs.com" className="text-gray-600 hover:text-[#FF8A00] transition-colors">
+                    hello@chainlabs.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#001641] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Phone className="text-[#001641]" size={20} />
+                </div>
+                <div>
+                  <p className="font-medium text-[#001641]">Phone</p>
+                  <a href="tel:+14155551234" className="text-gray-600 hover:text-[#FF8A00] transition-colors">
+                    +1 (415) 555-1234
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#001641] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="text-[#001641]" size={20} />
+                </div>
+                <div>
+                  <p className="font-medium text-[#001641]">Office</p>
+                  <p className="text-gray-600">
+                    123 Blockchain Avenue<br />
+                    San Francisco, CA 94102<br />
+                    United States
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
+              Send us a Message
+            </h3>
+
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-[#001641] mb-2">
                   Name *
@@ -319,6 +370,7 @@ export default function CompanyPage() {
                 <p className="text-red-600 text-center">Failed to send message. Please try again.</p>
               )}
             </form>
+          </div>
         </div>
       </section>
     </div>
