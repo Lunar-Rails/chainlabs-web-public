@@ -123,22 +123,18 @@ export default function CompanyPage() {
               We believe in quality over quantity, transparency over opacity, and collaboration over competition. Our mission is to make blockchain technology safer and more accessible for everyone.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <div className="text-4xl font-semibold text-[#001641] mb-2" style={{ lineHeight: '110%' }}>2018</div>
-              <p className="text-gray-600">Founded</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-[#001641] p-8 rounded-xl border border-white/10">
+              <div className="text-4xl font-semibold text-white mb-2" style={{ lineHeight: '110%' }}>4/4</div>
+              <p className="text-gray-300 leading-relaxed">of the top 4 blockchain analytics firms use Chainlabs</p>
             </div>
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <div className="text-4xl font-semibold text-[#001641] mb-2" style={{ lineHeight: '110%' }}>90%</div>
-              <p className="text-gray-600">Market Coverage</p>
+            <div className="bg-[#001641] p-8 rounded-xl border border-white/10">
+              <div className="text-4xl font-semibold text-white mb-2" style={{ lineHeight: '110%' }}>Global</div>
+              <p className="text-gray-300 leading-relaxed">Our intelligence operative network spans the globe, 24/7</p>
             </div>
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <div className="text-4xl font-semibold text-[#001641] mb-2" style={{ lineHeight: '110%' }}>25+</div>
-              <p className="text-gray-600">Chains Supported</p>
-            </div>
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <div className="text-4xl font-semibold text-[#001641] mb-2" style={{ lineHeight: '110%' }}>Global</div>
-              <p className="text-gray-600">Intelligence Network</p>
+            <div className="bg-[#001641] p-8 rounded-xl border border-white/10">
+              <div className="text-4xl font-semibold text-white mb-2" style={{ lineHeight: '110%' }}>70+</div>
+              <p className="text-gray-300 leading-relaxed">We labels over 70 different categories and are adding more</p>
             </div>
           </div>
         </div>
