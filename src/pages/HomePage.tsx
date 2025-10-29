@@ -61,7 +61,7 @@ export default function HomePage() {
               <ArrowRight size={20} />
             </button>
           </div>
-          <div className="hidden lg:block h-[700px]">
+          <div className="hidden lg:block h-[600px]">
             <NetworkVisualization />
           </div>
         </div>
