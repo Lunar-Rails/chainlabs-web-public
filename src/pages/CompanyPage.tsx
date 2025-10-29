@@ -172,10 +172,10 @@ export default function CompanyPage() {
 
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
         <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] text-center mb-6" style={{ lineHeight: '110%' }}>
-          Meet Our Team
+          Meet Our Leaders
         </h2>
         <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-16 leading-relaxed">
-          A diverse group of experts passionate about blockchain transparency and security
+          A diverse group of 50+ blockchain experts, spanning the globe and passionate about making blokchains transparent.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
