@@ -267,8 +267,8 @@ export default function CompanyPage() {
                 </div>
                 <div>
                   <p className="font-medium text-[#001641]">Phone</p>
-                  <a href="tel:+14155551234" className="text-gray-600 hover:text-[#FF8A00] transition-colors">
-                    +1 (415) 555-1234
+                  <a href="tel:+16282369769" className="text-gray-600 hover:text-[#FF8A00] transition-colors">
+                    +1 (628) 236 9769
                   </a>
                 </div>
               </div>
@@ -280,9 +280,9 @@ export default function CompanyPage() {
                 <div>
                   <p className="font-medium text-[#001641]">Office</p>
                   <p className="text-gray-600">
-                    123 Blockchain Avenue<br />
-                    San Francisco, CA 94102<br />
-                    United States
+                    160 Robinson Road<br />
+                    14-04 SBF Center, 068914<br />
+                    Singapore
                   </p>
                 </div>
               </div>
