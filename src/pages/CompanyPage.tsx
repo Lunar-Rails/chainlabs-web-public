@@ -222,52 +222,6 @@ export default function CompanyPage() {
             We're always looking for talented individuals who share our passion for blockchain intelligence and security. Join us in building the future of decentralized trust.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 text-left">
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/15 transition-all">
-              <h3 className="text-xl font-semibold text-white mb-2" style={{ lineHeight: '110%' }}>
-                Senior Blockchain Analyst
-              </h3>
-              <p className="text-gray-300 mb-4">Intelligence Operations · Remote</p>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                Lead investigations and develop new methodologies for identifying wallet clusters across multiple blockchains.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/15 transition-all">
-              <h3 className="text-xl font-semibold text-white mb-2" style={{ lineHeight: '110%' }}>
-                Data Scientist
-              </h3>
-              <p className="text-gray-300 mb-4">Research & Development · San Francisco or Remote</p>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                Build machine learning models for entity resolution and develop advanced algorithms for blockchain analysis.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/15 transition-all">
-              <h3 className="text-xl font-semibold text-white mb-2" style={{ lineHeight: '110%' }}>
-                Full Stack Engineer
-              </h3>
-              <p className="text-gray-300 mb-4">Engineering · Remote</p>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                Design and build scalable systems for processing and delivering blockchain intelligence to our clients.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/15 transition-all">
-              <h3 className="text-xl font-semibold text-white mb-2" style={{ lineHeight: '110%' }}>
-                Client Success Manager
-              </h3>
-              <p className="text-gray-300 mb-4">Client Success · New York or Remote</p>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                Partner with enterprise clients to ensure they get maximum value from our blockchain intelligence platform.
-              </p>
-            </div>
-          </div>
-
-          <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
-            View All Openings
-            <ArrowRight size={20} />
-          </button>
         </div>
       </section>
 
