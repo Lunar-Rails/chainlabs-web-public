@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ArrowRight, Plus, Minus } from 'lucide-react';
-import { HeroLineArt, DataVisualizationChart, HexagonalDiagram, WorldMapNetwork } from '../components/LineArt';
+import { DataVisualizationChart, HexagonalDiagram } from '../components/LineArt';
+import NetworkVisualization from '../components/NetworkVisualization';
 
 export default function HomePage() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -60,8 +61,8 @@ export default function HomePage() {
               <ArrowRight size={20} />
             </button>
           </div>
-          <div className="hidden lg:block">
-            <HeroLineArt />
+          <div className="hidden lg:block h-[600px]">
+            <NetworkVisualization />
           </div>
         </div>
       </section>
