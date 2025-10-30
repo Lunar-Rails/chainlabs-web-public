@@ -22,7 +22,7 @@ function App() {
       case 'solutions':
         return <SolutionsPage />;
       case 'industries':
-        return <IndustriesPage />;
+        return <IndustriesPage onNavigate={setCurrentPage} />;
       case 'insights':
         return <InsightsPage />;
       case 'requestSample':

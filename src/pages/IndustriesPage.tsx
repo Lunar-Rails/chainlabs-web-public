@@ -1,7 +1,13 @@
 import { ArrowRight } from 'lucide-react';
 import { ComplianceIcon, LawEnforcementIcon } from '../components/LineArt';
 
-export default function IndustriesPage() {
+type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample';
+
+interface IndustriesPageProps {
+  onNavigate?: (page: Page) => void;
+}
+
+export default function IndustriesPage({ onNavigate }: IndustriesPageProps) {
   return (
     <div className="bg-white">
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
@@ -60,7 +66,10 @@ export default function IndustriesPage() {
                   </span>
                 </li>
               </ul>
-              <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+              <button
+                onClick={() => onNavigate?.('requestSample')}
+                className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2"
+              >
                 Request a sample
                 <ArrowRight size={20} />
               </button>
@@ -121,7 +130,10 @@ export default function IndustriesPage() {
                   </span>
                 </li>
               </ul>
-              <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+              <button
+                onClick={() => onNavigate?.('requestSample')}
+                className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2"
+              >
                 Contact our team
                 <ArrowRight size={20} />
               </button>
@@ -183,7 +195,10 @@ export default function IndustriesPage() {
             Request a sample of our wallet label dataset and see the Chainlabs difference
             for yourself. No commitment required.
           </p>
-          <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+          <button
+            onClick={() => onNavigate?.('requestSample')}
+            className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2"
+          >
             Request a sample
             <ArrowRight size={20} />
           </button>
