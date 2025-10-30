@@ -1,5 +1,23 @@
 import { useEffect, useRef } from 'react';
 
+interface Node {
+  name: string;
+  theta: number;
+  phi: number;
+  baseRadius: number;
+  depthBias: number;
+  el: HTMLDivElement;
+  x: number;
+  y: number;
+  z: number;
+  v0: [number, number, number];
+}
+
+interface RotationGroup {
+  axis: [number, number, number];
+  speed: number;
+}
+
 export default function NetworkVisualization() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const labelsRef = useRef<HTMLDivElement>(null);
@@ -16,15 +34,6 @@ export default function NetworkVisualization() {
     };
 
     const LABELS = Object.keys(CATEGORY_MAP);
-
-    const VARIANT = {
-      offset: 18,
-      activeOffset: 26,
-      scaleMin: 0.88,
-      scaleMax: 1.10,
-      alphaMin: 0.60,
-      alphaMax: 1.0
-    };
 
     const canvas = canvasRef.current;
     const labelsLayer = labelsRef.current;
@@ -50,31 +59,23 @@ export default function NetworkVisualization() {
     window.addEventListener('resize', resize);
     resize();
 
-    interface Node {
-      theta: number;
-      phi: number;
-      el: HTMLDivElement;
-      name: string;
-      x: number;
-      y: number;
-      z: number;
-    }
-
     const nodes: Node[] = [];
-
-    function spherePoint() {
-      const u = Math.random(), v = Math.random();
-      const theta = 2 * Math.PI * u, phi = Math.acos(2 * v - 1);
-      return { theta, phi };
-    }
+    const rand = () => Math.random();
 
     for (let i = 0; i < LABELS.length; i++) {
       const name = LABELS[i];
-      const s = spherePoint();
+      const u = rand(), v = rand();
+      const theta = 2 * Math.PI * u;
+      const phi = Math.acos(2 * v - 1);
+      const depthBias = (rand() * 2 - 1);
+      const radiusVar = 1 + depthBias * 0.35;
+      const clamped = Math.max(0.45, Math.min(1.35, radiusVar));
+
       const el = document.createElement('div');
-      el.className = 'absolute px-3 py-1.5 text-xs rounded-full bg-white border border-gray-200 text-[#001641] shadow-md whitespace-nowrap transition-all';
+      el.className = 'absolute px-3 py-1.5 pl-[22px] text-[13px] leading-none rounded-full bg-white border border-[#E3E8EF] text-[#0A1630] whitespace-nowrap transition-all';
+      el.style.boxShadow = '0 2px 5px rgba(30,58,138,0.12)';
       el.setAttribute('data-cat', CATEGORY_MAP[name] || '');
-      el.innerHTML = '<span class="inline-block w-2 h-2 rounded-full mr-2 -ml-1 shadow-sm"></span>' + name;
+      el.innerHTML = '<span class="absolute left-[8px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full shadow-sm"></span>' + name;
 
       const dot = el.querySelector('span') as HTMLSpanElement;
       const cat = CATEGORY_MAP[name];
@@ -86,13 +87,42 @@ export default function NetworkVisualization() {
       else if (cat === 'Infra/Bridge') dot.style.background = '#A3A8B3';
 
       labelsLayer.appendChild(el);
-      nodes.push({ theta: s.theta, phi: s.phi, el, name, x: 0, y: 0, z: 0 });
+
+      nodes.push({
+        name, theta, phi,
+        baseRadius: clamped,
+        depthBias,
+        el,
+        x: 0, y: 0, z: 0,
+        v0: [0, 0, 0]
+      });
     }
+
+    const groups: Record<string, RotationGroup> = {
+      "CEX": { axis: [0, 1, 0], speed: 0.35 * 0.7 },
+      "DEX/DeFi": { axis: [0, 0.8, 0.2], speed: -0.30 * 0.7 },
+      "Privacy/Mixers": { axis: [0.3, 0.9, 0], speed: 0.28 * 0.7 },
+      "Risk/Illicit": { axis: [0, 0.7, -0.3], speed: -0.26 * 0.7 },
+      "OTC/P2P": { axis: [0.2, 1, 0.2], speed: 0.22 * 0.7 },
+      "Infra/Bridge": { axis: [0.4, 0.8, -0.2], speed: -0.20 * 0.7 }
+    };
+
+    Object.values(groups).forEach(g => {
+      const [x, y, z] = g.axis;
+      const len = Math.hypot(x, y, z) || 1;
+      g.axis = [x / len, y / len, z / len];
+    });
+
+    nodes.forEach(n => {
+      const x = Math.sin(n.phi) * Math.cos(n.theta) * n.baseRadius;
+      const y = Math.sin(n.phi) * Math.sin(n.theta) * n.baseRadius;
+      const z = Math.cos(n.phi) * (n.baseRadius + n.depthBias * 0.25);
+      n.v0 = [x, y, z];
+    });
 
     const edges: [number, number][] = [];
 
     function connect() {
-      edges.length = 0;
       const dist = 0.9, maxConn = 6;
       for (let i = 0; i < nodes.length; i++) {
         let c = 0;
@@ -105,15 +135,8 @@ export default function NetworkVisualization() {
     }
     connect();
 
-    function project(nx: number, ny: number, nz: number) {
-      const scale = R * (0.6 + 0.4 * (nz + 1) / 2);
-      const x = CX + nx * scale;
-      const y = CY + ny * scale * 0.7;
-      return { x, y, scale };
-    }
-
-    let rotY = 0, targetRotY = 0, auto = 0.0035, active = -1;
-    let dragging = false, lastX = 0;
+    let active = -1;
+    let dragging = false, lastX = 0, globalDrift = 0;
 
     function onDown(e: MouseEvent | TouchEvent) {
       dragging = true;
@@ -125,7 +148,7 @@ export default function NetworkVisualization() {
       const x = 'touches' in e ? e.touches[0].clientX : e.clientX;
       const dx = x - lastX;
       lastX = x;
-      targetRotY += dx * 0.0025;
+      globalDrift += dx * 0.0025 * 0.7;
     }
 
     function onUp() {
@@ -139,26 +162,47 @@ export default function NetworkVisualization() {
     window.addEventListener('touchmove', onMove as any);
     window.addEventListener('touchend', onUp);
 
+    function rotVec(v: [number, number, number], axis: [number, number, number], angle: number): [number, number, number] {
+      const [ux, uy, uz] = axis;
+      const [x, y, z] = v;
+      const c = Math.cos(angle), s = Math.sin(angle);
+      const cross: [number, number, number] = [uy * z - uz * y, uz * x - ux * z, ux * y - uy * x];
+      const dot = ux * x + uy * y + uz * z;
+      return [
+        x * c + cross[0] * s + ux * dot * (1 - c),
+        y * c + cross[1] * s + uy * dot * (1 - c),
+        z * c + cross[2] * s + uz * dot * (1 - c)
+      ];
+    }
+
+    function project(nx: number, ny: number, nz: number) {
+      const scale = R * (0.6 + 0.4 * (nz + 1) / 2);
+      const x = CX + nx * scale;
+      const y = CY + ny * scale * 0.7;
+      return { x, y, scale };
+    }
+
     function lerp(a: number, b: number, t: number) {
       return a + (b - a) * t;
     }
 
     let animationId: number;
 
-    function animate() {
+    function animate(t?: number) {
       animationId = requestAnimationFrame(animate);
       if (!ctx) return;
 
-      rotY += (targetRotY - rotY) * 0.08;
-      targetRotY += auto;
+      const time = (t || 0) / 1000;
 
       for (let n of nodes) {
-        let x = Math.sin(n.phi) * Math.cos(n.theta);
-        let y = Math.sin(n.phi) * Math.sin(n.theta);
-        let z = Math.cos(n.phi);
-        const cos = Math.cos(rotY), sin = Math.sin(rotY);
-        const rx = x * cos + z * sin, rz = -x * sin + z * cos;
-        n.x = rx; n.y = y; n.z = rz;
+        const cat = CATEGORY_MAP[n.name] || "CEX";
+        const g = groups[cat];
+        const angle = g.speed * time + globalDrift * 0.75 * (g.speed > 0 ? 1 : -1);
+        const v = rotVec(n.v0, g.axis, angle);
+        const breath = 1 + Math.sin(time * 0.8 + n.v0[1] * 3) * 0.12;
+        n.x = v[0] * breath;
+        n.y = v[1] * breath;
+        n.z = v[2] * (1.05 + Math.sin(time * 0.5 + v[0] * 2) * 0.12);
       }
 
       ctx.clearRect(0, 0, W, H);
@@ -167,7 +211,7 @@ export default function NetworkVisualization() {
       for (const [i, j] of edges) {
         const A = nodes[i], B = nodes[j];
         const pa = project(A.x, A.y, A.z), pb = project(B.x, B.y, B.z);
-        const alpha = 0.18 + 0.28 * Math.min(pa.scale, pb.scale) / R;
+        const alpha = 0.16 + 0.32 * Math.min(pa.scale, pb.scale) / R;
         ctx.globalAlpha = alpha;
         ctx.lineWidth = Math.max(1, 1.4 * Math.min(pa.scale, pb.scale) / R);
         ctx.strokeStyle = (i === active || j === active) ? '#1E3A8A' : '#D4DAE2';
@@ -189,21 +233,23 @@ export default function NetworkVisualization() {
         ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
         ctx.fill();
 
-        const offset = (i === active) ? VARIANT.activeOffset : VARIANT.offset;
-        const scaleZ = lerp(VARIANT.scaleMin, VARIANT.scaleMax, (n.z + 1) / 2);
-        const opacityZ = lerp(VARIANT.alphaMin, VARIANT.alphaMax, (n.z + 1) / 2);
+        const scaleZ = lerp(0.60, 1.25, (n.z + 1) / 2);
+        const alphaZ = lerp(0.35, 1.00, (n.z + 1) / 2);
+        const offset = (i === active) ? 28 : 19;
 
         const el = n.el;
         el.style.left = (p.x / window.devicePixelRatio + n.x * offset) + "px";
         el.style.top = (p.y / window.devicePixelRatio + n.y * offset) + "px";
         el.style.transform = "translate(-50%,-50%) scale(" + scaleZ.toFixed(3) + ")";
-        el.style.opacity = opacityZ.toFixed(3);
+        el.style.opacity = alphaZ.toFixed(3);
         el.style.zIndex = (1000 + Math.floor((n.z + 1) * 1000)).toString();
 
         if (i === active) {
-          el.classList.add('!bg-slate-50', '!border-blue-900');
+          el.style.background = '#F8FAFC';
+          el.style.borderColor = '#1E3A8A';
         } else {
-          el.classList.remove('!bg-slate-50', '!border-blue-900');
+          el.style.background = '#FFFFFF';
+          el.style.borderColor = '#E3E8EF';
         }
       }
     }
@@ -216,7 +262,8 @@ export default function NetworkVisualization() {
       const y = ('touches' in e ? e.touches[0].clientY : e.clientY) - rect.top;
       let best = -1, bestD = 1e9;
       nodes.forEach((n, i) => {
-        const bx = parseFloat(n.el.style.left) || 0, by = parseFloat(n.el.style.top) || 0;
+        const bx = parseFloat(n.el.style.left) || 0;
+        const by = parseFloat(n.el.style.top) || 0;
         const dx = bx - x, dy = by - y;
         const d = dx * dx + dy * dy;
         if (d < bestD) { bestD = d; best = i; }
