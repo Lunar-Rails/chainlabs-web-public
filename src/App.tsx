@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import HomePage from './pages/HomePage';
 import CompanyPage from './pages/CompanyPage';
 import SolutionsPage from './pages/SolutionsPage';
@@ -15,16 +15,25 @@ type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requ
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
 
+  const handleNavigate = (page: Page) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [currentPage]);
+
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <HomePage onNavigate={setCurrentPage} />;
+        return <HomePage onNavigate={handleNavigate} />;
       case 'company':
         return <CompanyPage />;
       case 'solutions':
         return <SolutionsPage />;
       case 'industries':
-        return <IndustriesPage onNavigate={setCurrentPage} />;
+        return <IndustriesPage onNavigate={handleNavigate} />;
       case 'insights':
         return <InsightsPage />;
       case 'requestSample':
@@ -34,15 +43,15 @@ function App() {
       case 'terms':
         return <TermsPage />;
       default:
-        return <HomePage onNavigate={setCurrentPage} />;
+        return <HomePage onNavigate={handleNavigate} />;
     }
   };
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
+      <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
       {renderPage()}
-      <Footer onNavigate={setCurrentPage} />
+      <Footer onNavigate={handleNavigate} />
     </div>
   );
 }

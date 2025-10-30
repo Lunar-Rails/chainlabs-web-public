@@ -7,12 +7,12 @@ interface FooterProps {
 }
 
 export default function Footer({ onNavigate }: FooterProps) {
-  const footerLinks = [
-    { label: 'Solutions', href: '#' },
-    { label: 'Industries', href: '#' },
-    { label: 'Insights', href: '#' },
-    { label: 'Company', href: '#' },
-    { label: 'Contact', href: '#' },
+  const footerLinks: { label: string; page: Page }[] = [
+    { label: 'Solutions', page: 'solutions' },
+    { label: 'Industries', page: 'industries' },
+    { label: 'Insights', page: 'insights' },
+    { label: 'Company', page: 'company' },
+    { label: 'Contact', page: 'requestSample' },
   ];
 
   return (
@@ -51,12 +51,12 @@ export default function Footer({ onNavigate }: FooterProps) {
             <ul className="space-y-3">
               {footerLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                  <button
+                    onClick={() => onNavigate?.(link.page)}
+                    className="text-sm text-gray-400 hover:text-white transition-colors text-left"
                   >
                     {link.label}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
