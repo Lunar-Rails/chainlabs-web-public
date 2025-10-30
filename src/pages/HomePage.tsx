@@ -54,7 +54,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
   return (
     <div className="bg-white">
       <section className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
-        <div className="lg:hidden absolute inset-0 opacity-50 pointer-events-none">
+        <div className="lg:hidden absolute inset-0 opacity-10 pointer-events-none">
           <NetworkVisualization />
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
