@@ -20,9 +20,13 @@ export default function Footer({ onNavigate }: FooterProps) {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           <div className="lg:col-span-1">
-            <div className="mb-4">
+            <button
+              onClick={() => onNavigate?.('home')}
+              className="mb-4 cursor-pointer"
+              aria-label="Go to homepage"
+            >
               <img src="/Cl Logo 2 Inverted.svg" alt="Chainlabs" className="h-8" />
-            </div>
+            </button>
             <p className="text-sm text-gray-400 mb-6">
               Blockchain Intelligence & Wallet Labeling
             </p>
