@@ -53,9 +53,12 @@ export default function HomePage({ onNavigate }: HomePageProps) {
 
   return (
     <div className="bg-white">
-      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
+      <section className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
+        <div className="lg:hidden absolute inset-0 opacity-50 pointer-events-none">
+          <NetworkVisualization />
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div>
+          <div className="relative z-10">
             <h1 className="text-5xl lg:text-7xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
               Web3 Wallet Labels You Can Trust
             </h1>
