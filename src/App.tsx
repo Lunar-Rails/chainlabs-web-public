@@ -16,7 +16,7 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <HomePage />;
+        return <HomePage onNavigate={setCurrentPage} />;
       case 'company':
         return <CompanyPage />;
       case 'solutions':
@@ -28,7 +28,7 @@ function App() {
       case 'requestSample':
         return <RequestSamplePage />;
       default:
-        return <HomePage />;
+        return <HomePage onNavigate={setCurrentPage} />;
     }
   };
 

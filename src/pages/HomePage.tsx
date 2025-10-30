@@ -3,7 +3,13 @@ import { ArrowRight, Plus, Minus } from 'lucide-react';
 import { DataVisualizationChart, HexagonalDiagram } from '../components/LineArt';
 import NetworkVisualization from '../components/NetworkVisualization';
 
-export default function HomePage() {
+type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample';
+
+interface HomePageProps {
+  onNavigate?: (page: Page) => void;
+}
+
+export default function HomePage({ onNavigate }: HomePageProps) {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   const faqs = [
@@ -56,7 +62,10 @@ export default function HomePage() {
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Defensible, global coverage with audit-ready proof. Powering compliance, investigations, and research.
             </p>
-            <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+            <button
+              onClick={() => onNavigate?.('requestSample')}
+              className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2"
+            >
               Request a sample
               <ArrowRight size={20} />
             </button>
@@ -200,7 +209,10 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+            <button
+              onClick={() => onNavigate?.('requestSample')}
+              className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2"
+            >
               Request a sample
               <ArrowRight size={20} />
             </button>
