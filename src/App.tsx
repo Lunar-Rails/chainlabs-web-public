@@ -5,10 +5,12 @@ import SolutionsPage from './pages/SolutionsPage';
 import IndustriesPage from './pages/IndustriesPage';
 import InsightsPage from './pages/InsightsPage';
 import RequestSamplePage from './pages/RequestSamplePage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsPage from './pages/TermsPage';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
-type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample';
+type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample' | 'privacy' | 'terms';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -27,6 +29,10 @@ function App() {
         return <InsightsPage />;
       case 'requestSample':
         return <RequestSamplePage />;
+      case 'privacy':
+        return <PrivacyPolicyPage />;
+      case 'terms':
+        return <TermsPage />;
       default:
         return <HomePage onNavigate={setCurrentPage} />;
     }
@@ -36,7 +42,7 @@ function App() {
     <div className="min-h-screen bg-white">
       <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
       {renderPage()}
-      <Footer />
+      <Footer onNavigate={setCurrentPage} />
     </div>
   );
 }

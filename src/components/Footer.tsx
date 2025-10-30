@@ -1,6 +1,12 @@
 import { Linkedin, Youtube, Send, Phone, MapPin } from 'lucide-react';
 
-export default function Footer() {
+type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample' | 'privacy' | 'terms';
+
+interface FooterProps {
+  onNavigate?: (page: Page) => void;
+}
+
+export default function Footer({ onNavigate }: FooterProps) {
   const footerLinks = [
     { label: 'Solutions', href: '#' },
     { label: 'Industries', href: '#' },
@@ -60,14 +66,20 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-white mb-4">Legal</h4>
             <ul className="space-y-3 mb-6">
               <li>
-                <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <button
+                  onClick={() => onNavigate?.('privacy')}
+                  className="text-sm text-gray-400 hover:text-white transition-colors text-left"
+                >
                   Privacy Policy
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <button
+                  onClick={() => onNavigate?.('terms')}
+                  className="text-sm text-gray-400 hover:text-white transition-colors text-left"
+                >
                   Terms and Conditions
-                </a>
+                </button>
               </li>
             </ul>
 
