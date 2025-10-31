@@ -20,7 +20,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
 
   return (
     <nav className="bg-white/80 backdrop-blur-[20px] sticky top-0 z-50 py-3">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="mx-auto px-10">
         <div className="flex justify-between items-center h-20">
           <button
             onClick={() => onNavigate('home')}
