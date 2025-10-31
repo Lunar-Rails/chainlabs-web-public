@@ -136,8 +136,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           Our Data
         </h2>
         <p className="text-xl text-gray-600 text-center max-w-4xl mx-auto mb-16 leading-relaxed">
-          Every month we add 250+ new organizations that regularly transact on public blockchains,
-          and we develop algorithms to infer the address clusters that belong to these organizations.
+          Chainlabs’ tracer network spans 52 countries, ensuring access to exchanges and services that require local KYC and in-country resources.
         </p>
 
         <div className="mb-20">
