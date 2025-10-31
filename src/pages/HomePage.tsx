@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ArrowRight, Plus, Minus } from 'lucide-react';
 import { DataVisualizationChart, HexagonalDiagram } from '../components/LineArt';
 import NetworkVisualization from '../components/NetworkVisualization';
+import CoverageMap from '../components/CoverageMap';
 
 type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample';
 
@@ -138,6 +139,10 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           Every month we add 250+ new organizations that regularly transact on public blockchains,
           and we develop algorithms to infer the address clusters that belong to these organizations.
         </p>
+
+        <div className="mb-20">
+          <CoverageMap />
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="bg-gray-50 p-12 rounded-2xl">
