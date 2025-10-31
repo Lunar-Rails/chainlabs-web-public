@@ -56,32 +56,17 @@ export default function CoverageMap() {
           throw new Error('amCharts libraries not loaded');
         }
 
-        const COVER_COLOR = am5.color(0xFFB800);
+        const COVER_COLOR = am5.color(0xD4A744);
         const BASE_FILL = am5.color(0xD0D0D0);
-        const HOVER_FILL = am5.color(0xFFD36A);
-        const STORAGE_KEY = "coverage_iso2_codes_v1";
 
-        const initialCovered = [
-          "US", "CA", "GB", "FR", "DE", "IT", "ES", "NL", "SE", "NO", "DK", "CH", "BE", "AT", "IE", "FI", "PT",
-          "AE", "SA", "IL", "IN", "SG", "JP", "KR", "HK", "AU", "NZ", "ZA", "BR", "MX", "AR", "CL"
+        const coveredCountries = [
+          "US", "CA", "MX", "GT", "HN", "SV", "CR", "PA", "CO", "VE", "EC", "PE", "BR", "BO", "PY", "UY", "AR", "CL",
+          "IS", "IE", "GB", "PT", "ES", "FR", "BE", "NL", "DE", "DK", "NO", "SE", "FI", "EE", "LV", "LT", "PL", "CZ", "SK", "AT", "CH", "IT", "SI", "HR", "BA", "RS", "ME", "AL", "MK", "GR", "BG", "RO", "MD", "UA", "BY",
+          "RU", "GE", "AM", "AZ", "TR", "CY", "IL", "JO", "SA", "AE", "OM", "KW", "BH", "QA",
+          "KZ", "UZ", "TM", "KG", "TJ", "PK", "IN", "NP", "BD", "MM", "TH", "LA", "VN", "KH", "MY", "SG", "ID", "PH", "CN", "MN", "KP", "KR", "JP", "TW",
+          "NG", "GH", "ZA", "KE", "ET",
+          "AU", "NZ"
         ];
-
-        const loadCovered = () => {
-          try {
-            const raw = localStorage.getItem(STORAGE_KEY);
-            if (!raw) return initialCovered;
-            const arr = JSON.parse(raw);
-            return Array.isArray(arr) ? arr : initialCovered;
-          } catch {
-            return initialCovered;
-          }
-        };
-
-        const saveCovered = (arr: string[]) => {
-          try {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
-          } catch {}
-        };
 
         const root = am5.Root.new(chartRef.current);
         rootRef.current = root;
@@ -90,8 +75,8 @@ export default function CoverageMap() {
 
         const chart = root.container.children.push(
           am5map.MapChart.new(root, {
-            panX: "translateX",
-            panY: "translateY",
+            panX: "none",
+            panY: "none",
             projection: am5map.geoMercator(),
             wheelY: "none"
           })
@@ -106,76 +91,22 @@ export default function CoverageMap() {
 
         polygonSeries.mapPolygons.template.setAll({
           tooltipText: "{name}",
-          interactive: true,
+          interactive: false,
           fill: BASE_FILL,
           stroke: am5.color(0xffffff),
           strokeWidth: 0.5
         });
 
-        polygonSeries.mapPolygons.template.states.create("hover", {
-          fill: HOVER_FILL
-        });
-
-        polygonSeries.mapPolygons.template.states.create("covered", {
-          fill: COVER_COLOR
-        });
-
-        let covered = loadCovered().map(c => c.toUpperCase());
-        let editMode = false;
-
         const applyCoverage = () => {
           polygonSeries.mapPolygons.each((polygon: any) => {
             const id = polygon.dataItem?.get("id");
-            if (id && covered.includes(id)) {
-              polygon.states.applyAnimate("covered");
-            } else {
-              polygon.states.applyAnimate("default");
+            if (id && coveredCountries.includes(id)) {
+              polygon.set("fill", COVER_COLOR);
             }
           });
         };
 
-        polygonSeries.mapPolygons.template.events.on("click", (ev: any) => {
-          if (!editMode) return;
-          const id = ev.target.dataItem?.get("id");
-          if (!id) return;
-
-          const idx = covered.indexOf(id);
-          if (idx === -1) {
-            covered.push(id);
-          } else {
-            covered.splice(idx, 1);
-          }
-          covered.sort();
-          saveCovered(covered);
-          applyCoverage();
-        });
-
         polygonSeries.events.on("datavalidated", applyCoverage);
-
-        const toggleBtn = document.getElementById("toggle-edit");
-        const copyBtn = document.getElementById("copy-codes");
-
-        const handleToggle = () => {
-          editMode = !editMode;
-          if (toggleBtn) {
-            toggleBtn.textContent = editMode ? "Disable Edit Mode" : "Enable Edit Mode";
-            toggleBtn.style.background = editMode ? "#fff7e0" : "#fff";
-          }
-        };
-
-        const handleCopy = () => {
-          navigator.clipboard.writeText(JSON.stringify(covered));
-          const hint = document.getElementById("saved-hint");
-          if (hint) {
-            hint.textContent = "Copied to clipboard!";
-            setTimeout(() => {
-              hint.textContent = "Selections auto-save.";
-            }, 2000);
-          }
-        };
-
-        toggleBtn?.addEventListener("click", handleToggle);
-        copyBtn?.addEventListener("click", handleCopy);
 
         if (isMounted) {
           setIsLoading(false);
@@ -204,40 +135,21 @@ export default function CoverageMap() {
   return (
     <div className="w-full">
       {isLoading && (
-        <div className="w-full max-w-[1100px] h-[500px] lg:h-[600px] mx-auto bg-gray-100 rounded-lg flex items-center justify-center">
+        <div className="w-full h-[350px] lg:h-[400px] mx-auto bg-gray-100 rounded-lg flex items-center justify-center">
           <div className="text-gray-500">Loading map...</div>
         </div>
       )}
       {error && (
-        <div className="w-full max-w-[1100px] h-[500px] lg:h-[600px] mx-auto bg-red-50 rounded-lg flex items-center justify-center">
+        <div className="w-full h-[350px] lg:h-[400px] mx-auto bg-red-50 rounded-lg flex items-center justify-center">
           <div className="text-red-600">Error: {error}</div>
         </div>
       )}
       <div
         ref={chartRef}
         id="coverage-map"
-        className="w-full max-w-[1100px] h-[500px] lg:h-[600px] mx-auto relative bg-white rounded-lg"
+        className="w-full h-[350px] lg:h-[400px] mx-auto relative bg-white rounded-lg"
         style={{ display: isLoading || error ? 'none' : 'block' }}
       />
-      {!isLoading && !error && (
-        <div className="max-w-[1100px] mx-auto mt-4 flex gap-2 items-center justify-start text-sm flex-wrap">
-          <button
-            id="toggle-edit"
-            className="px-3 py-2 border border-gray-300 rounded-lg bg-white hover:bg-gray-50 transition-colors text-sm"
-          >
-            Enable Edit Mode
-          </button>
-          <button
-            id="copy-codes"
-            className="px-3 py-2 border border-gray-300 rounded-lg bg-white hover:bg-gray-50 transition-colors text-sm"
-          >
-            Copy Covered Country Codes
-          </button>
-          <span id="saved-hint" className="text-xs text-gray-500 ml-2">
-            Selections auto-save.
-          </span>
-        </div>
-      )}
     </div>
   );
 }
