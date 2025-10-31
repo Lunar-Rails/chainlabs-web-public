@@ -139,9 +139,13 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           Chainlabs’ tracer network spans 52 countries, ensuring access to exchanges and services that require local KYC and in-country resources.
         </p>
 
-        <div className="mb-20">
+        <div className="mb-12">
           <CoverageMap />
         </div>
+
+        <p className="text-lg text-gray-600 text-center max-w-4xl mx-auto mb-20 leading-relaxed">
+          Every month we add 250+ new organisations that regularly transact on public blockchains and we develop algorithms to infer the address clusters that belong to these organisations. Each entity and each wallet tag comes with a screenshot which contains the URL, wallet address, and other information clearly identifying the entity.
+        </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="bg-gray-50 p-12 rounded-2xl">
