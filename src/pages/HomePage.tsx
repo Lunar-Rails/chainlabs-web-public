@@ -88,17 +88,17 @@ export default function HomePage({ onNavigate }: HomePageProps) {
 
           <div className="mb-24 flex flex-col gap-12">
             <div className="flex justify-center items-center gap-16 flex-wrap">
-              <img src="/coinbase white logo@3x.png" alt="Coinbase" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
-              <img src="/elementus-white.png" alt="Elementus" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
-              <img src="/lookintobitcoin white logo.png" alt="LookIntoBitcoin" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
-              <img src="/santiment white logo@3x.png" alt="Santiment" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
-              <img src="/trm white logo@3x.png" alt="TRM" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/coinbase white logo@3x.png" alt="Coinbase" className="h-5 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/elementus-white.png" alt="Elementus" className="h-5 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/lookintobitcoin white logo.png" alt="LookIntoBitcoin" className="h-5 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/santiment white logo@3x.png" alt="Santiment" className="h-5 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/trm white logo@3x.png" alt="TRM" className="h-5 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
             </div>
             <div className="flex justify-center items-center gap-16 flex-wrap">
-              <img src="/scorechain logo@3x.png" alt="Scorechain" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
-              <img src="/upsalla white logo@3x.png" alt="Upsalla" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
-              <img src="/merkle white logo@3x.png" alt="Merkle" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
-              <img src="/iknaio white logo@3x.png" alt="Iknaio" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/scorechain logo@3x.png" alt="Scorechain" className="h-5 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/upsalla white logo@3x.png" alt="Upsalla" className="h-5 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/merkle white logo@3x.png" alt="Merkle" className="h-5 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/iknaio white logo@3x.png" alt="Iknaio" className="h-5 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
             </div>
           </div>
         </div>
