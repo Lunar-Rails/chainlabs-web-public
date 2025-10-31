@@ -56,7 +56,7 @@ export default function CoverageMap() {
           throw new Error('amCharts libraries not loaded');
         }
 
-        const COVER_COLOR = am5.color(0xD4A744);
+        const COVER_COLOR = am5.color(0xFFB800);
         const BASE_FILL = am5.color(0xD0D0D0);
 
         const coveredCountries = [
