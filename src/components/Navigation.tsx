@@ -21,7 +21,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
   return (
     <nav className="bg-white/80 backdrop-blur-[20px] sticky top-0 z-50 py-3">
       <div className="mx-auto px-10">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-80">
           <button
             onClick={() => onNavigate('home')}
             className="hover:opacity-80 transition-opacity"
