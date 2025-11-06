@@ -48,7 +48,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{ backgroundColor: '#F9FAFB' }}>
       <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
       {renderPage()}
       <Footer onNavigate={handleNavigate} />
