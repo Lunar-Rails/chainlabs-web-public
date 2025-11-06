@@ -133,15 +133,19 @@ export default function HomePage({ onNavigate }: HomePageProps) {
 
       <section className="bg-white py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] text-center mb-6" style={{ lineHeight: '110%' }}>
-            Our Data
-          </h2>
-          <p className="text-xl text-gray-600 text-center max-w-4xl mx-auto mb-16 leading-relaxed">
-            Chainlabs' tracer network spans 52 countries, ensuring access to exchanges and services that require local KYC and in-country resources.
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 items-center">
+            <div className="text-left">
+              <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
+                Our Data
+              </h2>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Chainlabs' tracer network spans 52 countries, ensuring access to exchanges and services that require local KYC and in-country resources.
+              </p>
+            </div>
 
-          <div className="mb-12">
-            <CoverageMap />
+            <div>
+              <CoverageMap />
+            </div>
           </div>
 
           <p className="text-2xl lg:text-3xl text-[#001641] text-center" style={{ lineHeight: '150%' }}>
