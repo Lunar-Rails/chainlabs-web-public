@@ -54,7 +54,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
 
   return (
     <div>
-      <section className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
+      <section className="relative max-w-7xl mx-auto px-6 lg:px-8 py-[100px]">
         <div className="lg:hidden absolute inset-0 opacity-10 pointer-events-none">
           <NetworkVisualization />
         </div>
