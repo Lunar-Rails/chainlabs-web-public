@@ -148,7 +148,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             </div>
           </div>
 
-          <p className="text-2xl lg:text-3xl text-[#001641] text-center" style={{ lineHeight: '150%' }}>
+          <p className="text-2xl lg:text-3xl text-[#001641] text-left pt-[100px]" style={{ lineHeight: '150%' }}>
             Every month we add <span className="bg-[#FFB800] px-2 py-1">250+ new organisations</span> that regularly transact on public blockchains and we develop algorithms to infer the address clusters that belong to these organisations. Each entity and each wallet tag comes with a screenshot which contains the URL, wallet address, and other information clearly identifying the entity.
           </p>
         </div>
