@@ -143,18 +143,9 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           <CoverageMap />
         </div>
 
-        <p className="text-lg text-gray-600 text-center max-w-4xl mx-auto mb-20 leading-relaxed">
+        <p className="text-lg text-gray-600 text-center max-w-4xl mx-auto leading-relaxed">
           Every month we add 250+ new organisations that regularly transact on public blockchains and we develop algorithms to infer the address clusters that belong to these organisations. Each entity and each wallet tag comes with a screenshot which contains the URL, wallet address, and other information clearly identifying the entity.
         </p>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="bg-white p-12 rounded-2xl">
-            <DataVisualizationChart />
-          </div>
-          <div className="bg-white p-12 rounded-2xl">
-            <HexagonalDiagram />
-          </div>
-        </div>
       </section>
 
       <section className="py-20 lg:py-32">
