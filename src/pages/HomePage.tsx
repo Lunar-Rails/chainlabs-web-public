@@ -13,10 +13,12 @@ interface HomePageProps {
 export default function HomePage({ onNavigate }: HomePageProps) {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [visibleApproaches, setVisibleApproaches] = useState<boolean[]>([false, false, false]);
+  const [visibleStats, setVisibleStats] = useState<boolean[]>([false, false, false]);
   const approachRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const statsRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const observers = approachRefs.current.map((ref, index) => {
+    const approachObservers = approachRefs.current.map((ref, index) => {
       if (!ref) return null;
 
       const observer = new IntersectionObserver(
@@ -41,8 +43,34 @@ export default function HomePage({ onNavigate }: HomePageProps) {
       return observer;
     });
 
+    const statsObservers = statsRefs.current.map((ref, index) => {
+      if (!ref) return null;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                setVisibleStats((prev) => {
+                  const newState = [...prev];
+                  newState[index] = true;
+                  return newState;
+                });
+              }, index * 150);
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      observer.observe(ref);
+      return observer;
+    });
+
     return () => {
-      observers.forEach((observer) => observer?.disconnect());
+      approachObservers.forEach((observer) => observer?.disconnect());
+      statsObservers.forEach((observer) => observer?.disconnect());
     };
   }, []);
 
@@ -140,21 +168,42 @@ export default function HomePage({ onNavigate }: HomePageProps) {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-            <div className="bg-white p-10 rounded-xl border border-gray-200 hover:shadow-lg transition-all text-center">
+            <div
+              ref={(el) => statsRefs.current[0] = el}
+              className={`bg-white p-10 rounded-xl border border-gray-200 hover:shadow-lg transition-all text-center duration-700 ${
+                visibleStats[0]
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-8'
+              }`}
+            >
               <div className="text-5xl font-semibold text-[#001641] mb-3" style={{ lineHeight: '110%' }}>4/4</div>
               <p className="text-gray-600 leading-relaxed">
                 of the top 4 blockchain analytics firms use Chainlabs
               </p>
             </div>
 
-            <div className="bg-white p-10 rounded-xl border border-gray-200 hover:shadow-lg transition-all text-center">
+            <div
+              ref={(el) => statsRefs.current[1] = el}
+              className={`bg-white p-10 rounded-xl border border-gray-200 hover:shadow-lg transition-all text-center duration-700 ${
+                visibleStats[1]
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-8'
+              }`}
+            >
               <div className="text-5xl font-semibold text-[#001641] mb-3" style={{ lineHeight: '110%' }}>Global</div>
               <p className="text-gray-600 leading-relaxed">
                 Our intelligence operative network spans the globe, 24/7
               </p>
             </div>
 
-            <div className="bg-white p-10 rounded-xl border border-gray-200 hover:shadow-lg transition-all text-center">
+            <div
+              ref={(el) => statsRefs.current[2] = el}
+              className={`bg-white p-10 rounded-xl border border-gray-200 hover:shadow-lg transition-all text-center duration-700 ${
+                visibleStats[2]
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-8'
+              }`}
+            >
               <div className="text-5xl font-semibold text-[#001641] mb-3" style={{ lineHeight: '110%' }}>70+</div>
               <p className="text-gray-600 leading-relaxed">
                 We labels over 70 different categories and are adding more
