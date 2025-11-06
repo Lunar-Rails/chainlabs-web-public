@@ -81,7 +81,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       <section className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <h2 className="text-2xl font-semibold text-[#001641] text-center mb-20" style={{ lineHeight: '110%' }}>
             Used by Industry Leaders
           </h2>
@@ -103,7 +103,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 pb-20 lg:pb-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
