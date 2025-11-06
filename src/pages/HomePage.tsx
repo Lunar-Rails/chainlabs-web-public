@@ -164,9 +164,6 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
                 Chainlabs delivers defensible wallet intelligence through a rigorous methodology that combines human expertise with advanced technology. Our approach ensures every label meets the highest standards of accuracy and compliance.
               </p>
-              <p className="text-base text-gray-600 leading-relaxed mb-8">
-                From quality control to custom infrastructure and client collaboration, we've built a system designed to provide the most reliable blockchain intelligence available.
-              </p>
               <button
                 onClick={() => onNavigate?.('requestSample')}
                 className="bg-[#001641] text-white px-8 py-3 rounded-full text-base font-medium hover:bg-[#002451] transition-all inline-flex items-center gap-2"
