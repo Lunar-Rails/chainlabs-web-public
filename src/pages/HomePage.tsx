@@ -307,7 +307,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         </div>
       </section>
 
-      <section className="bg-[#E8EAEE] py-20 lg:py-32">
+      <section className="bg-[#F4F5F6] py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] text-center mb-4" style={{ lineHeight: '110%' }}>
             Insights
