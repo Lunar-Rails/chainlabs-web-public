@@ -162,10 +162,10 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 Our Approach
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Crystal Expert empowers you to solve crypto-related crime with speed and accuracy.
+                Chainlabs delivers defensible wallet intelligence through a rigorous methodology that combines human expertise with advanced technology. Our approach ensures every label meets the highest standards of accuracy and compliance.
               </p>
               <p className="text-base text-gray-600 leading-relaxed mb-8">
-                Detect and disrupt criminal activities fast and more effectively with Crystal's advanced blockchain intelligence, trusted data and intuitive visualisation canvas.
+                From quality control to custom infrastructure and client collaboration, we've built a system designed to provide the most reliable blockchain intelligence available.
               </p>
               <button
                 onClick={() => onNavigate?.('requestSample')}
@@ -178,37 +178,28 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             <div className="space-y-0">
               <div className="border-t border-gray-300 pt-8 pb-8">
                 <h3 className="text-3xl font-medium text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
-                  Achieve real-time visibility
+                  Quality in. Quality out.
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Follow funds through multiple wallets and chains with powerful visualization capabilities
+                  Each label comes with accurate and complete metadata verified by Chainlabs Quality Control. Quality control runs to the core of our process and our promise to our customers. Your models are only as good as the data input.
                 </p>
               </div>
 
               <div className="border-t border-gray-300 pt-8 pb-8">
                 <h3 className="text-3xl font-medium text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
-                  Identify real-world suspects
+                  Efficient, bespoke data ingestion
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Link pseudonymous blockchain transactions to real-world organizations
-                </p>
-              </div>
-
-              <div className="border-t border-gray-300 pt-8 pb-8">
-                <h3 className="text-3xl font-medium text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
-                  Connect the dots
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  See how individuals and organizations are connected
+                  Our custom-built infrastructure enables rapid processing and integration of new data sources, keeping you ahead of emerging trends and entities.
                 </p>
               </div>
 
               <div className="border-t border-gray-300 pt-8 pb-8 border-b">
                 <h3 className="text-3xl font-medium text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
-                  Collect evidence for court
+                  A client centric approach
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Create clear visualizations illustrating flow of funds and links between entities as evidence for court
+                  Your needs drive our innovation. We work closely with clients to understand requirements and deliver tailored solutions that exceed expectations.
                 </p>
               </div>
             </div>
