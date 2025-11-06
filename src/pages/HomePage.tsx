@@ -156,74 +156,62 @@ export default function HomePage({ onNavigate }: HomePageProps) {
 
       <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] text-center mb-16" style={{ lineHeight: '110%' }}>
-            Our Approach
-          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
+                Our Approach
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                Crystal Expert empowers you to solve crypto-related crime with speed and accuracy.
+              </p>
+              <p className="text-base text-gray-600 leading-relaxed mb-8">
+                Detect and disrupt criminal activities fast and more effectively with Crystal's advanced blockchain intelligence, trusted data and intuitive visualisation canvas.
+              </p>
+              <button
+                onClick={() => onNavigate?.('requestSample')}
+                className="bg-[#001641] text-white px-8 py-3 rounded-full text-base font-medium hover:bg-[#002451] transition-all inline-flex items-center gap-2"
+              >
+                Request a sample
+              </button>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-              <div className="h-48 bg-white">
-                <img
-                  src="/Abstract - 4.png"
-                  alt="Quality in. Quality out."
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
-                  Quality in. Quality out.
+            <div className="space-y-0">
+              <div className="border-t border-gray-300 pt-8 pb-8">
+                <h3 className="text-3xl font-medium text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
+                  Achieve real-time visibility
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                 Each label comes with accurate and complete metadata verified by Chainlabs Quality Control.. Quality control runs to the core of our process and our promise to our customers. Your models are only as good as the data input.
+                  Follow funds through multiple wallets and chains with powerful visualization capabilities
+                </p>
+              </div>
+
+              <div className="border-t border-gray-300 pt-8 pb-8">
+                <h3 className="text-3xl font-medium text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
+                  Identify real-world suspects
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Link pseudonymous blockchain transactions to real-world organizations
+                </p>
+              </div>
+
+              <div className="border-t border-gray-300 pt-8 pb-8">
+                <h3 className="text-3xl font-medium text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
+                  Connect the dots
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  See how individuals and organizations are connected
+                </p>
+              </div>
+
+              <div className="border-t border-gray-300 pt-8 pb-8 border-b">
+                <h3 className="text-3xl font-medium text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
+                  Collect evidence for court
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Create clear visualizations illustrating flow of funds and links between entities as evidence for court
                 </p>
               </div>
             </div>
-
-            <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-              <div className="h-48 bg-white">
-                <img
-                  src="/Abstract - 1.png"
-                  alt="Efficient, bespoke data ingestion"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
-                  Efficient, bespoke data ingestion
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Our custom-built infrastructure enables rapid processing and integration of new data sources, keeping you ahead of emerging trends and entities.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-              <div className="h-48 bg-white">
-                <img
-                  src="/Abstract - 5.png"
-                  alt="A client centric approach"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
-                  A client centric approach
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Your needs drive our innovation. We work closely with clients to understand requirements and deliver tailored solutions that exceed expectations.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <button
-              onClick={() => onNavigate?.('requestSample')}
-              className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2"
-            >
-              Request a sample
-              <ArrowRight size={20} />
-            </button>
           </div>
         </div>
       </section>
