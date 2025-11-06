@@ -131,21 +131,23 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
-        <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] text-center mb-6" style={{ lineHeight: '110%' }}>
-          Our Data
-        </h2>
-        <p className="text-xl text-gray-600 text-center max-w-4xl mx-auto mb-16 leading-relaxed">
-          Chainlabs’ tracer network spans 52 countries, ensuring access to exchanges and services that require local KYC and in-country resources.
-        </p>
+      <section className="bg-white py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] text-center mb-6" style={{ lineHeight: '110%' }}>
+            Our Data
+          </h2>
+          <p className="text-xl text-gray-600 text-center max-w-4xl mx-auto mb-16 leading-relaxed">
+            Chainlabs' tracer network spans 52 countries, ensuring access to exchanges and services that require local KYC and in-country resources.
+          </p>
 
-        <div className="mb-12">
-          <CoverageMap />
+          <div className="mb-12">
+            <CoverageMap />
+          </div>
+
+          <p className="text-lg text-gray-600 text-center max-w-4xl mx-auto leading-relaxed">
+            Every month we add 250+ new organisations that regularly transact on public blockchains and we develop algorithms to infer the address clusters that belong to these organisations. Each entity and each wallet tag comes with a screenshot which contains the URL, wallet address, and other information clearly identifying the entity.
+          </p>
         </div>
-
-        <p className="text-lg text-gray-600 text-center max-w-4xl mx-auto leading-relaxed">
-          Every month we add 250+ new organisations that regularly transact on public blockchains and we develop algorithms to infer the address clusters that belong to these organisations. Each entity and each wallet tag comes with a screenshot which contains the URL, wallet address, and other information clearly identifying the entity.
-        </p>
       </section>
 
       <section className="py-20 lg:py-32">
