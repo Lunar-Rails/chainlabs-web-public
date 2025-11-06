@@ -166,7 +166,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               </p>
               <button
                 onClick={() => onNavigate?.('requestSample')}
-                className="bg-[#001641] text-white px-8 py-3 rounded-full text-base font-medium hover:bg-[#002451] transition-all inline-flex items-center gap-2"
+                className="bg-[#FF8A00] text-white px-8 py-3 rounded-full text-base font-medium hover:bg-[#e67d00] transition-all inline-flex items-center gap-2"
               >
                 Request a sample
               </button>
