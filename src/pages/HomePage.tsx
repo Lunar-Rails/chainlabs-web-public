@@ -80,50 +80,50 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         </div>
       </section>
 
-      <section className="bg-[#001641] py-32 lg:py-40 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <h2 className="text-2xl font-semibold text-white text-center mb-20" style={{ lineHeight: '110%' }}>
+      <section className="relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 py-20 lg:py-32">
+          <h2 className="text-2xl font-semibold text-[#001641] text-center mb-20" style={{ lineHeight: '110%' }}>
             Used by Industry Leaders
           </h2>
 
           <div className="mb-24 flex flex-col gap-12">
             <div className="flex justify-center items-center gap-16 flex-wrap">
-              <img src="/coinbase white logo@3x.png" alt="Coinbase" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
-              <img src="/elementus-white.png" alt="Elementus" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
-              <img src="/lookintobitcoin white logo.png" alt="LookIntoBitcoin" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
-              <img src="/santiment white logo@3x.png" alt="Santiment" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
-              <img src="/trm white logo@3x.png" alt="TRM" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/coinbase white logo@3x.png" alt="Coinbase" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/elementus-white.png" alt="Elementus" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/lookintobitcoin white logo.png" alt="LookIntoBitcoin" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/santiment white logo@3x.png" alt="Santiment" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/trm white logo@3x.png" alt="TRM" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
             </div>
             <div className="flex justify-center items-center gap-16 flex-wrap">
-              <img src="/scorechain logo@3x.png" alt="Scorechain" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
-              <img src="/upsalla white logo@3x.png" alt="Upsalla" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
-              <img src="/merkle white logo@3x.png" alt="Merkle" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
-              <img src="/iknaio white logo@3x.png" alt="Iknaio" className="h-10 object-contain grayscale opacity-60 hover:opacity-80 transition-opacity" />
+              <img src="/scorechain logo@3x.png" alt="Scorechain" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/upsalla white logo@3x.png" alt="Upsalla" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/merkle white logo@3x.png" alt="Merkle" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/iknaio white logo@3x.png" alt="Iknaio" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
             </div>
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 pb-20 lg:pb-32">
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-            <div className="bg-gradient-to-br from-[#001641]/40 to-[#002a70]/30 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:from-[#001641]/50 hover:to-[#002a70]/40 transition-all text-center">
-              <div className="text-5xl font-semibold text-white mb-3" style={{ lineHeight: '110%' }}>4/4</div>
-              <p className="text-gray-300 leading-relaxed">
+            <div className="bg-white p-10 rounded-xl border border-gray-200 hover:shadow-lg transition-all text-center">
+              <div className="text-5xl font-semibold text-[#001641] mb-3" style={{ lineHeight: '110%' }}>4/4</div>
+              <p className="text-gray-600 leading-relaxed">
                 of the top 4 blockchain analytics firms use Chainlabs
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-[#001641]/40 to-[#002a70]/30 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:from-[#001641]/50 hover:to-[#002a70]/40 transition-all text-center">
-              <div className="text-5xl font-semibold text-white mb-3" style={{ lineHeight: '110%' }}>Global</div>
-              <p className="text-gray-300 leading-relaxed">
+            <div className="bg-white p-10 rounded-xl border border-gray-200 hover:shadow-lg transition-all text-center">
+              <div className="text-5xl font-semibold text-[#001641] mb-3" style={{ lineHeight: '110%' }}>Global</div>
+              <p className="text-gray-600 leading-relaxed">
                 Our intelligence operative network spans the globe, 24/7
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-[#001641]/40 to-[#002a70]/30 backdrop-blur-sm p-10 rounded-xl border border-white/20 hover:from-[#001641]/50 hover:to-[#002a70]/40 transition-all text-center">
-              <div className="text-5xl font-semibold text-white mb-3" style={{ lineHeight: '110%' }}>70+</div>
-              <p className="text-gray-300 leading-relaxed">
+            <div className="bg-white p-10 rounded-xl border border-gray-200 hover:shadow-lg transition-all text-center">
+              <div className="text-5xl font-semibold text-[#001641] mb-3" style={{ lineHeight: '110%' }}>70+</div>
+              <p className="text-gray-600 leading-relaxed">
                 We labels over 70 different categories and are adding more
               </p>
             </div>
