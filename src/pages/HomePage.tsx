@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ArrowRight, Plus, Minus } from 'lucide-react';
 import { DataVisualizationChart, HexagonalDiagram } from '../components/LineArt';
 import NetworkVisualization from '../components/NetworkVisualization';
@@ -12,6 +12,39 @@ interface HomePageProps {
 
 export default function HomePage({ onNavigate }: HomePageProps) {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [visibleApproaches, setVisibleApproaches] = useState<boolean[]>([false, false, false]);
+  const approachRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observers = approachRefs.current.map((ref, index) => {
+      if (!ref) return null;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                setVisibleApproaches((prev) => {
+                  const newState = [...prev];
+                  newState[index] = true;
+                  return newState;
+                });
+              }, index * 150);
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      observer.observe(ref);
+      return observer;
+    });
+
+    return () => {
+      observers.forEach((observer) => observer?.disconnect());
+    };
+  }, []);
 
   const faqs = [
     {
@@ -173,7 +206,14 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             </div>
 
             <div className="space-y-0">
-              <div className="border-t border-gray-300 pt-8 pb-8">
+              <div
+                ref={(el) => approachRefs.current[0] = el}
+                className={`border-t border-gray-300 pt-8 pb-8 transition-all duration-700 ${
+                  visibleApproaches[0]
+                    ? 'opacity-100 translate-x-0'
+                    : 'opacity-0 translate-x-8'
+                }`}
+              >
                 <h3 className="text-3xl font-medium text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
                   Quality in. Quality out.
                 </h3>
@@ -182,7 +222,14 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 </p>
               </div>
 
-              <div className="border-t border-gray-300 pt-8 pb-8">
+              <div
+                ref={(el) => approachRefs.current[1] = el}
+                className={`border-t border-gray-300 pt-8 pb-8 transition-all duration-700 ${
+                  visibleApproaches[1]
+                    ? 'opacity-100 translate-x-0'
+                    : 'opacity-0 translate-x-8'
+                }`}
+              >
                 <h3 className="text-3xl font-medium text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
                   Efficient, bespoke data ingestion
                 </h3>
@@ -191,7 +238,14 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 </p>
               </div>
 
-              <div className="border-t border-gray-300 pt-8 pb-8 border-b">
+              <div
+                ref={(el) => approachRefs.current[2] = el}
+                className={`border-t border-gray-300 pt-8 pb-8 border-b transition-all duration-700 ${
+                  visibleApproaches[2]
+                    ? 'opacity-100 translate-x-0'
+                    : 'opacity-0 translate-x-8'
+                }`}
+              >
                 <h3 className="text-3xl font-medium text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
                   A client centric approach
                 </h3>
