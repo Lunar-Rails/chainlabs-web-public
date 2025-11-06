@@ -307,69 +307,68 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
-        <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] text-center mb-4" style={{ lineHeight: '110%' }}>
-          Insights
-        </h2>
-        <p className="text-xl text-gray-600 text-center mb-16">
-          Read all the latest news, thought leadership and research from Chainlabs
-        </p>
+      <section className="bg-[#E8EAEE] py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] text-center mb-4" style={{ lineHeight: '110%' }}>
+            Insights
+          </h2>
+          <p className="text-xl text-gray-600 text-center mb-16">
+            Read all the latest news, thought leadership and research from Chainlabs
+          </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <article className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
-            <div className="h-48 bg-gradient-to-br from-[#001641] to-[#003982]"></div>
-            <div className="p-6">
-              <div className="text-sm text-[#FF8A00] font-semibold mb-2">RESEARCH</div>
-              <h3 className="text-xl font-semibold text-[#001641] mb-3 group-hover:text-[#FF8A00] transition-colors" style={{ lineHeight: '110%' }}>
-                The State of Blockchain Intelligence in 2025
-              </h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                An in-depth analysis of emerging trends in wallet labeling and blockchain analytics.
-              </p>
-              <span className="text-[#001641] font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
-                Read more <ArrowRight size={16} />
-              </span>
-            </div>
-          </article>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <article className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
+              <div className="p-6">
+                <div className="text-sm text-[#FF8A00] font-semibold mb-2">RESEARCH</div>
+                <h3 className="text-xl font-semibold text-[#001641] mb-3 group-hover:text-[#FF8A00] transition-colors" style={{ lineHeight: '110%' }}>
+                  The State of Blockchain Intelligence in 2025
+                </h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  An in-depth analysis of emerging trends in wallet labeling and blockchain analytics.
+                </p>
+                <span className="text-[#001641] font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+                  Read more <ArrowRight size={16} />
+                </span>
+              </div>
+            </article>
 
-          <article className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
-            <div className="h-48 bg-gradient-to-br from-[#001641] to-[#003982]"></div>
-            <div className="p-6">
-              <div className="text-sm text-[#FF8A00] font-semibold mb-2">THOUGHT LEADERSHIP</div>
-              <h3 className="text-xl font-semibold text-[#001641] mb-3 group-hover:text-[#FF8A00] transition-colors" style={{ lineHeight: '110%' }}>
-                Building Trust in Decentralized Systems
-              </h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                How accurate wallet labels are transforming compliance and risk management.
-              </p>
-              <span className="text-[#001641] font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
-                Read more <ArrowRight size={16} />
-              </span>
-            </div>
-          </article>
+            <article className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
+              <div className="p-6">
+                <div className="text-sm text-[#FF8A00] font-semibold mb-2">THOUGHT LEADERSHIP</div>
+                <h3 className="text-xl font-semibold text-[#001641] mb-3 group-hover:text-[#FF8A00] transition-colors" style={{ lineHeight: '110%' }}>
+                  Building Trust in Decentralized Systems
+                </h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  How accurate wallet labels are transforming compliance and risk management.
+                </p>
+                <span className="text-[#001641] font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+                  Read more <ArrowRight size={16} />
+                </span>
+              </div>
+            </article>
 
-          <article className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
-            <div className="h-48 bg-gradient-to-br from-[#001641] to-[#003982]"></div>
-            <div className="p-6">
-              <div className="text-sm text-[#FF8A00] font-semibold mb-2">NEWS</div>
-              <h3 className="text-xl font-semibold text-[#001641] mb-3 group-hover:text-[#FF8A00] transition-colors" style={{ lineHeight: '110%' }}>
-                Chainlabs Expands Coverage to 25+ Blockchains
-              </h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                We're expanding our comprehensive labeling to support more blockchain networks.
-              </p>
-              <span className="text-[#001641] font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
-                Read more <ArrowRight size={16} />
-              </span>
-            </div>
-          </article>
-        </div>
+            <article className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
+              <div className="p-6">
+                <div className="text-sm text-[#FF8A00] font-semibold mb-2">NEWS</div>
+                <h3 className="text-xl font-semibold text-[#001641] mb-3 group-hover:text-[#FF8A00] transition-colors" style={{ lineHeight: '110%' }}>
+                  Chainlabs Expands Coverage to 25+ Blockchains
+                </h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  We're expanding our comprehensive labeling to support more blockchain networks.
+                </p>
+                <span className="text-[#001641] font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+                  Read more <ArrowRight size={16} />
+                </span>
+              </div>
+            </article>
+          </div>
 
-        <div className="text-center">
-          <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
-            More Insights
-            <ArrowRight size={20} />
-          </button>
+          <div className="text-center">
+            <button className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2">
+              More Insights
+              <ArrowRight size={20} />
+            </button>
+          </div>
         </div>
       </section>
 
