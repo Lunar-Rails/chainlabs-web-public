@@ -55,7 +55,7 @@ export default function SolutionsPage() {
   ];
 
   return (
-    <div className="bg-white">
+    <div>
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
         <div className="max-w-4xl">
           <div className="text-sm font-semibold text-[#FF8A00] mb-4 uppercase tracking-wider">
@@ -72,7 +72,7 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
@@ -173,7 +173,7 @@ export default function SolutionsPage() {
             </p>
           </div>
 
-          <div className="bg-gray-50 p-12 rounded-2xl">
+          <div className="bg-white p-12 rounded-2xl">
             <div className="space-y-8">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-[#001641] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">

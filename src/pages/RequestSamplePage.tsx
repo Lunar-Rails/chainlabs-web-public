@@ -191,7 +191,7 @@ export default function RequestSamplePage() {
 
   if (submitSuccess) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white flex items-center justify-center px-6">
+      <div className="min-h-screen flex items-center justify-center px-6">
         <div className="max-w-2xl w-full text-center">
           <div className="bg-white rounded-2xl shadow-xl p-12 border border-gray-100">
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -218,7 +218,7 @@ export default function RequestSamplePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div className="min-h-screen">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <div className="flex flex-col justify-start lg:pt-10">

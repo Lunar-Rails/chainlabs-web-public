@@ -53,7 +53,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
   };
 
   return (
-    <div className="bg-white">
+    <div>
       <section className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
         <div className="lg:hidden absolute inset-0 opacity-10 pointer-events-none">
           <NetworkVisualization />
@@ -148,16 +148,16 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="bg-gray-50 p-12 rounded-2xl">
+          <div className="bg-white p-12 rounded-2xl">
             <DataVisualizationChart />
           </div>
-          <div className="bg-gray-50 p-12 rounded-2xl">
+          <div className="bg-white p-12 rounded-2xl">
             <HexagonalDiagram />
           </div>
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20 lg:py-32">
+      <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] text-center mb-16" style={{ lineHeight: '110%' }}>
             Our Approach
@@ -297,7 +297,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20 lg:py-32 pb-0">
+      <section className="py-20 lg:py-32 pb-0">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-5xl lg:text-6xl font-bold text-[#001641] mb-16" style={{ lineHeight: '110%' }}>
             FAQs

@@ -81,7 +81,7 @@ export default function InsightsPage() {
   };
 
   return (
-    <div className="bg-white">
+    <div>
       <section className="bg-[#001641] py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h1 className="text-5xl lg:text-7xl font-semibold text-white mb-6 text-center" style={{ lineHeight: '110%' }}>
@@ -138,7 +138,7 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20 lg:py-32">
+      <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
             Case Studies
@@ -273,7 +273,7 @@ export default function InsightsPage() {
                   </p>
                 </div>
 
-                <div className="bg-gray-50 p-6 rounded-xl">
+                <div className="bg-white p-6 rounded-xl">
                   <h3 className="text-2xl font-semibold text-[#001641] mb-3" style={{ lineHeight: '110%' }}>
                     Results
                   </h3>

@@ -1,6 +1,6 @@
 export default function TermsPage() {
   return (
-    <div className="bg-white">
+    <div>
       <section className="max-w-4xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
         <h1 className="text-5xl lg:text-6xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
           Terms and Conditions
@@ -249,7 +249,7 @@ export default function TermsPage() {
             <p className="text-gray-700 leading-relaxed mb-4">
               If you have any questions about these Terms, please contact us:
             </p>
-            <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="bg-white p-6 rounded-lg border border-gray-200">
               <p className="text-gray-700 mb-2"><strong>Chainlabs Pte. Ltd.</strong></p>
               <p className="text-gray-700 mb-2">160 Robinson Road</p>
               <p className="text-gray-700 mb-2">14-04 SBF Center</p>

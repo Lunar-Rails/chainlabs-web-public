@@ -56,7 +56,7 @@ export default function CompanyPage() {
   };
 
   return (
-    <div className="bg-white">
+    <div>
       <section className="bg-[#001641] py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h1 className="text-5xl lg:text-7xl font-semibold text-white mb-6 text-center" style={{ lineHeight: '110%' }}>
@@ -85,19 +85,19 @@ export default function CompanyPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-50 p-8 rounded-xl border border-gray-200">
+            <div className="bg-white p-8 rounded-xl border border-gray-200">
               <div className="text-4xl font-semibold text-[#001641] mb-2" style={{ lineHeight: '110%' }}>2018</div>
               <p className="text-gray-600 leading-relaxed">Founded</p>
             </div>
-            <div className="bg-gray-50 p-8 rounded-xl border border-gray-200">
+            <div className="bg-white p-8 rounded-xl border border-gray-200">
               <div className="text-4xl font-semibold text-[#001641] mb-2" style={{ lineHeight: '110%' }}>4/4</div>
               <p className="text-gray-600 leading-relaxed">of the top 4 blockchain analytics firms use Chainlabs</p>
             </div>
-            <div className="bg-gray-50 p-8 rounded-xl border border-gray-200">
+            <div className="bg-white p-8 rounded-xl border border-gray-200">
               <div className="text-4xl font-semibold text-[#001641] mb-2" style={{ lineHeight: '110%' }}>Global</div>
               <p className="text-gray-600 leading-relaxed">Our intelligence operative network spans the globe, 24/7</p>
             </div>
-            <div className="bg-gray-50 p-8 rounded-xl border border-gray-200">
+            <div className="bg-white p-8 rounded-xl border border-gray-200">
               <div className="text-4xl font-semibold text-[#001641] mb-2" style={{ lineHeight: '110%' }}>70+</div>
               <p className="text-gray-600 leading-relaxed">We labels over 70 different categories and are adding more</p>
             </div>

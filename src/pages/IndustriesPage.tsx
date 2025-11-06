@@ -9,7 +9,7 @@ interface IndustriesPageProps {
 
 export default function IndustriesPage({ onNavigate }: IndustriesPageProps) {
   return (
-    <div className="bg-white">
+    <div>
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
         <h1 className="text-5xl lg:text-6xl font-semibold text-[#001641] text-center mb-6" style={{ lineHeight: '110%' }}>
           Industries We Serve
@@ -75,7 +75,7 @@ export default function IndustriesPage({ onNavigate }: IndustriesPageProps) {
               </button>
             </div>
 
-            <div className="bg-gray-50 p-12 rounded-2xl">
+            <div className="bg-white p-12 rounded-2xl">
               <ComplianceIcon />
             </div>
           </div>
@@ -142,7 +142,7 @@ export default function IndustriesPage({ onNavigate }: IndustriesPageProps) {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20 lg:py-32">
+      <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
