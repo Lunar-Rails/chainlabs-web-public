@@ -1,7 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import { ComplianceIcon, LawEnforcementIcon } from '../components/LineArt';
 
-type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample';
+type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample' | 'privacy' | 'terms';
 
 interface IndustriesPageProps {
   onNavigate?: (page: Page) => void;

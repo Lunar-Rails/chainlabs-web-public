@@ -1,10 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { ArrowRight, Plus, Minus } from 'lucide-react';
-import { DataVisualizationChart, HexagonalDiagram } from '../components/LineArt';
 import NetworkVisualization from '../components/NetworkVisualization';
 import CoverageMap from '../components/CoverageMap';
 
-type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample';
+type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample' | 'privacy' | 'terms';
 
 interface HomePageProps {
   onNavigate?: (page: Page) => void;
