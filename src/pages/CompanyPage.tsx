@@ -105,25 +105,25 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      <section className="bg-[#001641] py-20 lg:py-32">
+      <section className="bg-[#F4F5F6] py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-4xl font-semibold text-white text-center mb-4" style={{ lineHeight: '110%' }}>
+          <h2 className="text-4xl font-semibold text-[#001641] text-center mb-4" style={{ lineHeight: '110%' }}>
             Trusted by Industry Leaders
           </h2>
-          <p className="text-xl text-gray-300 text-center mb-16">
+          <p className="text-xl text-gray-600 text-center mb-16">
             Our affiliated companies and partners
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 border border-white/20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
             {affiliatedCompanies.map((company) => (
               <div
                 key={company.id}
-                className="flex items-center justify-center p-12 border-r border-b border-white/20 h-48 hover:bg-white/5 transition-all"
+                className="flex items-center justify-center p-12 bg-white h-48 hover:shadow-md transition-all"
               >
                 <img
                   src={company.logo_url}
                   alt={company.name}
-                  className="max-h-16 max-w-full object-contain grayscale opacity-80 hover:opacity-100 transition-opacity"
+                  className="max-h-16 max-w-full object-contain grayscale opacity-70 hover:opacity-100 transition-opacity"
                 />
               </div>
             ))}
