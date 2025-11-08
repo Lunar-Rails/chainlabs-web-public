@@ -17,20 +17,11 @@ interface TeamMember {
   display_order: number;
 }
 
-interface AffiliatedCompany {
-  id: string;
-  name: string;
-  logo_url: string;
-  display_order: number;
-}
-
 export default function CompanyPage() {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
-  const [affiliatedCompanies, setAffiliatedCompanies] = useState<AffiliatedCompany[]>([]);
 
   useEffect(() => {
     fetchTeamMembers();
-    fetchAffiliatedCompanies();
   }, []);
 
   const fetchTeamMembers = async () => {
@@ -41,17 +32,6 @@ export default function CompanyPage() {
 
     if (!error && data) {
       setTeamMembers(data);
-    }
-  };
-
-  const fetchAffiliatedCompanies = async () => {
-    const { data, error } = await supabase
-      .from('affiliated_companies')
-      .select('*')
-      .order('display_order', { ascending: true });
-
-    if (!error && data) {
-      setAffiliatedCompanies(data);
     }
   };
 
@@ -114,19 +94,20 @@ export default function CompanyPage() {
             Our affiliated companies and partners
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
-            {affiliatedCompanies.map((company) => (
-              <div
-                key={company.id}
-                className="flex items-center justify-center p-12 bg-white h-48 hover:shadow-md transition-all"
-              >
-                <img
-                  src={company.logo_url}
-                  alt={company.name}
-                  className="max-h-16 max-w-full object-contain grayscale opacity-70 hover:opacity-100 transition-opacity"
-                />
-              </div>
-            ))}
+          <div className="flex flex-col gap-12">
+            <div className="flex justify-center items-center gap-16 flex-wrap">
+              <img src="/coinbase white logo@3x.png" alt="Coinbase" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/elementus-white.png" alt="Elementus" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/lookintobitcoin white logo.png" alt="LookIntoBitcoin" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/santiment white logo@3x.png" alt="Santiment" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/trm white logo@3x.png" alt="TRM" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+            </div>
+            <div className="flex justify-center items-center gap-16 flex-wrap">
+              <img src="/scorechain logo@3x.png" alt="Scorechain" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/upsalla white logo@3x.png" alt="Upsalla" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/merkle white logo@3x.png" alt="Merkle" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/iknaio white logo@3x.png" alt="Iknaio" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+            </div>
           </div>
         </div>
       </section>
