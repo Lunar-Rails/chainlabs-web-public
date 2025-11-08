@@ -160,6 +160,12 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               <img src="/merkle white logo@3x.png" alt="Merkle" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
               <img src="/iknaio white logo@3x.png" alt="Iknaio" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
             </div>
+            <div className="flex justify-center items-center gap-16 flex-wrap">
+              <img src="/chainanalysis logo white@3x.png" alt="Chainalysis" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/AML-bot-white-logo.png" alt="AML Bot" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/Elliptic_logo-white.png" alt="Elliptic" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/OKLink logo.webp" alt="OKLink" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+            </div>
           </div>
         </div>
 
