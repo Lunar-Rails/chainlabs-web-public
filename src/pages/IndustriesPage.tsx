@@ -10,7 +10,7 @@ interface IndustriesPageProps {
 export default function IndustriesPage({ onNavigate }: IndustriesPageProps) {
   return (
     <div>
-      <section className="relative flex items-center justify-center overflow-hidden" style={{ height: '900px' }}>
+      <section className="relative flex items-center justify-center overflow-hidden" style={{ height: '500px' }}>
         <video
           autoPlay
           loop
