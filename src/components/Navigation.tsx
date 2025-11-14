@@ -26,7 +26,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
             onClick={() => onNavigate('home')}
             className="hover:opacity-80 transition-opacity"
           >
-            <img src="/Chainlabs Logo Hero.svg" alt="Chainlabs" className="h-16" />
+            <img src="/Chainlabs Logo Hero.svg" alt="Chainlabs" className="h-16 md:h-16 h-8" />
           </button>
 
           <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
@@ -65,7 +65,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
 
       {mobileMenuOpen && (
         <div className="md:hidden bg-white/80 backdrop-blur-[20px] border-t border-gray-200">
-          <div className="px-6 py-4 space-y-4">
+          <div className="px-6 py-6 space-y-6">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -73,7 +73,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
                   onNavigate(item.id);
                   setMobileMenuOpen(false);
                 }}
-                className={`block w-full text-left text-base font-medium transition-colors ${
+                className={`block w-full text-center text-lg font-medium transition-colors ${
                   currentPage === item.id
                     ? 'text-[#001641]'
                     : 'text-gray-600'
@@ -87,7 +87,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
                 onNavigate('requestSample');
                 setMobileMenuOpen(false);
               }}
-              className="w-full bg-[#001641] text-white px-6 h-[48px] rounded-full text-sm font-semibold"
+              className="w-full bg-[#001641] text-white px-6 h-[48px] rounded-full text-base font-semibold"
             >
               Request a Sample
             </button>
