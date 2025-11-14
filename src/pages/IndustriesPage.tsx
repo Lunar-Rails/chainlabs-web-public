@@ -10,15 +10,19 @@ interface IndustriesPageProps {
 export default function IndustriesPage({ onNavigate }: IndustriesPageProps) {
   return (
     <div>
-      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
-        <h1 className="text-5xl lg:text-6xl font-semibold text-[#001641] text-center mb-6" style={{ lineHeight: '110%' }}>
-          Industries We Serve
-        </h1>
-        <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-20 leading-relaxed">
-          Chainlabs provides blockchain intelligence solutions tailored to the unique needs
-          of compliance providers and law enforcement agencies worldwide.
-        </p>
+      <section className="flex items-center justify-center" style={{ height: '900px' }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+          <h1 className="text-5xl lg:text-6xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
+            Industries We Serve
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Chainlabs provides blockchain intelligence solutions tailored to the unique needs
+            of compliance providers and law enforcement agencies worldwide.
+          </p>
+        </div>
+      </section>
 
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
         <div className="space-y-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
