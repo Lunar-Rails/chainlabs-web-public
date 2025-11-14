@@ -8,7 +8,7 @@ interface IndustriesPageProps {
 }
 
 export default function IndustriesPage({ onNavigate }: IndustriesPageProps) {
-  const [expandedSection, setExpandedSection] = useState<string | null>('compliance');
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
   return (
     <div>
       <section className="relative flex items-center justify-center overflow-hidden" style={{ height: '500px' }}>
@@ -40,15 +40,15 @@ export default function IndustriesPage({ onNavigate }: IndustriesPageProps) {
               onClick={() => setExpandedSection(expandedSection === 'compliance' ? null : 'compliance')}
               className="w-full py-10 flex items-center justify-between group hover:bg-gray-50/50 transition-colors"
             >
-              <div className="flex items-center gap-6">
-                <span className="text-sm font-semibold text-[#FF8A00] uppercase tracking-wider">01</span>
+              <div className="flex items-center gap-8">
+                <span className="text-5xl lg:text-6xl font-bold text-[#FF8A00]">01</span>
                 <h2 className="text-3xl lg:text-4xl font-semibold text-[#001641] text-left" style={{ lineHeight: '110%' }}>
                   Compliance Software Providers
                 </h2>
               </div>
               <ChevronDown
                 size={28}
-                className={`text-[#001641] transition-transform duration-300 ${
+                className={`text-[#001641] transition-transform duration-300 flex-shrink-0 ${
                   expandedSection === 'compliance' ? 'rotate-180' : ''
                 }`}
               />
@@ -113,15 +113,15 @@ export default function IndustriesPage({ onNavigate }: IndustriesPageProps) {
               onClick={() => setExpandedSection(expandedSection === 'law-enforcement' ? null : 'law-enforcement')}
               className="w-full py-10 flex items-center justify-between group hover:bg-gray-50/50 transition-colors"
             >
-              <div className="flex items-center gap-6">
-                <span className="text-sm font-semibold text-[#FF8A00] uppercase tracking-wider">02</span>
+              <div className="flex items-center gap-8">
+                <span className="text-5xl lg:text-6xl font-bold text-[#FF8A00]">02</span>
                 <h2 className="text-3xl lg:text-4xl font-semibold text-[#001641] text-left" style={{ lineHeight: '110%' }}>
                   Law Enforcement
                 </h2>
               </div>
               <ChevronDown
                 size={28}
-                className={`text-[#001641] transition-transform duration-300 ${
+                className={`text-[#001641] transition-transform duration-300 flex-shrink-0 ${
                   expandedSection === 'law-enforcement' ? 'rotate-180' : ''
                 }`}
               />
