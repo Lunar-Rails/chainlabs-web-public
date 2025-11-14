@@ -26,7 +26,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
             onClick={() => onNavigate('home')}
             className="hover:opacity-80 transition-opacity"
           >
-            <img src="/CL logo 2.svg" alt="Chainlabs" className="h-16" />
+            <img src="/Chainlabs Logo Hero.svg" alt="Chainlabs" className="h-16" />
           </button>
 
           <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
