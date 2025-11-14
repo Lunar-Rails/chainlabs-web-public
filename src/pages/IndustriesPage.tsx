@@ -1,4 +1,5 @@
-import { ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 
 type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample' | 'privacy' | 'terms';
 
@@ -7,6 +8,7 @@ interface IndustriesPageProps {
 }
 
 export default function IndustriesPage({ onNavigate }: IndustriesPageProps) {
+  const [expandedSection, setExpandedSection] = useState<string | null>('compliance');
   return (
     <div>
       <section className="relative flex items-center justify-center overflow-hidden" style={{ height: '500px' }}>
@@ -31,117 +33,155 @@ export default function IndustriesPage({ onNavigate }: IndustriesPageProps) {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-          <div className="bg-[#001641] p-12 lg:p-16 flex flex-col justify-center relative overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#FF8A00]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="relative z-10">
-              <div className="inline-block px-4 py-2 bg-[#FF8A00]/20 rounded-full mb-6">
-                <span className="text-[#FF8A00] text-sm font-semibold uppercase tracking-wide">
-                  For Compliance Providers
-                </span>
+      <section className="max-w-5xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
+        <div className="space-y-0">
+          <div className="border-t border-gray-200">
+            <button
+              onClick={() => setExpandedSection(expandedSection === 'compliance' ? null : 'compliance')}
+              className="w-full py-10 flex items-center justify-between group hover:bg-gray-50/50 transition-colors"
+            >
+              <div className="flex items-center gap-6">
+                <span className="text-sm font-semibold text-[#FF8A00] uppercase tracking-wider">01</span>
+                <h2 className="text-3xl lg:text-4xl font-semibold text-[#001641] text-left" style={{ lineHeight: '110%' }}>
+                  Compliance Software Providers
+                </h2>
               </div>
-              <h2 className="text-4xl lg:text-5xl font-semibold text-white mb-6" style={{ lineHeight: '110%' }}>
-                Compliance Software Providers
-              </h2>
-              <div className="text-xl font-semibold text-[#FF8A00] mb-8">
-                Power Your Platform with Trusted Intelligence
-              </div>
-              <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                Integrate Chainlabs' comprehensive wallet label dataset directly into your
-                compliance and risk management platform. Our defensible methodology and
-                audit-ready documentation enable your customers to meet regulatory requirements
-                with confidence.
-              </p>
-              <p className="text-base text-gray-400 leading-relaxed mb-8">
-                We provide flexible integration options, from REST APIs to custom data pipelines,
-                ensuring seamless incorporation into your existing infrastructure. Our labels
-                cover 25+ blockchains and are continuously updated with new entities and
-                emerging risk indicators.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-300 text-sm leading-relaxed">
-                    Comprehensive coverage of exchanges, mixers, and DeFi protocols
-                  </span>
+              <ChevronDown
+                size={28}
+                className={`text-[#001641] transition-transform duration-300 ${
+                  expandedSection === 'compliance' ? 'rotate-180' : ''
+                }`}
+              />
+            </button>
+
+            <div
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                expandedSection === 'compliance' ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+              }`}
+            >
+              <div className="pb-12 px-2">
+                <div className="text-xl font-semibold text-[#FF8A00] mb-6">
+                  Power Your Platform with Trusted Intelligence
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-300 text-sm leading-relaxed">
-                    Real-time updates to stay ahead of emerging threats
-                  </span>
+                <div className="space-y-6 mb-8">
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Integrate Chainlabs' comprehensive wallet label dataset directly into your
+                    compliance and risk management platform. Our defensible methodology and
+                    audit-ready documentation enable your customers to meet regulatory requirements
+                    with confidence.
+                  </p>
+                  <p className="text-base text-gray-600 leading-relaxed">
+                    We provide flexible integration options, from REST APIs to custom data pipelines,
+                    ensuring seamless incorporation into your existing infrastructure. Our labels
+                    cover 25+ blockchains and are continuously updated with new entities and
+                    emerging risk indicators.
+                  </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-300 text-sm leading-relaxed">
-                    Documented provenance for every label and cluster
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-300 text-sm leading-relaxed">
-                    Dedicated support and custom integration assistance
-                  </span>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700 leading-relaxed">
+                      Comprehensive coverage of exchanges, mixers, and DeFi protocols
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700 leading-relaxed">
+                      Real-time updates to stay ahead of emerging threats
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700 leading-relaxed">
+                      Documented provenance for every label and cluster
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700 leading-relaxed">
+                      Dedicated support and custom integration assistance
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-50 to-gray-50 p-12 lg:p-16 flex flex-col justify-center relative overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-tl from-[#001641]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="relative z-10">
-              <div className="inline-block px-4 py-2 bg-[#001641]/10 rounded-full mb-6">
-                <span className="text-[#001641] text-sm font-semibold uppercase tracking-wide">
-                  For Law Enforcement
-                </span>
+          <div className="border-t border-gray-200">
+            <button
+              onClick={() => setExpandedSection(expandedSection === 'law-enforcement' ? null : 'law-enforcement')}
+              className="w-full py-10 flex items-center justify-between group hover:bg-gray-50/50 transition-colors"
+            >
+              <div className="flex items-center gap-6">
+                <span className="text-sm font-semibold text-[#FF8A00] uppercase tracking-wider">02</span>
+                <h2 className="text-3xl lg:text-4xl font-semibold text-[#001641] text-left" style={{ lineHeight: '110%' }}>
+                  Law Enforcement
+                </h2>
               </div>
-              <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
-                Law Enforcement
-              </h2>
-              <div className="text-xl font-semibold text-[#FF8A00] mb-8">
-                Investigate Crypto Crime with Confidence
-              </div>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Law enforcement agencies worldwide trust Chainlabs to support their investigations
-                into cryptocurrency-related crimes. Our wallet labels provide the critical
-                intelligence needed to trace illicit funds, identify bad actors, and build
-                prosecutable cases.
-              </p>
-              <p className="text-base text-gray-600 leading-relaxed mb-8">
-                With coverage spanning 25+ blockchains and a global intelligence network operating
-                24/7, we help you stay ahead of sophisticated criminal operations. Our labels are
-                court-admissible and backed by comprehensive documentation of our methodology
-                and sources.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-sm leading-relaxed">
-                    Intelligence on ransomware groups, scam operations, and darknet markets
-                  </span>
+              <ChevronDown
+                size={28}
+                className={`text-[#001641] transition-transform duration-300 ${
+                  expandedSection === 'law-enforcement' ? 'rotate-180' : ''
+                }`}
+              />
+            </button>
+
+            <div
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                expandedSection === 'law-enforcement' ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+              }`}
+            >
+              <div className="pb-12 px-2">
+                <div className="text-xl font-semibold text-[#FF8A00] mb-6">
+                  Investigate Crypto Crime with Confidence
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-sm leading-relaxed">
-                    Court-admissible documentation and methodology transparency
-                  </span>
+                <div className="space-y-6 mb-8">
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Law enforcement agencies worldwide trust Chainlabs to support their investigations
+                    into cryptocurrency-related crimes. Our wallet labels provide the critical
+                    intelligence needed to trace illicit funds, identify bad actors, and build
+                    prosecutable cases.
+                  </p>
+                  <p className="text-base text-gray-600 leading-relaxed">
+                    With coverage spanning 25+ blockchains and a global intelligence network operating
+                    24/7, we help you stay ahead of sophisticated criminal operations. Our labels are
+                    court-admissible and backed by comprehensive documentation of our methodology
+                    and sources.
+                  </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-sm leading-relaxed">
-                    Expert witness support and case consultation
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-sm leading-relaxed">
-                    Secure data handling with strict confidentiality protocols
-                  </span>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700 leading-relaxed">
+                      Intelligence on ransomware groups, scam operations, and darknet markets
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700 leading-relaxed">
+                      Court-admissible documentation and methodology transparency
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700 leading-relaxed">
+                      Expert witness support and case consultation
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700 leading-relaxed">
+                      Secure data handling with strict confidentiality protocols
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <div className="border-t border-b border-gray-200"></div>
         </div>
       </section>
 
