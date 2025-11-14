@@ -1,5 +1,4 @@
 import { ArrowRight } from 'lucide-react';
-import { ComplianceIcon, LawEnforcementIcon } from '../components/LineArt';
 
 type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample' | 'privacy' | 'terms';
 
@@ -33,124 +32,114 @@ export default function IndustriesPage({ onNavigate }: IndustriesPageProps) {
       </section>
 
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
-        <div className="space-y-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div>
-              <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+          <div className="bg-[#001641] p-12 lg:p-16 flex flex-col justify-center relative overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#FF8A00]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative z-10">
+              <div className="inline-block px-4 py-2 bg-[#FF8A00]/20 rounded-full mb-6">
+                <span className="text-[#FF8A00] text-sm font-semibold uppercase tracking-wide">
+                  For Compliance Providers
+                </span>
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-semibold text-white mb-6" style={{ lineHeight: '110%' }}>
                 Compliance Software Providers
               </h2>
-              <div className="text-lg font-semibold text-[#FF8A00] mb-6">
+              <div className="text-xl font-semibold text-[#FF8A00] mb-8">
                 Power Your Platform with Trusted Intelligence
               </div>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+              <p className="text-lg text-gray-300 leading-relaxed mb-6">
                 Integrate Chainlabs' comprehensive wallet label dataset directly into your
                 compliance and risk management platform. Our defensible methodology and
                 audit-ready documentation enable your customers to meet regulatory requirements
                 with confidence.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+              <p className="text-base text-gray-400 leading-relaxed mb-8">
                 We provide flexible integration options, from REST APIs to custom data pipelines,
                 ensuring seamless incorporation into your existing infrastructure. Our labels
                 cover 25+ blockchains and are continuously updated with new entities and
                 emerging risk indicators.
               </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-[#FF8A00] rounded-full mt-2"></div>
-                  <span className="text-gray-700">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm leading-relaxed">
                     Comprehensive coverage of exchanges, mixers, and DeFi protocols
                   </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-[#FF8A00] rounded-full mt-2"></div>
-                  <span className="text-gray-700">
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm leading-relaxed">
                     Real-time updates to stay ahead of emerging threats
                   </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-[#FF8A00] rounded-full mt-2"></div>
-                  <span className="text-gray-700">
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm leading-relaxed">
                     Documented provenance for every label and cluster
                   </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-[#FF8A00] rounded-full mt-2"></div>
-                  <span className="text-gray-700">
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm leading-relaxed">
                     Dedicated support and custom integration assistance
                   </span>
-                </li>
-              </ul>
-              <button
-                onClick={() => onNavigate?.('requestSample')}
-                className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2"
-              >
-                Request a sample
-                <ArrowRight size={20} />
-              </button>
-            </div>
-
-            <div className="bg-white p-12 rounded-2xl">
-              <ComplianceIcon />
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="order-2 lg:order-1 bg-gray-50 p-12 rounded-2xl">
-              <LawEnforcementIcon />
-            </div>
-
-            <div className="order-1 lg:order-2">
-              <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
+          <div className="bg-gradient-to-br from-blue-50 to-gray-50 p-12 lg:p-16 flex flex-col justify-center relative overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-tl from-[#001641]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative z-10">
+              <div className="inline-block px-4 py-2 bg-[#001641]/10 rounded-full mb-6">
+                <span className="text-[#001641] text-sm font-semibold uppercase tracking-wide">
+                  For Law Enforcement
+                </span>
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
                 Law Enforcement
               </h2>
-              <div className="text-lg font-semibold text-[#FF8A00] mb-6">
+              <div className="text-xl font-semibold text-[#FF8A00] mb-8">
                 Investigate Crypto Crime with Confidence
               </div>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 Law enforcement agencies worldwide trust Chainlabs to support their investigations
                 into cryptocurrency-related crimes. Our wallet labels provide the critical
                 intelligence needed to trace illicit funds, identify bad actors, and build
                 prosecutable cases.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+              <p className="text-base text-gray-600 leading-relaxed mb-8">
                 With coverage spanning 25+ blockchains and a global intelligence network operating
                 24/7, we help you stay ahead of sophisticated criminal operations. Our labels are
                 court-admissible and backed by comprehensive documentation of our methodology
                 and sources.
               </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-[#FF8A00] rounded-full mt-2"></div>
-                  <span className="text-gray-700">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-700 text-sm leading-relaxed">
                     Intelligence on ransomware groups, scam operations, and darknet markets
                   </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-[#FF8A00] rounded-full mt-2"></div>
-                  <span className="text-gray-700">
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-700 text-sm leading-relaxed">
                     Court-admissible documentation and methodology transparency
                   </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-[#FF8A00] rounded-full mt-2"></div>
-                  <span className="text-gray-700">
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-700 text-sm leading-relaxed">
                     Expert witness support and case consultation
                   </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-[#FF8A00] rounded-full mt-2"></div>
-                  <span className="text-gray-700">
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-700 text-sm leading-relaxed">
                     Secure data handling with strict confidentiality protocols
                   </span>
-                </li>
-              </ul>
-              <button
-                onClick={() => onNavigate?.('requestSample')}
-                className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2"
-              >
-                Contact our team
-                <ArrowRight size={20} />
-              </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
