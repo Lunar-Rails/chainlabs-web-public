@@ -9,19 +9,49 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsPage from './pages/TermsPage';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import { analytics } from './lib/analytics';
 
 type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample' | 'privacy' | 'terms';
+
+const PAGE_TITLES: Record<Page, string> = {
+  home: 'Home - Chainlabs',
+  company: 'Company - Chainlabs',
+  solutions: 'Solutions - Chainlabs',
+  industries: 'Industries - Chainlabs',
+  insights: 'Insights - Chainlabs',
+  requestSample: 'Request a Sample - Chainlabs',
+  privacy: 'Privacy Policy - Chainlabs',
+  terms: 'Terms and Conditions - Chainlabs',
+};
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
 
+  useEffect(() => {
+    // Initialize analytics on app mount
+    // Add your tracking IDs here when ready
+    analytics.init({
+      // googleAnalyticsId: 'G-XXXXXXXXXX', // Uncomment and add your GA4 ID
+      // metaPixelId: 'XXXXXXXXXXXXXXXX', // Uncomment and add your Meta Pixel ID
+    });
+  }, []);
+
   const handleNavigate = (page: Page) => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Update document title
+    document.title = PAGE_TITLES[page] || 'Chainlabs';
+
+    // Track page view
+    analytics.pageView(`/${page}`, PAGE_TITLES[page]);
   };
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
+
+    // Track initial page view
+    analytics.pageView(`/${currentPage}`, PAGE_TITLES[currentPage]);
   }, [currentPage]);
 
   const renderPage = () => {

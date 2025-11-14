@@ -1,5 +1,6 @@
 import { useState, FormEvent, ChangeEvent } from 'react';
 import { supabase } from '../lib/supabase';
+import { analytics } from '../lib/analytics';
 
 interface FormData {
   firstName: string;
@@ -166,6 +167,19 @@ export default function RequestSamplePage() {
       ]);
 
       if (error) throw error;
+
+      // Track successful form submission
+      analytics.formSubmit('demo_request', {
+        organization_type: formData.organizationType,
+        country: formData.country,
+        solution: formData.solutionOfInterest,
+      });
+
+      // Track as lead conversion
+      analytics.lead({
+        organization_type: formData.organizationType,
+        country: formData.country,
+      });
 
       setSubmitSuccess(true);
       setFormData({
