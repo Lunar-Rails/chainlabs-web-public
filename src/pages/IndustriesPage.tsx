@@ -10,12 +10,22 @@ interface IndustriesPageProps {
 export default function IndustriesPage({ onNavigate }: IndustriesPageProps) {
   return (
     <div>
-      <section className="flex items-center justify-center" style={{ height: '900px' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <h1 className="text-5xl lg:text-6xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
+      <section className="relative flex items-center justify-center overflow-hidden" style={{ height: '900px' }}>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/nodes.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black opacity-75"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
+          <h1 className="text-5xl lg:text-6xl font-semibold text-white mb-6" style={{ lineHeight: '110%' }}>
             Industries We Serve
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Chainlabs provides blockchain intelligence solutions tailored to the unique needs
             of compliance providers and law enforcement agencies worldwide.
           </p>
