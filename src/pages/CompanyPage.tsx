@@ -43,7 +43,7 @@ export default function CompanyPage() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          className="absolute inset-0 w-full h-full object-cover opacity-90"
         >
           <source src="/workingeyes.mp4" type="video/mp4" />
         </video>
