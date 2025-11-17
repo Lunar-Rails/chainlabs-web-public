@@ -21,7 +21,7 @@ export default function IndustriesPage({ onNavigate }: IndustriesPageProps) {
         >
           <source src="/nodes.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-#172B52 opacity-75"></div>
+        <div className="absolute inset-0 bg-blue opacity-75"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-white mb-4 md:mb-6" style={{ lineHeight: '110%' }}>
             Industries We Serve
