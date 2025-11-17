@@ -44,6 +44,7 @@ export default function InsightsPage() {
     const { data, error } = await supabase
       .from('articles')
       .select('*')
+      .eq('status', 'published')
       .order('display_order', { ascending: true });
 
     if (!error && data) {
@@ -55,6 +56,7 @@ export default function InsightsPage() {
     const { data, error } = await supabase
       .from('case_studies')
       .select('*')
+      .eq('status', 'published')
       .order('display_order', { ascending: true });
 
     if (!error && data) {

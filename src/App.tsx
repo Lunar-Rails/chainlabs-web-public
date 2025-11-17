@@ -7,11 +7,15 @@ import InsightsPage from './pages/InsightsPage';
 import RequestSamplePage from './pages/RequestSamplePage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsPage from './pages/TermsPage';
+import LoginPage from './pages/admin/LoginPage';
+import ArticlesPage from './pages/admin/ArticlesPage';
+import CaseStudiesPage from './pages/admin/CaseStudiesPage';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import { analytics } from './lib/analytics';
+import { AuthProvider, useAuth } from './contexts/AuthContext';
 
-type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample' | 'privacy' | 'terms';
+type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample' | 'privacy' | 'terms' | 'admin-login' | 'admin-articles' | 'admin-case-studies';
 
 const PAGE_TITLES: Record<Page, string> = {
   home: 'Home - Chainlabs',
@@ -22,35 +26,54 @@ const PAGE_TITLES: Record<Page, string> = {
   requestSample: 'Request a Sample - Chainlabs',
   privacy: 'Privacy Policy - Chainlabs',
   terms: 'Terms and Conditions - Chainlabs',
+  'admin-login': 'Admin Login - Chainlabs',
+  'admin-articles': 'Manage Articles - Chainlabs Admin',
+  'admin-case-studies': 'Manage Case Studies - Chainlabs Admin',
 };
 
-function App() {
+function AppContent() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
+  const { isAdmin, loading } = useAuth();
 
   useEffect(() => {
-    // Initialize analytics on app mount
-    // Add your tracking IDs here when ready
-    analytics.init({
-      // googleAnalyticsId: 'G-XXXXXXXXXX', // Uncomment and add your GA4 ID
-      // metaPixelId: 'XXXXXXXXXXXXXXXX', // Uncomment and add your Meta Pixel ID
-    });
+    analytics.init({});
   }, []);
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/admin')) {
+      if (path === '/admin/articles') {
+        setCurrentPage('admin-articles');
+      } else if (path === '/admin/case-studies') {
+        setCurrentPage('admin-case-studies');
+      } else {
+        setCurrentPage('admin-login');
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (currentPage.startsWith('admin-') && currentPage !== 'admin-login') {
+      if (!loading && !isAdmin) {
+        setCurrentPage('admin-login');
+      }
+    }
+  }, [isAdmin, loading, currentPage]);
 
   const handleNavigate = (page: Page) => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    // Update document title
     document.title = PAGE_TITLES[page] || 'Chainlabs';
-
-    // Track page view
     analytics.pageView(`/${page}`, PAGE_TITLES[page]);
+
+    if (page.startsWith('admin-')) {
+      const adminPath = page === 'admin-login' ? '/admin' : `/admin/${page.replace('admin-', '')}`;
+      window.history.pushState({}, '', adminPath);
+    }
   };
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
-
-    // Track initial page view
     analytics.pageView(`/${currentPage}`, PAGE_TITLES[currentPage]);
   }, [currentPage]);
 
@@ -72,17 +95,33 @@ function App() {
         return <PrivacyPolicyPage />;
       case 'terms':
         return <TermsPage />;
+      case 'admin-login':
+        return isAdmin ? <ArticlesPage /> : <LoginPage />;
+      case 'admin-articles':
+        return loading ? <div className="min-h-screen flex items-center justify-center"><p>Loading...</p></div> : (isAdmin ? <ArticlesPage /> : <LoginPage />);
+      case 'admin-case-studies':
+        return loading ? <div className="min-h-screen flex items-center justify-center"><p>Loading...</p></div> : (isAdmin ? <CaseStudiesPage /> : <LoginPage />);
       default:
         return <HomePage onNavigate={handleNavigate} />;
     }
   };
 
+  const isAdminPage = currentPage.startsWith('admin-');
+
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#F9FAFB' }}>
-      <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
+    <div className="min-h-screen" style={{ backgroundColor: isAdminPage ? '#ffffff' : '#F9FAFB' }}>
+      {!isAdminPage && <Navigation currentPage={currentPage} onNavigate={handleNavigate} />}
       {renderPage()}
-      <Footer onNavigate={handleNavigate} />
+      {!isAdminPage && <Footer onNavigate={handleNavigate} />}
     </div>
+  );
+}
+
+function App() {
+  return (
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
   );
 }
 
