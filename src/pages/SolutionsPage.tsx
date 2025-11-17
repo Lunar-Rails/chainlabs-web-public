@@ -148,7 +148,7 @@ export default function SolutionsPage() {
             ))}
           </div>
 
-          <p className="text-center text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-center text-gray-600 max-w-3xl mx-auto leading-relaxed pt-20">
             All tiers include access to our comprehensive documentation, API libraries, and
             compliance-ready audit trails. Enterprise customers receive dedicated support and
             custom integration assistance.
