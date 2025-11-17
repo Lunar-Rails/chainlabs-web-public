@@ -162,12 +162,12 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      <section className="bg-[#001641] py-20 lg:py-32">
+      <section className="bg-[#F4F5F6] py-20 lg:py-32">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-4xl lg:text-5xl font-semibold text-white mb-6" style={{ lineHeight: '110%' }}>
+          <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
             Join Our Team
           </h2>
-          <p className="text-xl text-gray-300 mb-12 leading-relaxed">
+          <p className="text-xl text-gray-600 mb-12 leading-relaxed">
             We're always looking for talented individuals who share our passion for blockchain intelligence and security. Join us in building the future of decentralized trust.
           </p>
 
