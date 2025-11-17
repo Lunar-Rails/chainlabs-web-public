@@ -127,7 +127,7 @@ export default function CompanyPage() {
           A diverse group of 50+ blockchain experts, spanning the globe and passionate about making blokchains transparent.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {teamMembers.map((member) => (
             <div
               key={member.id}
@@ -137,20 +137,20 @@ export default function CompanyPage() {
                 <img
                   src={member.photo_url}
                   alt={member.name}
-                  className="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover object-top grayscale group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-[#001641] mb-1" style={{ lineHeight: '110%' }}>
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-[#001641] mb-1" style={{ lineHeight: '110%' }}>
                   {member.name}
                 </h3>
-                <p className="text-[#FF8A00] font-medium mb-3">{member.role}</p>
+                <p className="text-[#FF8A00] font-medium mb-3 text-sm">{member.role}</p>
                 {member.linkedin_url && (
                   <a
                     href={member.linkedin_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-[#001641] hover:text-[#FF8A00] transition-colors"
+                    className="inline-flex items-center gap-2 text-[#001641] hover:text-[#FF8A00] transition-colors text-sm"
                   >
                     <Linkedin size={20} />
                     <span className="text-sm font-medium">Connect on LinkedIn</span>
