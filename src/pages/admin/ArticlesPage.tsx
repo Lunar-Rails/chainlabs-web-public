@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../../lib/supabase';
 import AdminLayout from '../../components/admin/AdminLayout';
+import ImageUpload from '../../components/admin/ImageUpload';
+import RichTextEditor from '../../components/admin/RichTextEditor';
+import SocialShare from '../../components/admin/SocialShare';
 import { Plus, Edit2, Trash2, Eye, EyeOff, Search } from 'lucide-react';
 
 interface Article {
@@ -14,6 +17,7 @@ interface Article {
   status: string;
   slug: string | null;
   tags: string[] | null;
+  cover_image_url: string | null;
   display_order: number;
   created_at: string;
   updated_at: string;
@@ -243,9 +247,11 @@ function ArticleEditor({ article, onClose }: ArticleEditorProps) {
     status: article?.status || 'draft',
     slug: article?.slug || '',
     tags: article?.tags?.join(', ') || '',
+    cover_image_url: article?.cover_image_url || null,
     display_order: article?.display_order || 0,
   });
   const [saving, setSaving] = useState(false);
+  const articleUrl = article ? `${window.location.origin}/insights/${article.slug || article.id}` : '';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -328,6 +334,12 @@ function ArticleEditor({ article, onClose }: ArticleEditorProps) {
               </div>
             </div>
 
+            <ImageUpload
+              currentImageUrl={formData.cover_image_url}
+              onImageUploaded={(url) => setFormData({ ...formData, cover_image_url: url })}
+              onImageRemoved={() => setFormData({ ...formData, cover_image_url: null })}
+            />
+
             <div>
               <label className="block text-sm font-semibold text-[#001641] mb-2">
                 Excerpt *
@@ -345,12 +357,11 @@ function ArticleEditor({ article, onClose }: ArticleEditorProps) {
               <label className="block text-sm font-semibold text-[#001641] mb-2">
                 Content *
               </label>
-              <textarea
-                required
+              <RichTextEditor
                 value={formData.content}
-                onChange={(e) => setFormData({ ...formData, content: e.target.value })}
-                rows={10}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8A00]"
+                onChange={(value) => setFormData({ ...formData, content: value })}
+                placeholder="Write your article content here... Markdown is supported."
+                rows={15}
               />
             </div>
 
@@ -437,6 +448,18 @@ function ArticleEditor({ article, onClose }: ArticleEditorProps) {
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8A00]"
               />
             </div>
+
+            {article && article.status === 'published' && (
+              <div className="pt-6 border-t border-gray-200">
+                <label className="block text-sm font-semibold text-[#001641] mb-3">
+                  Share Article
+                </label>
+                <SocialShare
+                  title={article.title}
+                  url={articleUrl}
+                />
+              </div>
+            )}
 
             <div className="flex gap-4 pt-6 border-t border-gray-200">
               <button

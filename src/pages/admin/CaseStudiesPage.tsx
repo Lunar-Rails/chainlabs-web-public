@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../../lib/supabase';
 import AdminLayout from '../../components/admin/AdminLayout';
+import ImageUpload from '../../components/admin/ImageUpload';
+import RichTextEditor from '../../components/admin/RichTextEditor';
+import SocialShare from '../../components/admin/SocialShare';
 import { Plus, Edit2, Trash2, Eye, EyeOff, Search } from 'lucide-react';
 
 interface CaseStudy {
@@ -13,6 +16,7 @@ interface CaseStudy {
   industry: string;
   status: string;
   slug: string | null;
+  cover_image_url: string | null;
   display_order: number;
   created_at: string;
   updated_at: string;
@@ -235,9 +239,11 @@ function CaseStudyEditor({ caseStudy, onClose }: CaseStudyEditorProps) {
     industry: caseStudy?.industry || '',
     status: caseStudy?.status || 'draft',
     slug: caseStudy?.slug || '',
+    cover_image_url: caseStudy?.cover_image_url || null,
     display_order: caseStudy?.display_order || 0,
   });
   const [saving, setSaving] = useState(false);
+  const caseStudyUrl = caseStudy ? `${window.location.origin}/insights/${caseStudy.slug || caseStudy.id}` : '';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -283,6 +289,12 @@ function CaseStudyEditor({ caseStudy, onClose }: CaseStudyEditorProps) {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
+            <ImageUpload
+              currentImageUrl={formData.cover_image_url}
+              onImageUploaded={(url) => setFormData({ ...formData, cover_image_url: url })}
+              onImageRemoved={() => setFormData({ ...formData, cover_image_url: null })}
+            />
+
             <div>
               <label className="block text-sm font-semibold text-[#001641] mb-2">
                 Title *
@@ -329,13 +341,11 @@ function CaseStudyEditor({ caseStudy, onClose }: CaseStudyEditorProps) {
               <label className="block text-sm font-semibold text-[#001641] mb-2">
                 Challenge *
               </label>
-              <textarea
-                required
+              <RichTextEditor
                 value={formData.challenge}
-                onChange={(e) => setFormData({ ...formData, challenge: e.target.value })}
-                rows={4}
+                onChange={(value) => setFormData({ ...formData, challenge: value })}
                 placeholder="Describe the client's challenge or problem..."
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8A00]"
+                rows={6}
               />
             </div>
 
@@ -343,13 +353,11 @@ function CaseStudyEditor({ caseStudy, onClose }: CaseStudyEditorProps) {
               <label className="block text-sm font-semibold text-[#001641] mb-2">
                 Solution *
               </label>
-              <textarea
-                required
+              <RichTextEditor
                 value={formData.solution}
-                onChange={(e) => setFormData({ ...formData, solution: e.target.value })}
-                rows={4}
+                onChange={(value) => setFormData({ ...formData, solution: value })}
                 placeholder="Describe the solution provided..."
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8A00]"
+                rows={6}
               />
             </div>
 
@@ -357,13 +365,11 @@ function CaseStudyEditor({ caseStudy, onClose }: CaseStudyEditorProps) {
               <label className="block text-sm font-semibold text-[#001641] mb-2">
                 Results *
               </label>
-              <textarea
-                required
+              <RichTextEditor
                 value={formData.results}
-                onChange={(e) => setFormData({ ...formData, results: e.target.value })}
-                rows={4}
+                onChange={(value) => setFormData({ ...formData, results: value })}
                 placeholder="Describe the outcomes and results achieved..."
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8A00]"
+                rows={6}
               />
             </div>
 
@@ -409,6 +415,18 @@ function CaseStudyEditor({ caseStudy, onClose }: CaseStudyEditorProps) {
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8A00]"
               />
             </div>
+
+            {caseStudy && caseStudy.status === 'published' && (
+              <div className="pt-6 border-t border-gray-200">
+                <label className="block text-sm font-semibold text-[#001641] mb-3">
+                  Share Case Study
+                </label>
+                <SocialShare
+                  title={caseStudy.title}
+                  url={caseStudyUrl}
+                />
+              </div>
+            )}
 
             <div className="flex gap-4 pt-6 border-t border-gray-200">
               <button
