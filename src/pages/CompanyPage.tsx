@@ -43,11 +43,10 @@ export default function CompanyPage() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
         >
           <source src="/workingeyes.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-[#172B52] opacity-75"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <h1 className="text-5xl lg:text-7xl font-semibold text-white mb-6 text-center" style={{ lineHeight: '110%' }}>
             Building Trust in<br />Blockchain Intelligence
