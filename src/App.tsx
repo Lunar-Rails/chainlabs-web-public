@@ -12,6 +12,7 @@ import ArticlesPage from './pages/admin/ArticlesPage';
 import CaseStudiesPage from './pages/admin/CaseStudiesPage';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import CookieConsent from './components/CookieConsent';
 import { analytics } from './lib/analytics';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 
@@ -113,6 +114,7 @@ function AppContent() {
       {!isAdminPage && <Navigation currentPage={currentPage} onNavigate={handleNavigate} />}
       {renderPage()}
       {!isAdminPage && <Footer onNavigate={handleNavigate} />}
+      <CookieConsent />
     </div>
   );
 }
