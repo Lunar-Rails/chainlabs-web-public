@@ -106,23 +106,19 @@ export default function CompanyPage() {
           <div className="flex flex-col gap-12">
             <div className="flex justify-center items-center gap-16 flex-wrap">
               <img src="/coinbase white logo@3x.png" alt="Coinbase" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
-              <img src="/elementus-white.png" alt="Elementus" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
-              <img src="/lookintobitcoin white logo.png" alt="LookIntoBitcoin" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
               <img src="/santiment white logo@3x.png" alt="Santiment" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
-              <img src="/trm white logo@3x.png" alt="TRM" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/lookintobitcoin white logo.png" alt="LookIntoBitcoin" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/scorechain logo@3x.png" alt="Scorechain" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
             </div>
             <div className="flex justify-center items-center gap-16 flex-wrap">
-              <img src="/scorechain logo@3x.png" alt="Scorechain" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
-              <img src="/upsalla white logo@3x.png" alt="Upsalla" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
               <img src="/merkle white logo@3x.png" alt="Merkle" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
               <img src="/iknaio white logo@3x.png" alt="Iknaio" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/AML-bot-white-logo.png" alt="AML Bot" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
             </div>
             <div className="flex justify-center items-center gap-16 flex-wrap">
-              <img src="/chainanalysis logo white@3x.png" alt="Chainalysis" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
-              <img src="/AML-bot-white-logo.png" alt="AML Bot" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
-              <img src="/Elliptic_logo-white.png" alt="Elliptic" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
               <img src="/nansen-white.webp" alt="Nansen" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
               <img src="/OKLink logo.webp" alt="OKLink" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
+              <img src="/ClovrLabs Logo.svg" alt="ClovrLabs" className="h-8 object-contain opacity-40 hover:opacity-60 transition-opacity" style={{ filter: 'brightness(0)' }} />
             </div>
           </div>
         </div>
