@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { X, Cookie } from 'lucide-react';
+import { X } from 'lucide-react';
 
 export default function CookieConsent() {
   const [showBanner, setShowBanner] = useState(false);
@@ -27,10 +27,6 @@ export default function CookieConsent() {
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-gray-200 shadow-2xl">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-start gap-4">
-          <div className="flex-shrink-0 mt-1">
-            <Cookie className="text-[#FF8A00]" size={24} />
-          </div>
-
           <div className="flex-1">
             <h3 className="text-lg font-semibold text-[#001641] mb-2">
               We Value Your Privacy
