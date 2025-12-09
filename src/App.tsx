@@ -3,7 +3,8 @@ import HomePage from './pages/HomePage';
 import CompanyPage from './pages/CompanyPage';
 import SolutionsPage from './pages/SolutionsPage';
 import IndustriesPage from './pages/IndustriesPage';
-import InsightsPage from './pages/InsightsPage';
+// TEMPORARILY HIDDEN - To be enabled in future iteration
+// import InsightsPage from './pages/InsightsPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsPage from './pages/TermsPage';
@@ -23,6 +24,7 @@ const PAGE_TITLES: Record<Page, string> = {
   company: 'Company - Chainlabs',
   solutions: 'Solutions - Chainlabs',
   industries: 'Industries - Chainlabs',
+  // TEMPORARILY HIDDEN - To be enabled in future iteration
   insights: 'Insights - Chainlabs',
   contact: 'Contact - Chainlabs',
   privacy: 'Privacy Policy - Chainlabs',
@@ -88,8 +90,9 @@ function AppContent() {
         return <SolutionsPage />;
       case 'industries':
         return <IndustriesPage onNavigate={handleNavigate} />;
-      case 'insights':
-        return <InsightsPage />;
+      // TEMPORARILY HIDDEN - To be enabled in future iteration
+      // case 'insights':
+      //   return <InsightsPage />;
       case 'contact':
         return <ContactPage />;
       case 'privacy':

@@ -350,6 +350,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         </div>
       </section>
 
+      {/* TEMPORARILY HIDDEN - Insights Section - To be enabled in future iteration
       <section className="bg-[#F4F5F6] py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] text-center mb-4" style={{ lineHeight: '110%' }}>
@@ -414,6 +415,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           </div>
         </div>
       </section>
+      */}
 
       <section className="py-20 lg:py-32 pb-0">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">

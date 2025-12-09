@@ -14,7 +14,8 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
   const navItems = [
     { id: 'solutions' as Page, label: 'Solutions' },
     { id: 'industries' as Page, label: 'Industries' },
-    { id: 'insights' as Page, label: 'Insights' },
+    // TEMPORARILY HIDDEN - To be enabled in future iteration
+    // { id: 'insights' as Page, label: 'Insights' },
     { id: 'company' as Page, label: 'Company' },
   ];
 
