@@ -67,7 +67,7 @@ export default function CompanyPage() {
               Founded in 2018, Chainlabs emerged from a simple observation: the blockchain ecosystem needed reliable, defensible wallet labels to enable compliance and investigation work. What started as a small research project has grown into the industry's most trusted source of blockchain intelligence.
             </p>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Today, we power critical operations for 90% of leading blockchain analytics firms, major exchanges, and regulatory bodies worldwide. Our intelligence network operates 24/7 across the globe, identifying and labeling over 250 new organizations every month.
+              Today, we power critical operations for 90% of leading blockchain analytics firms. Our intelligence network operates across the globe, identifying and labeling over 300 new entities every month.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
               We believe in quality over quantity, transparency over opacity, and collaboration over competition. Our mission is to make blockchain technology safer and more accessible for everyone.
@@ -84,7 +84,7 @@ export default function CompanyPage() {
             </div>
             <div className="bg-white p-8 rounded-xl border border-gray-200">
               <div className="text-4xl font-semibold text-[#001641] mb-2" style={{ lineHeight: '110%' }}>Global</div>
-              <p className="text-gray-600 leading-relaxed">Our intelligence operative network spans the globe, 24/7</p>
+              <p className="text-gray-600 leading-relaxed">Our intelligence operative network spans the globe</p>
             </div>
             <div className="bg-white p-8 rounded-xl border border-gray-200">
               <div className="text-4xl font-semibold text-[#001641] mb-2" style={{ lineHeight: '110%' }}>70+</div>
