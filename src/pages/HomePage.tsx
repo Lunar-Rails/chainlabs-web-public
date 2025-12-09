@@ -219,7 +219,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-20">
             <div className="text-center p-6">
-              <div className="text-5xl lg:text-6xl font-semibold text-[#FFB800] mb-4">
+              <div className="text-5xl lg:text-6xl font-semibold text-[#FF8A00] mb-4">
                 <CountUp end={308} suffix="M+" duration={2000} />
               </div>
               <p className="text-lg text-gray-600">
@@ -228,7 +228,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             </div>
 
             <div className="text-center p-6">
-              <div className="text-5xl lg:text-6xl font-semibold text-[#FFB800] mb-4">
+              <div className="text-5xl lg:text-6xl font-semibold text-[#FF8A00] mb-4">
                 <CountUp end={18000} separator duration={2200} />
               </div>
               <p className="text-lg text-gray-600">
@@ -237,7 +237,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             </div>
 
             <div className="text-center p-6">
-              <div className="text-5xl lg:text-6xl font-semibold text-[#FFB800] mb-4">
+              <div className="text-5xl lg:text-6xl font-semibold text-[#FF8A00] mb-4">
                 <CountUp end={800} suffix="+" duration={2100} />
               </div>
               <p className="text-lg text-gray-600">
@@ -246,7 +246,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             </div>
 
             <div className="text-center p-6">
-              <div className="text-5xl lg:text-6xl font-semibold text-[#FFB800] mb-4">
+              <div className="text-5xl lg:text-6xl font-semibold text-[#FF8A00] mb-4">
                 <CountUp end={480} suffix="+" duration={2300} />
               </div>
               <p className="text-lg text-gray-600">
@@ -255,7 +255,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             </div>
 
             <div className="text-center p-6">
-              <div className="text-5xl lg:text-6xl font-semibold text-[#FFB800] mb-4">
+              <div className="text-5xl lg:text-6xl font-semibold text-[#FF8A00] mb-4">
                 <CountUp end={21} duration={1800} />
               </div>
               <p className="text-lg text-gray-600">
@@ -264,7 +264,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             </div>
 
             <div className="text-center p-6">
-              <div className="text-5xl lg:text-6xl font-semibold text-[#FFB800] mb-4">
+              <div className="text-5xl lg:text-6xl font-semibold text-[#FF8A00] mb-4">
                 <CountUp end={300} suffix="+" duration={2400} />
               </div>
               <p className="text-lg text-gray-600">
@@ -274,7 +274,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           </div>
 
           <p className="text-2xl lg:text-3xl text-[#001641] text-center" style={{ lineHeight: '150%' }}>
-            Every month we add <span className="bg-[#FFB800] px-2 py-1">300+ new organisations</span> that regularly transact on public blockchains and we develop algorithms to infer the address clusters that belong to these organisations. Each entity and each wallet tag comes with a screenshot which contains the URL, wallet address, and other information clearly identifying the entity.
+            Every month we add <span className="bg-[#FF8A00] px-2 py-1">300+ new organisations</span> that regularly transact on public blockchains and we develop algorithms to infer the address clusters that belong to these organisations. Each entity and each wallet tag comes with a screenshot which contains the URL, wallet address, and other information clearly identifying the entity.
           </p>
         </div>
       </section>
