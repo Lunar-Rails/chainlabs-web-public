@@ -89,7 +89,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
               }}
               className="w-full bg-[#001641] text-white px-6 h-[48px] rounded-full text-base font-semibold"
             >
-              Request a Sample
+              Book a Consultation
             </button>
           </div>
         </div>
