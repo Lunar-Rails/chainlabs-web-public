@@ -138,16 +138,10 @@ export default function IndustriesPage({ onNavigate }: IndustriesPageProps) {
                 </div>
                 <div className="space-y-4 md:space-y-6 mb-6 md:mb-8">
                   <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    Law enforcement agencies worldwide trust Chainlabs to support their investigations
-                    into cryptocurrency-related crimes. Our wallet labels provide the critical
-                    intelligence needed to trace illicit funds, identify bad actors, and build
-                    prosecutable cases.
+                    Chainlabs' wide coverage of labelled web 3 data can support investigations into cryptocurrency-related crimes, providing critical intelligence for law enforcement agencies to trace illicit funds, identify bad actors, and build prosecutable cases.
                   </p>
                   <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                    With coverage spanning 25+ blockchains and a global intelligence network operating
-                    24/7, we help you stay ahead of sophisticated criminal operations. Our labels are
-                    court-admissible and backed by comprehensive documentation of our methodology
-                    and sources.
+                    With coverage spanning 25+ blockchains and a global intelligence network, we help you stay ahead of sophisticated criminal operations. Our labels coverage is wide and is backed by auditable proof.
                   </p>
                 </div>
 
