@@ -37,16 +37,7 @@ export default function CompanyPage() {
 
   return (
     <div>
-      <section className="relative bg-black py-20 lg:py-32 overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-90"
-        >
-          <source src="/workingeyes.mp4" type="video/mp4" />
-        </video>
+      <section className="relative bg-gradient-to-br from-[#001641] via-[#002a5c] to-[#001641] py-20 lg:py-32 overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <h1 className="text-5xl lg:text-7xl font-semibold text-white mb-6 text-center" style={{ lineHeight: '110%' }}>
             Building Trust in<br />Blockchain Intelligence
