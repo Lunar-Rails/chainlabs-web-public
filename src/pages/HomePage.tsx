@@ -252,7 +252,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 onClick={() => onNavigate?.('requestSample')}
                 className="bg-[#FF8A00] text-white px-8 py-3 rounded-full text-base font-medium hover:bg-[#e67d00] transition-all inline-flex items-center gap-2"
               >
-                Request a sample
+                Book a Consultation
               </button>
             </div>
 
