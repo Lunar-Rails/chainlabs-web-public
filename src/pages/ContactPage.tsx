@@ -166,7 +166,7 @@ export default function ContactPage() {
       <div className="relative bg-gradient-to-br from-[#001641] via-[#002255] to-[#003388] py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-semibold text-white mb-4" style={{ lineHeight: '110%' }}>
-            Ready to see what blockchain solution
+            Ready to see what blockchain solution is right for you?
           </h1>
         </div>
       </div>
