@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { ArrowRight, Plus, Minus } from 'lucide-react';
 import NetworkVisualization from '../components/NetworkVisualization';
-import CoverageMap from '../components/CoverageMap';
+import CountUp from '../components/CountUp';
 
 type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample' | 'privacy' | 'terms';
 
@@ -213,22 +213,67 @@ export default function HomePage({ onNavigate }: HomePageProps) {
 
       <section className="bg-white py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 items-center">
-            <div className="text-left">
-              <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>
-                Our Data
-              </h2>
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Chainlabs' tracer network spans 52 countries, ensuring access to exchanges and services that require local KYC and in-country resources.
+          <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] mb-16 text-center" style={{ lineHeight: '110%' }}>
+            Chainlabs in Numbers
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-20">
+            <div className="text-center p-6">
+              <div className="text-5xl lg:text-6xl font-semibold text-[#FFB800] mb-4">
+                <CountUp end={308} suffix="M+" duration={2000} />
+              </div>
+              <p className="text-lg text-gray-600">
+                BTC addresses labeled
               </p>
             </div>
 
-            <div>
-              <CoverageMap />
+            <div className="text-center p-6">
+              <div className="text-5xl lg:text-6xl font-semibold text-[#FFB800] mb-4">
+                <CountUp end={18000} separator duration={2200} />
+              </div>
+              <p className="text-lg text-gray-600">
+                Commercial entities in our database
+              </p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="text-5xl lg:text-6xl font-semibold text-[#FFB800] mb-4">
+                <CountUp end={800} suffix="+" duration={2100} />
+              </div>
+              <p className="text-lg text-gray-600">
+                OTC desks
+              </p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="text-5xl lg:text-6xl font-semibold text-[#FFB800] mb-4">
+                <CountUp end={480} suffix="+" duration={2300} />
+              </div>
+              <p className="text-lg text-gray-600">
+                Regional exchanges in our database
+              </p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="text-5xl lg:text-6xl font-semibold text-[#FFB800] mb-4">
+                <CountUp end={21} duration={1800} />
+              </div>
+              <p className="text-lg text-gray-600">
+                Tokens covered
+              </p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="text-5xl lg:text-6xl font-semibold text-[#FFB800] mb-4">
+                <CountUp end={300} suffix="+" duration={2400} />
+              </div>
+              <p className="text-lg text-gray-600">
+                New entities labeled a month
+              </p>
             </div>
           </div>
 
-          <p className="text-2xl lg:text-3xl text-[#001641] text-left pt-20" style={{ lineHeight: '150%' }}>
+          <p className="text-2xl lg:text-3xl text-[#001641] text-center" style={{ lineHeight: '150%' }}>
             Every month we add <span className="bg-[#FFB800] px-2 py-1">250+ new organisations</span> that regularly transact on public blockchains and we develop algorithms to infer the address clusters that belong to these organisations. Each entity and each wallet tag comes with a screenshot which contains the URL, wallet address, and other information clearly identifying the entity.
           </p>
         </div>
