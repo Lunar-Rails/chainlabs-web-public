@@ -134,33 +134,6 @@ export default function IndustriesPage({ onNavigate }: IndustriesPageProps) {
                     With coverage spanning 25+ blockchains and a global intelligence network, we help you stay ahead of sophisticated criminal operations. Our labels coverage is wide and is backed by auditable proof.
                   </p>
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3 md:gap-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm md:text-base text-gray-700 leading-relaxed">
-                      Intelligence on ransomware groups, scam operations, and darknet markets
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm md:text-base text-gray-700 leading-relaxed">
-                      Court-admissible documentation and methodology transparency
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm md:text-base text-gray-700 leading-relaxed">
-                      Expert witness support and case consultation
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm md:text-base text-gray-700 leading-relaxed">
-                      Secure data handling with strict confidentiality protocols
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
