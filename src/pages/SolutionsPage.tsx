@@ -141,7 +141,7 @@ export default function SolutionsPage() {
                       : 'bg-[#001641] text-white hover:bg-[#002a5c]'
                   }`}
                 >
-                  Request a sample
+                  Book a Consultation
                   <ArrowRight size={18} />
                 </button>
               </div>
