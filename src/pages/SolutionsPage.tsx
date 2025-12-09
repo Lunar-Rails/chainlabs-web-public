@@ -65,9 +65,7 @@ export default function SolutionsPage() {
             Access the Most Up-to-date and Defensible Wallet Label Dataset in Crypto.
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Our wallet label dataset is continuously updated with the latest entities and addresses.
-            We employ a rigorous methodology combining human intelligence, advanced algorithms, and
-            blockchain forensics to ensure every label is accurate, defensible, and audit-ready.
+            Since 2019 we have developed a proven wallet label database which is continuously updated with new entities and maintained to ensure our data remains fresh and relevant. Chainlabs provides the widest, industry leading coverage and our excellent customer satisfaction rates are testament to the quality and reliability of our data. We can provide seed labels as well as advanced post-clustered labels, per our customer needs.
           </p>
         </div>
       </section>
