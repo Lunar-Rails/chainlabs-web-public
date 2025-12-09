@@ -1,56 +1,26 @@
-import { Check, ArrowRight } from 'lucide-react';
+import { Check, Building2, CreditCard, ShieldAlert, AlertTriangle, Ban } from 'lucide-react';
 
 export default function SolutionsPage() {
-  const tiers = [
+  const categories = [
     {
-      name: 'Core',
-      bestFor: 'Core compliance teams',
-      coverage: 'Core CeFi, Darknet, Mixers, and VPN/Hosting categories...',
-      updateFrequency: 'Monthly delta updates',
-      customization: 'Limited (86h/month)',
-      features: [
-        'CeFi labels (exchanges, custodians)',
-        'Darknet marketplaces',
-        'Mixer services',
-        'VPN/Hosting providers',
-        'Monthly data updates',
-        '86 hours per month of customization',
-      ],
+      icon: Building2,
+      title: 'OTC, Exchanges & VASPs',
     },
     {
-      name: 'Advanced',
-      bestFor: 'Advanced risk and DeFi analysis',
-      coverage: 'Core plus: OTC, Scams, Exploits, DeFi, Public Entities, Illicit NFTs',
-      updateFrequency: 'Monthly delta updates',
-      customization: 'Limited (86h/month)',
-      features: [
-        'All Core tier features',
-        'OTC desks and brokers',
-        'Scam and fraud operations',
-        'Exploit and hack labels',
-        'DeFi protocol labels',
-        'Public entity wallets',
-        'Illicit NFT collections',
-        '86 hours per month of customization',
-      ],
-      highlighted: true,
+      icon: CreditCard,
+      title: 'Gambling, Merchant and ATM',
     },
     {
-      name: 'Enterprise custom',
-      bestFor: 'Real time or emerging priorities',
-      coverage: 'Advanced plus: Any category or region defined by the client',
-      updateFrequency: 'Continuous during active briefs',
-      customization: 'Extensive (>86h/month)',
-      features: [
-        'All Advanced tier features',
-        'Custom category creation',
-        'Region-specific targeting',
-        'Continuous real-time updates',
-        'Dedicated research team',
-        'Priority brief handling',
-        'Extensive customization (>86h/month)',
-        'White-glove service',
-      ],
+      icon: ShieldAlert,
+      title: 'Darknet Markets, Mixers',
+    },
+    {
+      icon: AlertTriangle,
+      title: 'Scam & Ransomware',
+    },
+    {
+      icon: Ban,
+      title: 'Sanction list: Terrorism Financing, CSAM, and more.',
     },
   ];
 
@@ -72,85 +42,24 @@ export default function SolutionsPage() {
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-semibold text-[#001641] mb-4" style={{ lineHeight: '110%' }}>
-              Choose Your Plan
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-            {tiers.map((tier) => (
-              <div
-                key={tier.name}
-                className={`bg-white rounded-2xl p-8 ${
-                  tier.highlighted
-                    ? 'border-2 border-[#FF8A00] shadow-xl scale-105'
-                    : 'border border-gray-200 shadow-sm'
-                } transition-all hover:shadow-lg`}
-              >
-                {tier.highlighted && (
-                  <div className="bg-[#FF8A00] text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">
-                    MOST POPULAR
-                  </div>
-                )}
-                <h3 className="text-3xl font-semibold text-[#001641] mb-6" style={{ lineHeight: '110%' }}>{tier.name}</h3>
-
-                <div className="space-y-6 mb-8">
-                  <div>
-                    <div className="text-sm font-semibold text-gray-500 mb-2">Best for</div>
-                    <div className="text-gray-900">{tier.bestFor}</div>
-                  </div>
-
-                  <div>
-                    <div className="text-sm font-semibold text-gray-500 mb-2">Coverage</div>
-                    <div className="text-gray-900">{tier.coverage}</div>
-                  </div>
-
-                  <div>
-                    <div className="text-sm font-semibold text-gray-500 mb-2">
-                      Update frequency
-                    </div>
-                    <div className="text-gray-900">{tier.updateFrequency}</div>
-                  </div>
-
-                  <div>
-                    <div className="text-sm font-semibold text-gray-500 mb-2">
-                      New data customization
-                    </div>
-                    <div className="text-gray-900">{tier.customization}</div>
-                  </div>
-                </div>
-
-                <div className="border-t border-gray-200 pt-6 mb-8">
-                  <ul className="space-y-3">
-                    {tier.features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-3">
-                        <Check className="text-[#FF8A00] flex-shrink-0 mt-0.5" size={20} />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <button
-                  className={`w-full py-3 rounded-full font-semibold transition-all flex items-center justify-center gap-2 ${
-                    tier.highlighted
-                      ? 'bg-[#FF8A00] text-white hover:bg-[#e67d00]'
-                      : 'bg-[#001641] text-white hover:bg-[#002a5c]'
-                  }`}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {categories.map((category) => {
+              const Icon = category.icon;
+              return (
+                <div
+                  key={category.title}
+                  className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all hover:border-[#FF8A00] group"
                 >
-                  Book a Consultation
-                  <ArrowRight size={18} />
-                </button>
-              </div>
-            ))}
+                  <div className="w-16 h-16 bg-[#001641] bg-opacity-5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#FF8A00] group-hover:bg-opacity-10 transition-colors">
+                    <Icon className="text-[#001641] group-hover:text-[#FF8A00] transition-colors" size={32} strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-xl font-semibold text-[#001641] leading-tight" style={{ lineHeight: '120%' }}>
+                    {category.title}
+                  </h3>
+                </div>
+              );
+            })}
           </div>
-
-          <p className="text-center text-gray-600 max-w-3xl mx-auto leading-relaxed pt-20">
-            All tiers include access to our comprehensive documentation, API libraries, and
-            compliance-ready audit trails. Enterprise customers receive dedicated support and
-            custom integration assistance.
-          </p>
         </div>
       </section>
 
