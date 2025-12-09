@@ -417,7 +417,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
 
       <section className="py-20 lg:py-32 pb-0">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <h2 className="text-5xl lg:text-6xl font-bold text-[#001641] mb-16" style={{ lineHeight: '110%' }}>
+          <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] mb-16" style={{ lineHeight: '110%' }}>
             FAQs
           </h2>
 
@@ -431,7 +431,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   onClick={() => toggleFaq(index)}
                   className="w-full flex items-center justify-between py-8 text-left hover:opacity-70 transition-opacity"
                 >
-                  <span className="text-2xl lg:text-3xl font-medium text-[#001641] pr-8" style={{ lineHeight: '120%' }}>
+                  <span className="text-lg lg:text-xl font-medium text-[#001641] pr-8" style={{ lineHeight: '120%' }}>
                     {faq.question}
                   </span>
                   <div className="flex-shrink-0">
