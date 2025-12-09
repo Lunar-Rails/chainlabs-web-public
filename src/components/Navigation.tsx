@@ -50,7 +50,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
               onClick={() => onNavigate('requestSample')}
               className="bg-[#001641] text-white px-6 h-[48px] rounded-full text-sm font-semibold hover:bg-[#002255] transition-colors"
             >
-              Request a Sample
+              Book a Consultation
             </button>
           </div>
 
