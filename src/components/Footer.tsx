@@ -1,6 +1,6 @@
 import { Linkedin, Youtube, Send, Phone, MapPin } from 'lucide-react';
 
-type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample' | 'privacy' | 'terms';
+type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'contact' | 'privacy' | 'terms';
 
 interface FooterProps {
   onNavigate?: (page: Page) => void;
@@ -12,7 +12,7 @@ export default function Footer({ onNavigate }: FooterProps) {
     { label: 'Industries', page: 'industries' },
     { label: 'Insights', page: 'insights' },
     { label: 'Company', page: 'company' },
-    { label: 'Contact', page: 'requestSample' },
+    { label: 'Contact', page: 'contact' },
   ];
 
   return (

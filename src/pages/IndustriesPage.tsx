@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 
-type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample' | 'privacy' | 'terms';
+type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'contact' | 'privacy' | 'terms';
 
 interface IndustriesPageProps {
   onNavigate?: (page: Page) => void;
@@ -196,7 +196,7 @@ export default function IndustriesPage({ onNavigate }: IndustriesPageProps) {
             for yourself. No commitment required.
           </p>
           <button
-            onClick={() => onNavigate?.('requestSample')}
+            onClick={() => onNavigate?.('contact')}
             className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2"
           >
             Book a Consultation

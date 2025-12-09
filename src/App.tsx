@@ -4,7 +4,7 @@ import CompanyPage from './pages/CompanyPage';
 import SolutionsPage from './pages/SolutionsPage';
 import IndustriesPage from './pages/IndustriesPage';
 import InsightsPage from './pages/InsightsPage';
-import RequestSamplePage from './pages/RequestSamplePage';
+import ContactPage from './pages/ContactPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsPage from './pages/TermsPage';
 import LoginPage from './pages/admin/LoginPage';
@@ -16,7 +16,7 @@ import CookieConsent from './components/CookieConsent';
 import { analytics } from './lib/analytics';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 
-type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample' | 'privacy' | 'terms' | 'admin-login' | 'admin-articles' | 'admin-case-studies';
+type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'contact' | 'privacy' | 'terms' | 'admin-login' | 'admin-articles' | 'admin-case-studies';
 
 const PAGE_TITLES: Record<Page, string> = {
   home: 'Home - Chainlabs',
@@ -24,7 +24,7 @@ const PAGE_TITLES: Record<Page, string> = {
   solutions: 'Solutions - Chainlabs',
   industries: 'Industries - Chainlabs',
   insights: 'Insights - Chainlabs',
-  requestSample: 'Request a Sample - Chainlabs',
+  contact: 'Contact - Chainlabs',
   privacy: 'Privacy Policy - Chainlabs',
   terms: 'Terms and Conditions - Chainlabs',
   'admin-login': 'Admin Login - Chainlabs',
@@ -90,8 +90,8 @@ function AppContent() {
         return <IndustriesPage onNavigate={handleNavigate} />;
       case 'insights':
         return <InsightsPage />;
-      case 'requestSample':
-        return <RequestSamplePage />;
+      case 'contact':
+        return <ContactPage />;
       case 'privacy':
         return <PrivacyPolicyPage />;
       case 'terms':

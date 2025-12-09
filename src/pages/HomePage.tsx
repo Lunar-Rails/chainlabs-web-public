@@ -3,7 +3,7 @@ import { ArrowRight, Plus, Minus } from 'lucide-react';
 import NetworkVisualization from '../components/NetworkVisualization';
 import CountUp from '../components/CountUp';
 
-type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample' | 'privacy' | 'terms';
+type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'contact' | 'privacy' | 'terms';
 
 interface HomePageProps {
   onNavigate?: (page: Page) => void;
@@ -123,7 +123,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               Defensible, global coverage with audit-ready proof. Powering compliance, investigations, and research.
             </p>
             <button
-              onClick={() => onNavigate?.('requestSample')}
+              onClick={() => onNavigate?.('contact')}
               className="bg-[#FF8A00] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e67d00] transition-all hover:shadow-lg inline-flex items-center gap-2"
             >
               Book a Consultation
@@ -290,7 +290,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 Chainlabs delivers defensible wallet intelligence through a rigorous methodology that combines human expertise with advanced technology. Our approach ensures every label meets the highest standards of accuracy and compliance.
               </p>
               <button
-                onClick={() => onNavigate?.('requestSample')}
+                onClick={() => onNavigate?.('contact')}
                 className="bg-[#FF8A00] text-white px-8 py-3 rounded-full text-base font-medium hover:bg-[#e67d00] transition-all inline-flex items-center gap-2"
               >
                 Book a Consultation

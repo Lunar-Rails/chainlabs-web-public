@@ -1,7 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
-type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'requestSample' | 'privacy' | 'terms';
+type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'contact' | 'privacy' | 'terms';
 
 interface NavigationProps {
   currentPage: Page;
@@ -47,7 +47,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
 
           <div className="hidden md:flex items-center">
             <button
-              onClick={() => onNavigate('requestSample')}
+              onClick={() => onNavigate('contact')}
               className="bg-[#001641] text-white px-6 h-[48px] rounded-full text-sm font-semibold hover:bg-[#002255] transition-colors"
             >
               Book a Consultation
@@ -84,7 +84,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
             ))}
             <button
               onClick={() => {
-                onNavigate('requestSample');
+                onNavigate('contact');
                 setMobileMenuOpen(false);
               }}
               className="w-full bg-[#001641] text-white px-6 h-[48px] rounded-full text-base font-semibold"
