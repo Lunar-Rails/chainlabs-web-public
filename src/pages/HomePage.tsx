@@ -88,23 +88,19 @@ export default function HomePage({ onNavigate }: HomePageProps) {
     },
     {
       question: "How often is the wallet label dataset updated?",
-      answer: "We add 250+ new organizations to our dataset every month. Update frequency varies by tier: Core and Advanced tiers receive monthly delta updates, while Enterprise customers can receive continuous real-time updates during active briefs. Our global intelligence network operates 24/7 to identify emerging entities and risks."
+      answer: "We add 300+ new organizations to our dataset every month and regularly refresh our historical dataset."
     },
     {
       question: "Who uses Chainlabs' wallet intelligence?",
-      answer: "90% of leading blockchain AML/KYC firms and all top 4 blockchain analytics companies use Chainlabs. Our clients include compliance software providers, cryptocurrency exchanges, law enforcement agencies, and research institutions worldwide. We power critical compliance and investigation workflows for organizations that demand the highest quality intelligence."
-    },
-    {
-      question: "What types of entities does Chainlabs label?",
-      answer: "Our coverage includes centralized exchanges (CeFi), darknet marketplaces, mixer services, VPN/hosting providers, OTC desks, scam operations, exploit addresses, DeFi protocols, public entity wallets, and illicit NFT collections. The specific categories available depend on your subscription tier, with Enterprise customers able to request custom categories."
+      answer: "90% of leading blockchain AML/KYC firms use Chainlabs. Our end users include compliance software providers, cryptocurrency exchanges, law enforcement agencies, and research institutions worldwide. We power critical compliance and investigation workflows for organizations that demand the highest quality intelligence."
     },
     {
       question: "How can I integrate Chainlabs data into my platform?",
-      answer: "We provide flexible integration options including REST APIs, custom data pipelines, and direct database access. All tiers include comprehensive documentation and API libraries. Enterprise customers receive dedicated support and custom integration assistance to ensure seamless incorporation into your existing infrastructure."
+      answer: "We provide flexible integration options including REST APIs and custom data pipelines."
     },
     {
-      question: "What is the difference between the Core, Advanced, and Enterprise tiers?",
-      answer: "The Core tier includes essential categories like CeFi, darknet, mixers, and VPN/hosting with monthly updates. Advanced adds OTC, scams, exploits, DeFi, public entities, and illicit NFTs. Enterprise provides all Advanced features plus custom category creation, real-time updates, dedicated research teams, and extensive customization (>86 hours/month). Each tier is designed for specific use cases and organizational needs."
+      question: "What type of categories do you cover?",
+      answer: "Our coverage includes essential categories like CeFi, darknet, mixers, and VPN/hosting with monthly updates. We also provide OTC, scams, exploits, DeFi, public entities, and illicit NFTs. In addition to these, we provide custom category creation, real-time updates, dedicated research teams, and extensive customization based on your needs."
     }
   ];
 
@@ -194,7 +190,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             >
               <div className="text-5xl font-semibold text-[#001641] mb-3" style={{ lineHeight: '110%' }}>Global</div>
               <p className="text-gray-600 leading-relaxed">
-                Our intelligence operative network spans the globe, 24/7
+                Our intelligence operative network spans the globe
               </p>
             </div>
 
