@@ -213,7 +213,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
 
       <section className="bg-white py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-4xl lg:text-5xl font-semibold text-[#001641] mb-16 text-center" style={{ lineHeight: '110%' }}>
+          <h2 className="text-2xl font-semibold text-[#001641] mb-16 text-center" style={{ lineHeight: '110%' }}>
             Chainlabs in Numbers
           </h2>
 
