@@ -16,7 +16,7 @@ export default function SolutionsPage() {
     },
     {
       icon: AlertTriangle,
-      title: 'Scam & Ransomware',
+      title: 'Malware, Scam & Ransomware',
     },
     {
       icon: Ban,
