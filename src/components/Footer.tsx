@@ -98,7 +98,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <Send size={18} className="text-white" />
               </a>
               <a
-                href="https://linkedin.com/company/chainlabs"
+                href="https://www.linkedin.com/company/chainlabs-ai/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
