@@ -25,7 +25,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               className="mb-4 cursor-pointer"
               aria-label="Go to homepage"
             >
-              <img src="/Chainlabs Logo footer Inversed.svg" alt="Chainlabs" className="h-8" />
+              <img src="/ChainLabs-Inversed-Logo-orig.svg" alt="Chainlabs" className="h-8" />
             </button>
             <p className="text-sm text-gray-400 mb-6">
               Blockchain Intelligence & Wallet Labeling
