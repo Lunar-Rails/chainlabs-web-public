@@ -1,4 +1,4 @@
-import { Linkedin, Youtube, Send, Phone, MapPin } from 'lucide-react';
+import { Linkedin, Phone, MapPin } from 'lucide-react';
 
 type Page = 'home' | 'company' | 'solutions' | 'industries' | 'insights' | 'contact' | 'privacy' | 'terms';
 
@@ -89,15 +89,6 @@ export default function Footer({ onNavigate }: FooterProps) {
 
             <div className="flex gap-4">
               <a
-                href="https://t.me/chainlabs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
-                aria-label="Telegram"
-              >
-                <Send size={18} className="text-white" />
-              </a>
-              <a
                 href="https://www.linkedin.com/company/chainlabs-ai/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -105,15 +96,6 @@ export default function Footer({ onNavigate }: FooterProps) {
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} className="text-white" />
-              </a>
-              <a
-                href="https://youtube.com/@chainlabs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube size={18} className="text-white" />
               </a>
             </div>
           </div>
