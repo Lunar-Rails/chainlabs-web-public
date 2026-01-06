@@ -70,8 +70,8 @@ export default function CompanyPage() {
               <p className="text-gray-600 leading-relaxed">Founded</p>
             </div>
             <div className="bg-white p-8 rounded-xl border border-gray-200">
-              <div className="text-4xl font-semibold text-[#001641] mb-2" style={{ lineHeight: '110%' }}>4/4</div>
-              <p className="text-gray-600 leading-relaxed">of the top 4 blockchain analytics firms use Chainlabs</p>
+              <div className="text-4xl font-semibold text-[#001641] mb-2" style={{ lineHeight: '110%' }}>25+</div>
+              <p className="text-gray-600 leading-relaxed">Our labels cover the top blockchains and we are adding more</p>
             </div>
             <div className="bg-white p-8 rounded-xl border border-gray-200">
               <div className="text-4xl font-semibold text-[#001641] mb-2" style={{ lineHeight: '110%' }}>Global</div>
