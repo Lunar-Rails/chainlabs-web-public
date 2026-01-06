@@ -174,9 +174,9 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   : 'opacity-0 translate-y-8'
               }`}
             >
-              <div className="text-5xl font-semibold text-[#001641] mb-3" style={{ lineHeight: '110%' }}>4/4</div>
+              <div className="text-5xl font-semibold text-[#001641] mb-3" style={{ lineHeight: '110%' }}>25+</div>
               <p className="text-gray-600 leading-relaxed">
-                of the top 4 blockchain analytics firms use Chainlabs
+                Our labels cover the top blockchains and we are adding more
               </p>
             </div>
 
