@@ -106,6 +106,8 @@ export default function ContactPage() {
         },
       ]);
 
+      console.log()
+
       if (error) throw error;
 
       analytics.formSubmit('contact_form', {
