@@ -39,7 +39,7 @@ A modern, responsive website for ChainLabs - blockchain analytics and solutions 
 - **Authentication**: Supabase Auth
 - **Storage**: Supabase Storage
 - **Edge Functions**: Supabase Functions (Deno runtime)
-- **Deployment**: Optimized for modern hosting platforms
+- **Deployment**: Netlify
 
 ## Prerequisites
 
@@ -62,11 +62,18 @@ A modern, responsive website for ChainLabs - blockchain analytics and solutions 
 
 3. **Environment Setup**
 
-   Create a `.env` file in the root directory:
+   Copy the example environment file and fill in your Supabase credentials:
+   ```bash
+   cp .env.local.example .env.local
+   ```
+   
+   Then edit `.env.local` and add your Supabase project URL and anonymous key:
    ```env
    VITE_SUPABASE_URL=your_supabase_project_url
    VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
    ```
+   
+   **Note**: The same Supabase project is used for both local development and production. Use the same credentials in your `.env.local` file that you'll configure in Netlify for production.
 
 4. **Database Setup**
 
@@ -111,6 +118,35 @@ Preview the production build:
 ```bash
 npm run preview
 ```
+
+## Deployment
+
+### Netlify Deployment
+
+The project is configured to deploy on Netlify with minimal configuration:
+
+1. **Connect Repository**
+   - Push your code to GitHub, GitLab, or Bitbucket
+   - In Netlify Dashboard, click "Add new site" → "Import an existing project"
+   - Select your repository
+
+2. **Configure Build Settings**
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+   - Node version: 18 or higher (set in Netlify UI if needed)
+
+3. **Set Environment Variables**
+   - Go to Site settings → Environment variables
+   - Add the following variables (use the same values as your `.env.local`):
+     - `VITE_SUPABASE_URL` - Your Supabase project URL
+     - `VITE_SUPABASE_ANON_KEY` - Your Supabase anonymous key
+
+4. **Deploy**
+   - Click "Deploy site"
+   - Netlify will automatically build and deploy your site
+   - Future pushes to your main branch will trigger automatic deployments
+
+**Note**: The `public/_redirects` file ensures that all routes are properly handled for the single-page application. This file is automatically copied to the `dist` folder during the build process.
 
 ## Scripts
 
@@ -188,10 +224,16 @@ chainlabs/
 
 ## Environment Variables
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `VITE_SUPABASE_URL` | Your Supabase project URL | Yes |
-| `VITE_SUPABASE_ANON_KEY` | Your Supabase anonymous key | Yes |
+| Variable | Description | Required | Location |
+|----------|-------------|----------|----------|
+| `VITE_SUPABASE_URL` | Your Supabase project URL | Yes | `.env.local` (local), Netlify UI (production) |
+| `VITE_SUPABASE_ANON_KEY` | Your Supabase anonymous key | Yes | `.env.local` (local), Netlify UI (production) |
+
+**Local Development**: Create `.env.local` file from `.env.local.example` and fill in your Supabase credentials.
+
+**Production**: Set these same environment variables in Netlify Dashboard (Site settings → Environment variables).
+
+The same Supabase project is used for both local development and production, so use the same credentials in both places.
 
 ## Browser Support
 
