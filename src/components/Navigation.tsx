@@ -27,10 +27,10 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
             onClick={() => onNavigate('home')}
             className="hover:opacity-80 transition-opacity"
           >
-            <img src="/ChainLabs-Logo-orig.svg" alt="Chainlabs" className="h-16 md:h-16 h-8" />
+            <img src="/ChainLabs-Logo-orig.svg" alt="Chainlabs" className="h-8 md:h-16" />
           </button>
 
-          <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
+          <div className="hidden lg:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -46,7 +46,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
             ))}
           </div>
 
-          <div className="hidden md:flex items-center">
+          <div className="hidden lg:flex items-center">
             <button
               onClick={() => onNavigate('contact')}
               className="bg-[#001641] text-white px-6 h-[48px] rounded-full text-sm font-semibold hover:bg-[#002255] transition-colors"
@@ -56,7 +56,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
           </div>
 
           <button
-            className="md:hidden text-[#001641]"
+            className="lg:hidden text-[#001641]"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -65,7 +65,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white/80 backdrop-blur-[20px] border-t border-gray-200">
+        <div className="lg:hidden bg-white/80 backdrop-blur-[20px] border-t border-gray-200">
           <div className="px-6 py-6 space-y-6">
             {navItems.map((item) => (
               <button
