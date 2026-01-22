@@ -35,23 +35,50 @@ export default function ContactPage() {
     return emailRegex.test(email);
   };
 
+  const hasInvalidPhoneCharacters = (phone: string): boolean => {
+    // Check if phone contains any characters other than digits, +, spaces, hyphens, parentheses
+    const invalidCharRegex = /[^\d+\s\-()]/;
+    return invalidCharRegex.test(phone);
+  };
+
+  const validatePhoneNumber = (phone: string): boolean => {
+    // International phone number regex: allows +, digits, spaces, hyphens, parentheses
+    // Must start with + followed by 1-15 digits, or just digits (7-15 digits)
+    const phoneRegex = /^(\+[1-9]\d{0,14}|[1-9]\d{6,14})$/;
+    const cleaned = phone.replace(/[\s\-()]/g, '');
+    return phoneRegex.test(cleaned);
+  };
+
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
 
+    // Validate name - must contain at least first and last name
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
+    } else {
+      const nameParts = formData.name.trim().split(/\s+/);
+      if (nameParts.length < 2) {
+        newErrors.name = 'Please enter both first and last name';
+      }
     }
 
+    // Validate email
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!validateEmail(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
     }
 
+    // Validate phone number
     if (!formData.contactNumber.trim()) {
       newErrors.contactNumber = 'Contact number is required';
+    } else if (hasInvalidPhoneCharacters(formData.contactNumber)) {
+      newErrors.contactNumber = 'Please enter only digits, +, spaces, hyphens, or parentheses';
+    } else if (!validatePhoneNumber(formData.contactNumber)) {
+      newErrors.contactNumber = 'Please enter a valid international phone number (e.g., +1234567890 or 1234567890)';
     }
 
+    // Validate consent
     if (!formData.consentGiven) {
       newErrors.consentGiven = 'You must agree to the privacy policy';
     }
@@ -71,12 +98,58 @@ export default function ContactPage() {
       [name]: type === 'checkbox' ? checked : value,
     }));
 
-    if (errors[name]) {
-      setErrors((prev) => ({
-        ...prev,
-        [name]: '',
-      }));
+    const newErrors: FormErrors = { ...errors };
+
+    // Real-time validation for each field
+    if (name === 'name') {
+      if (!value.trim()) {
+        // Clear error if field is empty (required validation happens on submit)
+        delete newErrors.name;
+      } else {
+        const nameParts = value.trim().split(/\s+/);
+        if (nameParts.length < 2) {
+          newErrors.name = 'Please enter both first and last name';
+        } else {
+          // Clear error if valid
+          delete newErrors.name;
+        }
+      }
+    } else if (name === 'email') {
+      if (!value.trim()) {
+        // Clear error if field is empty (required validation happens on submit)
+        delete newErrors.email;
+      } else if (!validateEmail(value)) {
+        newErrors.email = 'Please enter a valid email address';
+      } else {
+        // Clear error if valid
+        delete newErrors.email;
+      }
+    } else if (name === 'contactNumber') {
+      if (!value.trim()) {
+        // Clear error if field is empty (required validation happens on submit)
+        delete newErrors.contactNumber;
+      } else if (hasInvalidPhoneCharacters(value)) {
+        newErrors.contactNumber = 'Please enter only digits, +, spaces, hyphens, or parentheses';
+      } else if (!validatePhoneNumber(value)) {
+        newErrors.contactNumber = 'Please enter a valid international phone number (e.g., +1234567890 or 1234567890)';
+      } else {
+        // Clear error if valid
+        delete newErrors.contactNumber;
+      }
+    } else if (name === 'consentGiven') {
+      if (!checked) {
+        newErrors.consentGiven = 'You must agree to the privacy policy';
+      } else {
+        delete newErrors.consentGiven;
+      }
+    } else {
+      // For other fields, clear any existing errors when user starts typing
+      if (errors[name]) {
+        delete newErrors[name];
+      }
     }
+
+    setErrors(newErrors);
   };
 
   const handleSubmit = async (e: FormEvent) => {
