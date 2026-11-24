@@ -34,6 +34,10 @@ export default function ImageUpload({ currentImageUrl, onImageUploaded, onImageR
       const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`;
       const filePath = `covers/${fileName}`;
 
+      if (filePath.includes('..')) {
+        throw new Error('Invalid file path');
+      }
+
       const { error: uploadError } = await supabase.storage
         .from('content-images')
         .upload(filePath, file, {
@@ -49,8 +53,8 @@ export default function ImageUpload({ currentImageUrl, onImageUploaded, onImageR
 
       setPreviewUrl(publicUrl);
       onImageUploaded(publicUrl);
-    } catch (error: any) {
-      alert('Error uploading image: ' + error.message);
+    } catch (error: unknown) {
+      alert('Error uploading image: ' + (error instanceof Error ? error.message : 'Unknown error'));
     } finally {
       setUploading(false);
     }
